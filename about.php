@@ -46,14 +46,16 @@ get_header();
 						
 					<?php endif; ?>
 				</div>
-				
+
 
 				<!-- About Content -->
 
 					<div class="about-content-bg">
+
 						<!-- Intro -->
 						<section class="intro-bg">
 							<?php the_content(); ?>
+							<!-- Read More Link -->
 						</section>
 						
 						<!-- Stats -->
