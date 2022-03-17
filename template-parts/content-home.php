@@ -3,30 +3,19 @@
  * Template part for displaying post content in home.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
  * @package five-freedoms-ranch
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-	</header><!-- .entry-header -->
-
-	<?php five_freedoms_ranch_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
-		the_content();
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'five-freedoms-ranch' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
-
-</article><!-- #post-<?php the_ID(); ?> -->
+	<div class="blog-img">
+		<!-- image size options are: thumbnail, medium, large -->
+		<?php echo get_the_post_thumbnail($post->ID, 'thumbnail'); ?>
+	</div>
+	<div class="blog-card-body">
+		<?php the_title('<h4>', '</h4>'); ?>
+		<?php the_excerpt(); ?>
+		<a href="<?php the_permalink(); ?>">read more</a>
+	</div>
+</article>

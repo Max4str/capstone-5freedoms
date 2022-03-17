@@ -1,5 +1,7 @@
 <?php
 /**
+ * ANNOUNCEMENTS PAGE - Max
+ * 
  * The template for displaying all blog posts
  *
  * This is the template that displays all pages by default.
@@ -8,12 +10,11 @@
  * different template.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
  * @package five-freedoms-ranch
  */
-
-get_header();
 ?>
+
+<?php get_header(); ?>
 
 	<main id="primary" class="site-main">
 
@@ -28,5 +29,4 @@ get_header();
 
 	</main><!-- #main -->
 
-<?php
-get_footer();
+<?php get_footer(); ?>
