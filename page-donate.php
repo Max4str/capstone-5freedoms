@@ -42,7 +42,9 @@ get_header();
 							<p><?php _e($banner_text); ?></p>
 						<?php endif; ?>
 						
-					<?php endif; ?>
+					<?php endif; the_content(); ?>
+
+					
 				</div>
 
 
@@ -84,7 +86,10 @@ get_header();
 								<?php while($donate_options->have_posts()) : $donate_options->the_post(); ?>
 									<div class="donate-card">
 										<a class="donate-card-title" href="<?php the_permalink(); ?>"><?php the_title('<h4>', '</h4>'); ?></a>
-										<p class="donate-card-text"><?php the_content(); ?></p>
+										<?php $short_description = get_field('short_description'); ?>
+										<?php if($short_description): ?>
+											<p class="donate-card-text"><?php _e($short_description); ?></p>
+										<?php endif; ?>
 									</div>
 								<?php endwhile; ?>
 								<!-- end while loop -->
