@@ -1,8 +1,6 @@
 <?php
 /**
- * The template for displaying about page
- *
- * Template Name: Donate
+ * The template for displaying Donate Page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
