@@ -1,8 +1,6 @@
 <?php
 /**
- * The template for displaying about page
- *
- * Template Name: About
+ * The template for displaying About Content page
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
