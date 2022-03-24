@@ -67,15 +67,32 @@ get_header();
 									<p><?php _e($intro_text); ?></p>
 								<?php endif; ?>
 
+								<!-- Read More -->
+								<?php $intro_read_more = $intro['intro_read_more']; ?>
+								<?php if($intro_read_more): ?>
+									<div class="read-more">
+										<p class="read-more-link">
+											read more 
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
+											<g id="plus_icon" data-name="plus icon" transform="translate(-299.5 -1152)">
+												<line id="Line_4" data-name="Line 4" x2="8" transform="translate(300.5 1157)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+												<line id="Line_5" data-name="Line 5" y2="8" transform="translate(304.5 1153)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+											</g>
+											</svg>
+										</p>
+										<p class="read-more-text"><?php _e($intro_read_more); ?></p>
+									</div>
+								<?php endif; ?>
+
 							<?php endif; ?>
 						</section>
 						
 						<!-- Stats -->
 						<div class="stat">
 							<div class="stat-circle">
-								<div>Meet</div>
-								<div>Adopt</div>
-								<div>Donate</div>
+								<div class="stat-meet"><p>Meet</p></div>
+								<div class="stat-adopt"><p>Adopt</p></div>
+								<div class="stat-donate"><p>Donate</p></div>
 							</div>
 
 							<?php $stats = get_field('stats'); ?>
@@ -89,7 +106,7 @@ get_header();
 										<!-- Number -->
 										<?php $stat_field_one_number = $stat_field_one['stat_field_one_number']; ?>
 										<?php if($stat_field_one_number): ?>
-											<p><?php _e($stat_field_one_number); ?></p>
+											<p class="stat-number"><?php _e($stat_field_one_number); ?></p>
 										<?php endif; ?>
 										
 										<!-- Title -->
@@ -109,7 +126,7 @@ get_header();
 										<!-- Number -->
 										<?php $stat_field_two_number = $stat_field_two['stat_field_two_number']; ?>
 										<?php if($stat_field_two_number): ?>
-											<p><?php _e($stat_field_two_number); ?></p>
+											<p class="stat-number"><?php _e($stat_field_two_number); ?></p>
 										<?php endif; ?>
 										
 										<!-- Title -->
@@ -129,7 +146,7 @@ get_header();
 										<!-- Number -->
 										<?php $stat_field_three_number = $stat_field_three['stat_field_three_number']; ?>
 										<?php if($stat_field_three_number): ?>
-											<p><?php _e($stat_field_three_number); ?></p>
+											<p class="stat-number"><?php _e($stat_field_three_number); ?></p>
 										<?php endif; ?>
 										
 										<!-- Title -->
@@ -149,7 +166,7 @@ get_header();
 										<!-- Number -->
 										<?php $stat_field_four_number = $stat_field_four['stat_field_four_number']; ?>
 										<?php if($stat_field_four_number): ?>
-											<p><?php _e($stat_field_four_number); ?></p>
+											<p class="stat-number"><?php _e($stat_field_four_number); ?></p>
 										<?php endif; ?>
 										
 										<!-- Title -->
@@ -198,7 +215,7 @@ get_header();
 							<!-- Title-->
 							<?php $section_two_title = $section_two['section_two_title']; ?>
 							<?php if($section_two_title): ?>
-								<h3><?php _e($section_two_title); ?></h3>
+								<h3 class="ms-title dk-blue" onclick="AboutMissionVission(event,'mission')"><?php _e($section_two_title); ?></h3>
 							<?php endif; ?>
 						<?php endif; ?>
 
@@ -208,7 +225,7 @@ get_header();
 							<!-- Title-->
 							<?php $section_three_title = $section_three['section_three_title']; ?>
 							<?php if($section_three_title): ?>
-								<h3><?php _e($section_three_title); ?></h3>
+								<h3 class="ms-title" onclick="AboutMissionVission(event,'vision')"><?php _e($section_three_title); ?></h3>
 							<?php endif; ?>
 						<?php endif; ?>
 					</section>
@@ -221,7 +238,7 @@ get_header();
 							<!-- List -->
 							<?php $section_two_list = $section_two['section_two_list']; ?>
 							<?php if($section_two_list): ?>
-								<ol>
+								<ul id="mission" class="ms-content list">
 
 									<?php $list_item_1 = $section_two_list['list_item_1']; ?>
 									<?php if($list_item_1): ?>
@@ -248,7 +265,7 @@ get_header();
 										<li><?php _e($list_item_5); ?></li>
 									<?php endif; ?>
 
-								</ol>
+								</ul>
 							<?php endif; ?>
 
 						<?php endif; ?>
@@ -260,12 +277,10 @@ get_header();
 						<?php $section_three = get_field('section_three'); ?>
 						<?php if($section_three): ?>
 						
-							
-							
 							<!-- Text -->
 							<?php $section_three_text = $section_three['section_three_text']; ?>
 							<?php if($section_three_text): ?>
-								<p><?php _e($section_three_text); ?></p>
+								<p id="vision" class="ms-content " style="display:none"><?php _e($section_three_text); ?></p>
 							<?php endif; ?>
 
 						<?php endif; ?>

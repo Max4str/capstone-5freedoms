@@ -26,36 +26,46 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'five-freedoms-ranch' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<div class="header-top">
+			<div class="site-branding">
 				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				the_custom_logo();
+				if ( is_front_page() && is_home() ) :
+					?>
+					<a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><h1><?php bloginfo( 'name' ); ?></h1></a>
+					<?php
+				else :
+					?>
+					<a class="site-title" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><h1><?php bloginfo( 'name' ); ?></h1></a>
+					<?php
+				endif;
+				$five_freedoms_ranch_description = get_bloginfo( 'description', 'display' );
+				if ( $five_freedoms_ranch_description || is_customize_preview() ) :
+					?>
+					<p class="site-description"><?php echo $five_freedoms_ranch_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<?php endif; ?>
+			</div><!-- .site-branding -->
+			
+			<nav id="site-navigation" class="main-navigation">
+				<div class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 18">
+					<g id="Menu_Icon" data-name="Menu Icon" transform="translate(1 1)">
+						<line id="Line_1" data-name="Line 1" x2="12" transform="translate(12)" fill="none" stroke="#4365ee" stroke-linecap="round" stroke-width="2"/>
+						<line id="Line_2" data-name="Line 2" x2="24" transform="translate(0 8)" fill="none" stroke="#4365ee" stroke-linecap="round" stroke-width="2"/>
+						<line id="Line_3" data-name="Line 3" x2="16" transform="translate(8 16)" fill="none" stroke="#4365ee" stroke-linecap="round" stroke-width="2"/>
+					</g>
+					</svg>
+				</div>
 				<?php
-			endif;
-			$five_freedoms_ranch_description = get_bloginfo( 'description', 'display' );
-			if ( $five_freedoms_ranch_description || is_customize_preview() ) :
+				wp_nav_menu(
+					array(
+						'theme_location' => 'main-menu', 
+						'menu_id'        => 'main-menu',
+					)
+				);
 				?>
-				<p class="site-description"><?php echo $five_freedoms_ranch_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Main Menu', 'five-freedoms-ranch' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'main-menu',
-					'menu_id'        => 'main-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+			</nav><!-- #site-navigation -->
+		</div>
 
 		<!-- Header Donate Btn -->
 

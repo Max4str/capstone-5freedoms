@@ -183,14 +183,16 @@ function five_freedoms_ranch_scripts() {
 	wp_style_add_data( 'five-freedoms-ranch-style', 'rtl', 'replace' );
 
 	//GOOGLE FONTS
-    // wp_enqueue_style('oxygen','https://fonts.googleapis.com/css2?family=Oxygen:wght@300;700&display=swap',false);
+    wp_enqueue_style('Poppins','https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap',false);
+	wp_enqueue_style('Lato','https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap',false);
 
 	// STYLE
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
-    wp_enqueue_style( 'reset', get_template_directory_uri() . '/css/reset.css') ;
-    wp_enqueue_style( 'styles', get_template_directory_uri() . '/css/styles.css') ;
+    wp_enqueue_style( 'reset', get_template_directory_uri() . '/assets/css/reset.css') ;
+    wp_enqueue_style( 'styles', get_template_directory_uri() . '/assets/css/styles.css') ;
 
 	wp_enqueue_script( 'five-freedoms-ranch-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
