@@ -56,4 +56,11 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+
+		<!-- Header Donate Btn -->
+
+		<?php if(is_active_sidebar('donate-btn')):?>
+			<?php dynamic_sidebar('donate-btn'); ?>
+		<?php endif; ?>
+
 	</header><!-- #masthead -->

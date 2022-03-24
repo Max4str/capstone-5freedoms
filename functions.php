@@ -121,6 +121,19 @@ add_action( 'after_setup_theme', 'five_freedoms_ranch_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function five_freedoms_ranch_widgets_init() {
+	// Header Donate Btn
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Header Donate Btn', 'five-freedoms-ranch' ),
+			'id'            => 'donate-btn',
+			'description'   => esc_html__( 'Add widgets here.', 'five-freedoms-ranch' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5 class="widget-title">',
+			'after_title'   => '</h5>',
+		)
+	);
+
 	// Footer Contact Info
 	register_sidebar(
 		array(

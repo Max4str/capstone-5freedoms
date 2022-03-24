@@ -52,8 +52,22 @@ get_header();
 
 						<!-- Intro -->
 						<section class="intro-bg">
-							<?php the_content(); ?>
-							<!-- Read More Link -->
+							<?php $intro = get_field('intro'); ?>
+							<?php if($intro): ?>
+							
+								<!-- Title-->
+								<?php $intro_title = $section_one['intro_title']; ?>
+								<?php if($intro_title): ?>
+									<h3><?php _e($intro_title); ?></h3>
+								<?php endif; ?>
+								
+								<!-- Text -->
+								<?php $intro_text = $section_one['intro_text']; ?>
+								<?php if($intro_text): ?>
+									<p><?php _e($intro_text); ?></p>
+								<?php endif; ?>
+
+							<?php endif; ?>
 						</section>
 						
 						<!-- Stats -->
@@ -152,6 +166,7 @@ get_header();
 						</section>
 					</div>
 
+					
 
 					<!-- Story -->
 
@@ -181,9 +196,36 @@ get_header();
 						<?php if($section_two): ?>
 						
 							<!-- Title-->
-							<?php $section_two_title = $section_two['section_two_title']; ?>
-							<?php if($section_two_title): ?>
-								<h3><?php _e($section_two_title); ?></h3>
+							<?php $section_two_list = $section_two['section_two_list']; ?>
+							<?php if($section_two_list): ?>
+								<ol>
+
+									<?php $list_item_1 = $section_two_list['list_item_1']; ?>
+									<?php if($list_item_1): ?>
+										<li><?php _e($list_item_1); ?></li>
+									<?php endif; ?>
+
+									<?php $list_item_2 = $section_two_list['list_item_2']; ?>
+									<?php if($list_item_2): ?>
+										<li><?php _e($list_item_2); ?></li>
+									<?php endif; ?>
+
+									<?php $list_item_3 = $section_two_list['list_item_3']; ?>
+									<?php if($list_item_3): ?>
+										<li><?php _e($list_item_3); ?></li>
+									<?php endif; ?>
+
+									<?php $list_item_4 = $section_two_list['list_item_4']; ?>
+									<?php if($list_item_4): ?>
+										<li><?php _e($list_item_4); ?></li>
+									<?php endif; ?>
+
+									<?php $list_item_5 = $section_two_list['list_item_5']; ?>
+									<?php if($list_item_5): ?>
+										<li><?php _e($list_item_5); ?></li>
+									<?php endif; ?>
+
+								</ol>
 							<?php endif; ?>
 							
 							<!-- Text -->
