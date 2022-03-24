@@ -56,13 +56,13 @@ get_header();
 							<?php if($intro): ?>
 							
 								<!-- Title-->
-								<?php $intro_title = $section_one['intro_title']; ?>
+								<?php $intro_title = $intro['intro_title']; ?>
 								<?php if($intro_title): ?>
 									<h3><?php _e($intro_title); ?></h3>
 								<?php endif; ?>
 								
 								<!-- Text -->
-								<?php $intro_text = $section_one['intro_text']; ?>
+								<?php $intro_text = $intro['intro_text']; ?>
 								<?php if($intro_text): ?>
 									<p><?php _e($intro_text); ?></p>
 								<?php endif; ?>
@@ -71,7 +71,7 @@ get_header();
 						</section>
 						
 						<!-- Stats -->
-						<section class="stat">
+						<div class="stat">
 							<div class="stat-circle">
 								<div>Meet</div>
 								<div>Adopt</div>
@@ -163,10 +163,9 @@ get_header();
 
 							<?php endif; ?>
 							
-						</section>
+						</div>
 					</div>
 
-					
 
 					<!-- Story -->
 
@@ -190,12 +189,36 @@ get_header();
 					</section>
 
 
-					<!-- Mission -->
-					<section class="section-two">
+					<!-- Mission & Vision Title -->
+					
+					<section class="section-title">
 						<?php $section_two = get_field('section_two'); ?>
 						<?php if($section_two): ?>
 						
 							<!-- Title-->
+							<?php $section_two_title = $section_two['section_two_title']; ?>
+							<?php if($section_two_title): ?>
+								<h3><?php _e($section_two_title); ?></h3>
+							<?php endif; ?>
+						<?php endif; ?>
+
+						<?php $section_three = get_field('section_three'); ?>
+						<?php if($section_three): ?>
+						
+							<!-- Title-->
+							<?php $section_three_title = $section_three['section_three_title']; ?>
+							<?php if($section_three_title): ?>
+								<h3><?php _e($section_three_title); ?></h3>
+							<?php endif; ?>
+						<?php endif; ?>
+					</section>
+
+
+					<div class="section-two">
+						<?php $section_two = get_field('section_two'); ?>
+						<?php if($section_two): ?>
+
+							<!-- List -->
 							<?php $section_two_list = $section_two['section_two_list']; ?>
 							<?php if($section_two_list): ?>
 								<ol>
@@ -227,27 +250,17 @@ get_header();
 
 								</ol>
 							<?php endif; ?>
-							
-							<!-- Text -->
-							<?php $section_two_text = $section_two['section_two_text']; ?>
-							<?php if($section_two_text): ?>
-								<p><?php _e($section_two_text); ?></p>
-							<?php endif; ?>
 
 						<?php endif; ?>
-					</section>
+					</div>
 
 
 					<!-- Vision -->
-					<section class="section-three">
+					<div class="section-three">
 						<?php $section_three = get_field('section_three'); ?>
 						<?php if($section_three): ?>
 						
-							<!-- Title-->
-							<?php $section_three_title = $section_three['section_three_title']; ?>
-							<?php if($section_three_title): ?>
-								<h3><?php _e($section_three_title); ?></h3>
-							<?php endif; ?>
+							
 							
 							<!-- Text -->
 							<?php $section_three_text = $section_three['section_three_text']; ?>
@@ -256,7 +269,7 @@ get_header();
 							<?php endif; ?>
 
 						<?php endif; ?>
-					</section>
+					</div>
 
 				<?php
 					wp_link_pages(

@@ -41,15 +41,16 @@ get_header();
 						<?php if($banner_text): ?>
 							<p><?php _e($banner_text); ?></p>
 						<?php endif; ?>
-						
-					<?php endif; the_content(); ?>
 
-					
+					<?php endif; ?>					
 				</div>
 
+				<!-- Fundraiser -->
+				<section>
+					<?php the_content(); ?>
+				</section>
 
 				<!-- Donate -->
-
 				<section class="donate">
 					<?php $donate_options = get_field('donate_options'); ?>
 					<?php if($donate_options): ?>
@@ -102,13 +103,13 @@ get_header();
 				
 
 				<!-- Quote -->
-				<section>
+				<div class="quote">
 					<?php $quote = get_field('quote'); ?>
 					<?php if($quote): ?>
 						<p><?php _e($quote); ?></p>
 					<?php endif; ?>
 
-				</section>
+				</div>
 
 				
 				<!-- Intructions -->
