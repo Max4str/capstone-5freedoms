@@ -49,6 +49,7 @@
 			<div>
 
 				<!-- NEWEST BLOG POSTS HERE (2-3 of them) -->
+				<!-- setup a query to display the first 3 blog posts. show 3 posts and output the image, title, excerpt, and read more -->
 
 			</div>
 			<a href="#" class="btn">More announcements</a>
@@ -102,28 +103,99 @@
 
 
 		<!-- STATISTICS -->
-		<section class="home-statistics">
-			<div>
-				<img src="" alt="">
-				<div>
-					<div>
-						<p></p>
-						<p></p>
-					</div>
-					<div>
-						<p></p>
-						<p></p>
-					</div>
-					<div>
-						<p></p>
-						<p></p>
-					</div>
-					<div>
-						<p></p>
-						<p></p>
-					</div>
-				</div>
+		<!-- Stats -->
+		<section class="stat">
+			<div class="stat-circle">
+				<div>Meet</div>
+				<div>Adopt</div>
+				<div>Donate</div>
 			</div>
+
+			<?php $stats = get_field('stats'); ?>
+			<?php if($stats): ?>
+		
+				<!-- Stat Field 1 -->
+				<div class="stat-info">
+					<?php $stat_field_one = $stats['stat_field_one']; ?>
+					<?php if($stat_field_one): ?>
+				
+						<!-- Number -->
+						<?php $stat_field_one_number = $stat_field_one['stat_field_one_number']; ?>
+						<?php if($stat_field_one_number): ?>
+							<p><?php _e($stat_field_one_number); ?></p>
+						<?php endif; ?>
+						
+						<!-- Title -->
+						<?php $stat_field_one_title = $stat_field_one['stat_field_one_title']; ?>
+						<?php if($stat_field_one_title): ?>
+							<p><?php _e($stat_field_one_title); ?></p>
+						<?php endif; ?>
+
+					<?php endif; ?>
+				</div>
+
+				<!-- Stat Field 2 -->
+				<div class="stat-info">
+					<?php $stat_field_two = $stats['stat_field_two']; ?>
+					<?php if($stat_field_two): ?>
+				
+						<!-- Number -->
+						<?php $stat_field_two_number = $stat_field_two['stat_field_two_number']; ?>
+						<?php if($stat_field_two_number): ?>
+							<p><?php _e($stat_field_two_number); ?></p>
+						<?php endif; ?>
+						
+						<!-- Title -->
+						<?php $stat_field_two_title = $stat_field_two['stat_field_two_title']; ?>
+						<?php if($stat_field_two_title): ?>
+							<p><?php _e($stat_field_two_title); ?></p>
+						<?php endif; ?>
+
+					<?php endif; ?>
+				</div>
+
+				<!-- Stat Field 3 -->
+				<div class="stat-info">
+					<?php $stat_field_three = $stats['stat_field_three']; ?>
+					<?php if($stat_field_three): ?>
+				
+						<!-- Number -->
+						<?php $stat_field_three_number = $stat_field_three['stat_field_three_number']; ?>
+						<?php if($stat_field_three_number): ?>
+							<p><?php _e($stat_field_three_number); ?></p>
+						<?php endif; ?>
+						
+						<!-- Title -->
+						<?php $stat_field_three_title = $stat_field_three['stat_field_three_title']; ?>
+						<?php if($stat_field_three_title): ?>
+							<p><?php _e($stat_field_three_title); ?></p>
+						<?php endif; ?>
+
+					<?php endif; ?>
+				</div>
+
+				<!-- Stat Field 4 -->
+				<div class="stat-info">
+					<?php $stat_field_four = $stats['stat_field_four']; ?>
+					<?php if($stat_field_four): ?>
+				
+						<!-- Number -->
+						<?php $stat_field_four_number = $stat_field_four['stat_field_four_number']; ?>
+						<?php if($stat_field_four_number): ?>
+							<p><?php _e($stat_field_four_number); ?></p>
+						<?php endif; ?>
+						
+						<!-- Title -->
+						<?php $stat_field_four_title = $stat_field_four['stat_field_four_title']; ?>
+						<?php if($stat_field_four_title): ?>
+							<p><?php _e($stat_field_four_title); ?></p>
+						<?php endif; ?>
+
+					<?php endif; ?>
+				</div>
+
+			<?php endif; ?>
+			
 		</section>
 		<!-- END: STATISTICS -->
 
