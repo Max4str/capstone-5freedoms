@@ -1,3 +1,5 @@
+//BASE
+
 * {
     font-size: 100%;
 }
@@ -40,6 +42,9 @@ h4 {
     font-weight: 600;
     letter-spacing: 1px;
 }
+
+
+// HEADER 
 
 .site-title {
     font: 300 1.25rem/1.4 'Poppins', sans-serif;
@@ -84,11 +89,17 @@ h4 {
     }
 }
 
+
+// BANNER
+
 .banner {
     h2{
         writing-mode: vertical-lr;
     }
 }
+
+
+// ABOUT
 
 .intro-bg,
 .intro-bg h3 {
@@ -125,6 +136,9 @@ h4 {
     color: #2d5180;
     border-bottom: 1px solid #2d5180;
 }
+
+
+// DONATE
 
 .give-form-wrap {
     h2 {
@@ -300,9 +314,11 @@ form.give-form {
 }
 
 
+// DONATE SINGLE VIEW
 
 
 
+// FOOTER
 
 footer {
     .site-title {
