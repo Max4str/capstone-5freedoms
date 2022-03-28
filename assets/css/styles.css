@@ -4,6 +4,7 @@
 
 body {
   font: 400 1.125rem/1.65 "Lato", sans-serif;
+  color: #454545;
   letter-spacing: 0.5px;
   font-kerning: normal;
 }
@@ -31,6 +32,7 @@ h3 {
 
 h4 {
   font: 500 1.5rem/1 "Poppins", sans-serif;
+  letter-spacing: 0;
 }
 
 .read-more-link {
@@ -40,10 +42,21 @@ h4 {
 
 .site-title {
   font: 300 1.25rem/1.4 "Poppins", sans-serif;
-  display: none;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 .site-title span {
   font-weight: 700;
+}
+
+.menu-main-menu-container li:hover a {
+  color: #bbe3f8;
+}
+.menu-main-menu-container li:first-of-type:hover a {
+  color: #4365ee;
+}
+.menu-main-menu-container a {
+  color: #fff;
 }
 
 .menu-sub-menu-container a {
@@ -93,6 +106,204 @@ h4 {
   border-bottom: 1px solid #2d5180;
 }
 
+.give-form-wrap h2 {
+  font: 300 2rem/1.3 "Poppins", sans-serif;
+  text-transform: capitalize;
+  color: #4365ee;
+  letter-spacing: 0;
+}
+.give-form-wrap .give-goal-progress .raised {
+  font: 700 1.125rem "Poppin", sans-serif;
+  text-align: right;
+}
+.give-form-wrap .give-goal-progress .income {
+  font: inherit;
+  letter-spacing: 0.5px;
+  color: #f07b57;
+}
+
+form.give-form {
+  font-family: "Poppins", sans-serif;
+}
+form.give-form .give-donation-amount .give-currency-symbol {
+  color: #fff;
+}
+form.give-form .give-donation-amount #give-amount {
+  font-size: 1.75rem;
+  color: #4365ee;
+}
+form.give-form .give-btn-reveal {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #2d5180;
+}
+form.give-form .give-btn-reveal i {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1;
+}
+form.give-form legend {
+  color: #2d5180;
+  font: 800 2rem/1.3 "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+form.give-form label.give-label {
+  font-weight: 500;
+  letter-spacing: 0;
+}
+form.give-form #give-final-total-wrap {
+  margin: 2.125rem 0;
+}
+form.give-form #give-final-total-wrap .give-donation-total-label {
+  color: #fff;
+}
+form.give-form #give-final-total-wrap .give-final-total-amount {
+  font-size: 1.75rem;
+  color: #f9ac55;
+}
+form.give-form input[type=submit] {
+  font: 600 1rem "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#give-donation-level-button-wrap > li button {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #f9ac55;
+}
+#give-donation-level-button-wrap > li button:hover {
+  color: #fff;
+}
+
+.donate-options {
+  color: #fff;
+}
+.donate-options h4 {
+  color: #fff;
+}
+
+.donate-card a {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+.donate-card:first-child a {
+  color: #f07b57;
+}
+.donate-card:first-child a:hover {
+  color: #fff;
+}
+.donate-card:nth-child(2) a {
+  color: #f9ac55;
+}
+.donate-card:nth-child(2) a:hover {
+  color: #fff;
+}
+.donate-card:nth-child(3) a {
+  color: #4365ee;
+}
+.donate-card:nth-child(3) a:hover {
+  color: #fff;
+}
+.donate-card:last-child a {
+  color: #2d5180;
+}
+.donate-card:last-child a:hover {
+  color: #fff;
+}
+
+.quote {
+  font: 200 1.875rem/1.7 "Poppins", sans-serif;
+  font-style: italic;
+  color: #2d5180;
+}
+
+.quote-mark {
+  font: 300 15rem/1 "Poppins", sans-serif;
+  color: #bbe3f8;
+  letter-spacing: 0;
+}
+
+.step-number {
+  font: 500 2.125rem/1 "Poppins", sans-serif;
+  letter-spacing: 0;
+  color: #2d5180;
+}
+
+footer .site-title {
+  color: #454545;
+  font-size: 0.875rem;
+}
+footer a {
+  color: #454545;
+}
+
+.contact i {
+  font-size: 1rem;
+  color: #f9ac55;
+}
+
+.social i {
+  font-size: 1.5rem;
+  color: #454545;
+}
+
+.hours span {
+  font: 600 1.125rem "Poppins", sans-serif;
+  text-transform: uppercase;
+  color: #f9ac55;
+}
+.hours a:hover {
+  color: #f9ac55;
+}
+
+.contact-form label {
+  font: 500 1.125rem "Poppins", sans-serif;
+  letter-spacing: 0;
+  color: #454545;
+  text-transform: capitalize;
+}
+.contact-form input::placeholder {
+  font: 400 1rem/1 "Lato", sans-serif;
+  font-style: italic;
+  color: #b3b3b3;
+}
+.contact-form input[type=submit] {
+  font: 600 1rem "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.contact-form input[type=submit]:hover {
+  color: #4365ee;
+}
+
+.wpcf7-spinner {
+  display: none;
+}
+
+.form-title {
+  font: 600 1.125rem "Poppins", sans-serif;
+  text-transform: uppercase;
+  color: #4365ee;
+}
+
+.site-info p,
+.site-info a {
+  font: 400 0.875rem/1.5 "Lato", sans-serif;
+  letter-spacing: 0;
+  color: #454545;
+}
+
+.policy {
+  display: flex;
+}
+.policy span {
+  margin: 0 0.5rem;
+}
+
 h3 {
   margin-bottom: 2rem;
 }
@@ -104,9 +315,22 @@ h4 {
 a {
   display: block;
   text-decoration: none;
+  cursor: pointer;
 }
 
 ul {
+  margin: 0;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+.entry-content {
+  margin: 0;
+}
+
+.page {
   margin: 0;
 }
 
@@ -127,12 +351,13 @@ ul {
 
 header {
   padding: 1rem 1rem 2rem;
-}
-header img {
-  max-width: 3.5rem;
+  position: relative;
 }
 header svg {
-  width: 2.25rem;
+  width: 1.875rem;
+}
+header .site-title {
+  display: none;
 }
 
 .header-top {
@@ -142,12 +367,43 @@ header svg {
   margin-bottom: 0.5rem;
 }
 
+.site-branding {
+  display: flex;
+}
+.site-branding img {
+  max-width: 3.5rem;
+  margin-right: 0.5rem;
+}
+
 .site-title h1 {
   display: none;
 }
 
 .main-navigation {
   width: fit-content;
+}
+
+.menu-main-menu-container {
+  border-bottom-right-radius: 2px;
+  background-color: #2d5180;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: calc(25% + 0.5rem);
+}
+.menu-main-menu-container ul {
+  padding: 2rem 0;
+}
+.menu-main-menu-container li:first-of-type {
+  background-color: #4365ee;
+  border-radius: 0 2px 2px 0;
+  max-width: calc(66.6666666667% + 0.5rem);
+}
+.menu-main-menu-container li:first-of-type:hover {
+  background-color: #fff;
+}
+.menu-main-menu-container a {
+  padding: 1rem;
 }
 
 .menu-sub-menu-container a {
@@ -185,6 +441,10 @@ header svg {
   padding: 3.75rem 1rem;
   background-color: #4365ee;
   margin-bottom: 5rem;
+}
+
+.read-more {
+  cursor: pointer;
 }
 
 .read-more-text {
@@ -226,6 +486,7 @@ header svg {
 .stat-meet {
   background-color: #2d5180;
   left: 1rem;
+  z-index: 200;
 }
 
 .stat-adopt {
@@ -233,6 +494,7 @@ header svg {
   left: 0;
   right: 0;
   margin: 0 auto;
+  z-index: 100;
 }
 
 .stat-donate {
@@ -249,10 +511,322 @@ header svg {
   display: flex;
   justify-content: space-between;
   padding: 0 1rem;
+  cursor: pointer;
 }
 
-.section-two,
-.section-three {
+.section-two .ms-content,
+.section-three .ms-content {
   padding: 0 1rem;
   margin-bottom: 5rem;
+}
+
+.ms-content li {
+  margin-bottom: 0 1rem;
+}
+
+.fundraiser {
+  padding: 0 1rem;
+  margin-bottom: 5rem;
+}
+
+.give-form-wrap .give-form-title {
+  margin: 0 0 2rem;
+}
+.give-form-wrap .give-form-progress .raised {
+  margin: 0 0 0.5rem auto;
+}
+.give-form-wrap .give-form-content-wrap > p {
+  margin-bottom: 2.125rem;
+}
+.give-form-wrap .give-progress-bar {
+  background-color: #bbe3f8;
+  display: block;
+  width: 100%;
+  height: 0.75rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+.give-form-wrap .give-progress-bar span {
+  border-radius: 10px;
+}
+
+form.give-form .give-donation-amount {
+  float: none;
+  display: flex;
+  max-width: fit-content;
+  align-items: flex-end;
+}
+form.give-form .give-donation-amount .give-currency-symbol {
+  background-color: #4365ee;
+  border: 1px solid #4365ee;
+}
+form.give-form .give-donation-amount .give-currency-symbol,
+form.give-form .give-donation-amount #give-amount {
+  border: none;
+  border-bottom: 1px solid #4365ee;
+  width: fit-content;
+  height: auto;
+  margin: 0 0 0 auto;
+}
+form.give-form .give-btn-reveal {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #2d5180;
+  background-color: #fff;
+  margin-top: 2.25rem;
+}
+form.give-form legend {
+  border: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+form.give-form .form-row {
+  margin-bottom: 2.125rem;
+}
+form.give-form label.give-label {
+  margin-bottom: 1rem;
+}
+form.give-form input.give-input[type=text],
+form.give-form input.give-input[type=email] {
+  background-color: #fff;
+  border: 0;
+  border-bottom: 1px solid #454545;
+  padding: 0 1rem 0.5rem;
+}
+form.give-form #give-final-total-wrap {
+  float: none;
+  display: flex;
+  display: none;
+  align-items: flex-end;
+}
+form.give-form #give-final-total-wrap .give-donation-total-label {
+  background-color: #f9ac55;
+  border: 1px solid #f9ac55;
+}
+form.give-form #give-final-total-wrap .give-final-total-amount {
+  border: none;
+  border-bottom: 1px solid #f9ac55;
+  width: fit-content;
+  height: auto;
+}
+form.give-form .give-submit-button-wrap {
+  max-width: fit-content;
+  margin: 0 0 0 auto;
+}
+form.give-form .give-submit-button-wrap input[type=submit] {
+  background-color: #4365ee;
+  border: 1px solid #4365ee;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+#give-donation-level-button-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 0.75rem;
+  grid-row-gap: 0.75rem;
+  margin: 2.125rem 0;
+}
+#give-donation-level-button-wrap::before {
+  display: none;
+}
+#give-donation-level-button-wrap > li {
+  float: none;
+  margin: 0;
+}
+#give-donation-level-button-wrap > li button {
+  border: 1.5px solid #f9ac55;
+  background-color: #fff;
+  padding: 3rem 0;
+  width: 100%;
+  margin: 0;
+}
+#give-donation-level-button-wrap > li button:hover {
+  background-color: #f9ac55;
+}
+
+.donate {
+  padding: 0 1rem;
+  margin-bottom: 5rem;
+}
+
+.donate-info {
+  margin-bottom: 3.75rem;
+}
+
+.donate-card {
+  padding: 2.125rem 1.5rem;
+  margin-bottom: 3rem;
+  border-radius: 5px;
+}
+.donate-card a {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  padding: 0.5rem 2rem;
+  margin: 2.125rem 0 0 auto;
+  width: fit-content;
+}
+.donate-card:first-child {
+  background-color: #f07b57;
+}
+.donate-card:first-child a:hover {
+  background-color: #f07b57;
+}
+.donate-card:nth-child(2) {
+  background-color: #f9ac55;
+}
+.donate-card:nth-child(2) a:hover {
+  background-color: #f9ac55;
+}
+.donate-card:nth-child(3) {
+  background-color: #4365ee;
+}
+.donate-card:nth-child(3) a:hover {
+  background-color: #4365ee;
+}
+.donate-card:last-child {
+  background-color: #2d5180;
+  margin: 0;
+}
+.donate-card:last-child a:hover {
+  background-color: #2d5180;
+}
+
+.quote {
+  padding: 0 1rem;
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+.quote-mark {
+  position: absolute;
+  top: -1.875rem;
+  right: 1rem;
+  z-index: -99;
+}
+
+.instruction {
+  padding: 0 1rem;
+  margin-bottom: 5rem;
+}
+
+.step-card {
+  padding: 2.125rem 1.5rem;
+  margin-bottom: 3rem;
+  border: 1px solid #2d5180;
+  border-radius: 5px;
+  position: relative;
+}
+
+.step-number {
+  position: absolute;
+  top: -1.75rem;
+  right: 1.5rem;
+  padding: 0.75rem;
+  background-color: #fff;
+}
+
+.footer-top {
+  border-top: 1px solid #2d5180;
+  border-bottom: 1px solid #2d5180;
+  padding: 3.75rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 3rem;
+}
+
+.site-branding {
+  grid-column: 1/-1;
+}
+.site-branding img {
+  max-width: 2.25rem;
+}
+
+.contact {
+  grid-column: 1/-1;
+}
+.contact p {
+  margin-bottom: 1.125rem;
+}
+
+.social {
+  grid-column: 1/2;
+}
+.social i {
+  margin-bottom: 2.25rem;
+}
+.social a:last-of-type i {
+  margin: 0;
+}
+
+.hours {
+  grid-column: 2/-1;
+}
+.hours a {
+  background-color: #f9ac55;
+  max-width: 66.6666666667%;
+  margin-top: 1rem;
+}
+.hours a:hover {
+  background-color: #fff;
+  border: 1px solid #f9ac55;
+}
+.hours p:first-of-type {
+  margin-bottom: 1rem;
+}
+
+.contact-form {
+  grid-column: 1/-1;
+}
+.contact-form form {
+  margin-top: 3rem;
+}
+.contact-form form p {
+  margin-bottom: 2rem;
+}
+.contact-form form p:last-of-type {
+  margin: 0;
+  text-align: right;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #4365EE;
+  border-radius: 2px;
+  padding: 0.75rem 1.125rem;
+  margin-top: 0.5rem;
+}
+.contact-form input:focus-visible,
+.contact-form select:focus-visible,
+.contact-form textarea:focus-visible {
+  border: 1px solid #4365EE;
+  outline: none;
+}
+.contact-form input[type=submit] {
+  background-color: #4365ee;
+  width: 75%;
+  cursor: pointer;
+}
+.contact-form input[type=submit]:hover {
+  border: 1px solid #4365ee;
+  background-color: #fff;
+}
+
+.form-title {
+  margin-bottom: 1rem;
+}
+
+.site-info {
+  padding: 1.25rem 1rem;
+}
+
+.policy {
+  margin-top: 1rem;
 }

@@ -1,27 +1,26 @@
 function AddSiteTitle(){
-    const siteTitle = document.getElementsByClassName('site-title')[0]
-    // const siteTitleLink = siteTitle.childNodes[0]
+    const siteTitle = document.getElementsByClassName('site-title')
+
+    for (var i = 0; i < siteTitle.length; i++) {
+        var span = document.createElement('span')
+        var spanText = document.createTextNode("5 Freedoms Ranch") 
+        var br = document.createElement('br')
+        var newSiteTitle = document.createTextNode("Rescue & Rehabilitation Society")
+        span.appendChild(spanText)
+
+        siteTitle[i].appendChild(span)
+        siteTitle[i].appendChild(br)
+        siteTitle[i].appendChild(newSiteTitle)
+    }
     
-
-    var span = document.createElement('span')
-    var spanText = document.createTextNode("5 Freedoms Ranch") 
-    var br = document.createElement('br')
-    var newSiteTitle = document.createTextNode("Rescue & Rehabilitation Society")
-    span.appendChild(spanText)
-
-    siteTitle.appendChild(span)
-    siteTitle.appendChild(br)
-    siteTitle.appendChild(newSiteTitle)
-
-    // console.log(siteTitleLink)
+    // console.log(siteTitle)
 }
 AddSiteTitle()
 
 
-function toggleIntroReadMore() {
-    document.querySelector('.intro-bg .read-more').addEventListener('click', toggle)
-
-    function toggle(e) {
+const link = document.querySelector('.intro-bg .read-more')
+if(link){
+    link.addEventListener('click', (e)=>{
         var text = document.querySelector('.read-more-text')
         if(text.classList.contains('show-text')){
             text.classList.remove('show-text')
@@ -31,9 +30,9 @@ function toggleIntroReadMore() {
         }
 
         e.preventDefault()
-    }
+    })
 }
-toggleIntroReadMore()
+
 
 
 function AboutMissionVission(e, sectName) {
@@ -57,3 +56,15 @@ function AboutMissionVission(e, sectName) {
     document.getElementById(sectName).style.display = "block";
     e.currentTarget.className += " dk-blue";
 }
+
+
+
+function addDonateRevealSvg() {
+    const donateRevealBtn = document.getElementsByClassName('give-btn-reveal')[0]    
+    
+    const icon = document.createElement('i')
+    icon.setAttribute('class', 'fa-solid fa-chevron-right' )
+
+    donateRevealBtn.appendChild(icon)
+}
+addDonateRevealSvg()

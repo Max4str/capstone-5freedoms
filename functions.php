@@ -172,6 +172,19 @@ function five_freedoms_ranch_widgets_init() {
 			'after_title'   => '</h5>',
 		)
 	);
+
+	// Footer Contact Form
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Form', 'five-freedoms-ranch' ),
+			'id'            => 'footer-form',
+			'description'   => esc_html__( 'Add widgets here.', 'five-freedoms-ranch' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5 class="widget-title">',
+			'after_title'   => '</h5>',
+		)
+	);
 }
 add_action( 'widgets_init', 'five_freedoms_ranch_widgets_init' );
 

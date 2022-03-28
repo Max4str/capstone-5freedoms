@@ -11,10 +11,25 @@ h4 {
 a {
     display: block;
     text-decoration: none;
+    cursor: pointer;
 }
 
 ul {
     margin: 0;   
+}
+
+input {
+    &:focus-visible{
+        outline: none;
+    }
+}
+
+.entry-content {
+    margin: 0;
+}
+
+.page {
+    margin: 0;
 }
 
 .widget {
@@ -38,14 +53,16 @@ ul {
 
 header {
     padding: 1rem 1rem 2rem;
-
-    img {
-        max-width: 3.5rem;
-    }
+    position: relative;
 
     svg {
-        width: 2.25rem;
+        width: 1.875rem;
     }
+
+    .site-title {
+        display: none;
+    }
+
 }
 
 .header-top {
@@ -53,6 +70,15 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: .5rem;
+}
+
+.site-branding {
+    display: flex;
+
+    img {
+        max-width: 3.5rem;
+        margin-right: .5rem;
+    }
 }
 
 .site-title {
@@ -63,6 +89,40 @@ header {
 
 .main-navigation {
     width: fit-content;
+}
+
+.menu-main-menu-container {
+    border-bottom-right-radius: 2px;
+    background-color: #2d5180;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: calc(25% + .5rem);
+
+    ul {
+        padding: 2rem 0;
+        // display: flex;
+        // flex-direction: column;
+    }
+
+    // li {
+    //     order: 1;
+    // }
+
+    li:first-of-type {
+        // order: 0;
+        background-color: #4365ee;
+        border-radius: 0 2px 2px 0;
+        max-width: calc(100% - (100%/3) + .5rem);
+
+        &:hover {
+            background-color: #fff;
+        }
+    }
+
+    a {
+        padding: 1rem;
+    }
 }
 
 .menu-sub-menu-container a {
@@ -112,6 +172,10 @@ header {
     margin-bottom: 5rem;
 }
 
+.read-more {
+    cursor: pointer;
+}
+
 .read-more-text {
     display: none;
 }
@@ -153,6 +217,7 @@ header {
 .stat-meet {
     background-color: #2d5180;
     left: 1rem;
+    z-index: 200;
 }
 
 .stat-adopt {
@@ -160,6 +225,7 @@ header {
     left: 0;
     right: 0;
     margin: 0 auto;
+    z-index: 100;
 }
 
 .stat-donate {
@@ -176,15 +242,386 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 0 1rem;
+    cursor: pointer;
 }
 
 .section-two,
 .section-three {
+    .ms-content {
+        padding: 0 1rem;
+        margin-bottom: 5rem;
+    }
+}
+
+.ms-content li {
+    margin-bottom: 0 1rem;
+}
+
+
+// DONATE
+.fundraiser {
     padding: 0 1rem;
     margin-bottom: 5rem;
 }
 
-// DONATE
+.give-form-wrap {
+    .give-form-title {
+        margin: 0 0 2rem;
+    }
+    
+    .give-form-progress {
+        .raised {
+            margin: 0 0 .5rem auto;
+        }
+    }
+
+    .give-form-content-wrap > p {
+        margin-bottom: 2.125rem;
+    }
+
+    .give-progress-bar {
+        background-color: #bbe3f8;
+        display: block;
+        width: 100%;
+        height: .75rem;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+
+        span {
+            border-radius: 10px;
+        }
+    }
+
+}
+
+form.give-form {
+    .give-donation-amount {
+        float: none;
+        display: flex;
+        max-width: fit-content;
+        align-items: flex-end;
+
+        .give-currency-symbol {
+            background-color: #4365ee;
+            border: 1px solid #4365ee;
+        }
+
+        .give-currency-symbol,
+        #give-amount {
+            border: none;
+            border-bottom: 1px solid #4365ee;
+            width: fit-content;
+            height: auto;
+            margin: 0 0 0 auto;
+        }
+    }
+    
+    .give-btn-reveal {
+        width: 100%;
+        padding: .5rem 1rem;
+        display: flex;
+        justify-content: space-between;
+        border: 0;
+        border-radius: 0;
+        border-bottom: 1px solid #2d5180;
+        background-color: #fff;;
+        margin-top: 2.25rem;
+    }
+
+    legend {
+        border: none;
+        padding: 0;
+        margin: 0 0 2rem;        
+    }
+    
+    .form-row {
+        margin-bottom: 2.125rem;
+    }
+
+    label.give-label {
+        margin-bottom: 1rem;
+    }
+
+    input.give-input[type=text],
+    input.give-input[type=email] {
+        background-color: #fff;
+        border: 0;
+        border-bottom: 1px solid #454545;
+        padding: 0 1rem .5rem;
+    }
+
+    #give-final-total-wrap {
+        float: none;
+        display: flex;
+        display: none;
+        align-items: flex-end;
+
+        .give-donation-total-label {
+            background-color: #f9ac55;
+            border: 1px solid #f9ac55;
+        }
+
+        .give-final-total-amount {
+            border: none;
+            border-bottom: 1px solid #f9ac55;
+            width: fit-content;
+            height: auto;
+        }
+    }
+
+    .give-submit-button-wrap {
+        max-width: fit-content;
+        margin: 0 0 0 auto;
+        
+        input[type=submit] {
+            background-color: #4365ee;
+            border: 1px solid #4365ee;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+    }
+                
+    
+}
+
+#give-donation-level-button-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: .75rem;
+    grid-row-gap: .75rem;
+    margin: 2.125rem 0 ;
+
+    &::before {
+        display: none;
+    }
+
+    & > li {
+        float: none;
+        margin: 0;
+
+        button {
+            border: 1.5px solid #f9ac55;
+            background-color: #fff;
+            padding: 3rem 0;
+            width: 100%;
+            margin: 0;
+            
+            &:hover {
+                background-color: #f9ac55;
+            }
+        }
+    }
+}
+
+
+.donate {
+    padding: 0 1rem;
+    margin-bottom: 5rem;
+}
+
+.donate-info {
+    margin-bottom: 3.75rem;
+}
+
+.donate-card {
+    padding: 2.125rem 1.5rem;
+    margin-bottom: 3rem;
+    border-radius: 5px;
+
+    a {
+        background-color: #fff;
+        border: 1px solid #fff;
+        border-radius: 2px;
+        padding: .5rem 2rem;
+        margin: 2.125rem 0 0 auto;
+        width: fit-content;
+    }
+
+    &:first-child {
+        background-color: #f07b57;
+
+        a:hover {
+            background-color: #f07b57;
+        }
+    }
+
+    &:nth-child(2) {
+        background-color: #f9ac55;
+
+        a:hover {
+            background-color: #f9ac55;
+        }
+    }
+
+    &:nth-child(3) {
+        background-color: #4365ee;
+
+        a:hover {
+            background-color: #4365ee;
+        }
+    }
+
+    &:last-child {
+        background-color: #2d5180;
+        margin: 0;
+
+        a:hover {
+            background-color: #2d5180;
+        }
+    }
+}
+
+.quote {
+    padding: 0 1rem;
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+.quote-mark {
+    position: absolute;
+    top: -1.875rem;
+    right: 1rem;
+    z-index: -99;
+}
+
+.instruction {
+    padding: 0 1rem;
+    margin-bottom: 5rem;
+}
+
+.step-card {
+    padding: 2.125rem 1.5rem;
+    margin-bottom: 3rem;
+    border: 1px solid #2d5180;
+    border-radius: 5px;
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    top: -1.75rem;
+    right: 1.5rem;
+    padding: .75rem;
+    background-color: #fff;
+}
+
+
+
+
 
 
 // FOOTER
+
+.footer-top {
+    border-top: 1px solid #2d5180;
+    border-bottom: 1px solid #2d5180;
+    padding: 3.75rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: .5rem;
+    grid-row-gap: 3rem;
+}
+
+.site-branding {
+    grid-column: 1/-1;
+
+    img {
+        max-width: 2.25rem;
+    }
+}
+
+.contact {
+    grid-column: 1/-1;
+
+    p {
+        margin-bottom: 1.125rem;
+    }
+}
+
+.social {
+    grid-column: 1/2;
+
+    i {
+        margin-bottom: 2.25rem;
+    }
+
+    a:last-of-type i {
+        margin: 0;
+    }
+}
+
+.hours {
+    grid-column: 2/-1;
+
+    a {
+        background-color: #f9ac55;
+        max-width: calc( 100% - (100% /3));
+        margin-top: 1rem;
+
+        &:hover {
+            background-color: #fff;
+            border: 1px solid #f9ac55;
+        }
+    }
+
+    p {
+        &:first-of-type {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.contact-form {
+    grid-column: 1/-1;
+    
+    form {
+        margin-top: 3rem;
+
+        p {
+            margin-bottom: 2rem;
+        }
+
+        p:last-of-type {
+            margin: 0 ;
+            text-align: right;
+        }
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        border: 1px solid #4365EE;
+        border-radius: 2px;
+        padding: .75rem 1.125rem;
+        margin-top: .5rem;
+
+        &:focus-visible {
+            border: 1px solid #4365EE;
+            outline: none;
+        }
+    }
+
+    input[type=submit] {
+        background-color: #4365ee;
+        width: 75%;
+        cursor: pointer;
+
+        &:hover {
+            border: 1px solid #4365ee;
+            background-color: #fff;
+        }
+    }
+}
+
+.form-title {
+    margin-bottom: 1rem;
+}
+
+.site-info {
+    padding: 1.25rem 1rem;
+}
+
+.policy {
+    margin-top: 1rem;
+}
