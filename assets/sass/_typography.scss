@@ -43,6 +43,15 @@ h4 {
     letter-spacing: 1px;
 }
 
+input,
+textarea {
+    &::placeholder {
+        font: 300 1rem/1 'Poppins', sans-serif; 
+        font-style: italic;
+        color: #b3b3b3;
+    }
+}
+
 
 // HEADER 
 
@@ -314,7 +323,17 @@ form.give-form {
 }
 
 
-// DONATE SINGLE VIEW
+// DONATE OPTION SINGLE
+
+.note {
+    font: 500 1rem 'Poppins', sans-serif;
+    letter-spacing: 0;
+    color: #4365ee;
+
+    i {
+        text-align: right;
+    }
+}
 
 
 
@@ -367,14 +386,6 @@ footer {
         text-transform: capitalize;
     }
 
-    input {
-        &::placeholder {
-            font: 400 1rem/1 'Lato', sans-serif; 
-            font-style: italic;
-            color: #b3b3b3;
-        }
-    }
-
     input[type=submit] {
         font: 600 1rem 'Poppins', sans-serif;
         letter-spacing: 0.5px;
@@ -411,4 +422,16 @@ footer {
     span {
         margin: 0 .5rem;
     }
+}
+
+
+
+// WIDTH 520px
+
+@media screen and (min-width: 520px) {
+    
+    h2 {
+        font-size: 4rem;
+    }
+
 }

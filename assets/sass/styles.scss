@@ -95,36 +95,44 @@ header {
 }
 
 .menu-main-menu-container {
-    border-bottom-right-radius: 2px;
-    background-color: #2d5180;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: calc(25% + .5rem);
-
     ul {
-        padding: 2rem 0;
+        width: 75%;
+        padding: 2.125rem 0;
+        display: block;
+        border-bottom-right-radius: 5px;
+        background-color: #2d5180;
+        position: fixed;
+        top: 0;
+        left: -75vw;
+        transition: transform .675s ease-in-out;
+        z-index: 99;
     }
 
     li:first-of-type {
-        // order: 0;
         background-color: #4365ee;
         border-radius: 0 2px 2px 0;
         max-width: calc(100% - (100%/3) + .5rem);
+        transition: all .25s ease-in-out;
 
         &:hover {
             background-color: #fff;
+            border-radius: 0 3rem 3rem 0;
         }
     }
 
     a {
-        padding: 1rem;
+        padding: 1.25rem 1rem;
     }
+}
+
+.toggled {
+    transform: translateX(75vw);
 }
 
 .menu-sub-menu-container a {
     max-width: 100%;
     background-color: #4365ee;
+    border: 1px solid #4365ee;
     border-radius: 2px;
     padding: .75rem;
 
@@ -142,13 +150,7 @@ header {
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: .5rem;
     padding: 0 1rem;
-    margin-bottom: 5rem;
-
-    img {
-        grid-column: 1/4;
-        grid-row: 1/2;
-        margin-bottom: 1.25rem;
-    }
+    margin-bottom: 3.75rem;
 
     h2 {
         grid-column: 4/-1;
@@ -157,6 +159,20 @@ header {
 
     p {
         grid-column: 1/4;
+    }
+}
+
+.banner-img {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    margin-bottom: 1.25rem;
+    height: 17.5rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 }
 
@@ -188,18 +204,20 @@ header {
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 2rem;
     position: relative;
+    margin: 0 auto;
     padding: 0 1rem;
     margin-bottom: 5rem;
+    max-width: 21.25rem;
 }
 
 .stat-circle {
     grid-column: 1/-1;
-    height: 6.5rem;
+    height: 6.75rem;
 
     div {
         border-radius: 100%;
-        width: 6.5rem;
-        height: 6.5rem;
+        width: 6.75rem;
+        height: 6.75rem;
         display: flex;
         align-items: center;
         position: absolute;
@@ -368,13 +386,15 @@ form.give-form {
 
     .give-submit-button-wrap {
         max-width: fit-content;
-        margin: 0 0 0 auto;
+        margin: 2rem 0 0 auto;
         
         input[type=submit] {
             background-color: #4365ee;
             border: 1px solid #4365ee;
+            padding: 0.75rem 1.875rem;
             border-radius: 2px;
             cursor: pointer;
+            margin: 0;
         }
     }
                 
@@ -503,7 +523,50 @@ form.give-form {
 }
 
 
-// DONATE SINGLE VIEW
+// DONATE OPTION SINGLE
+
+.donate-option-form {
+    padding: 0 1rem;
+}
+    
+.note {
+    display: flex;
+    align-items: center;
+    margin-bottom: .75rem;
+    
+    p {
+        margin-right: 2rem;
+    }
+
+    i {
+        margin-right: .5rem;
+    }
+}
+
+.slider {
+    display: flex;
+    overflow-x: scroll;
+    margin-bottom: 3rem;
+
+    div {
+        width: 100%;
+        height: 20rem;
+        flex: none;
+        margin-right: 1rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-fit: center;
+            border-radius: 5px;
+        }
+    }
+}
 
 
 
@@ -521,6 +584,7 @@ form.give-form {
 
 .site-branding {
     grid-column: 1/-1;
+    grid-row: 1/2;
 
     img {
         max-width: 2.25rem;
@@ -529,6 +593,7 @@ form.give-form {
 
 .contact {
     grid-column: 1/-1;
+    grid-row: 2/3;
 
     p {
         margin-bottom: 1.125rem;
@@ -552,6 +617,7 @@ form.give-form {
 
     a {
         background-color: #f9ac55;
+        border: 1px solid #f9ac55;
         max-width: calc( 100% - (100% /3));
         margin-top: 1rem;
 
@@ -621,4 +687,72 @@ form.give-form {
 
 .policy {
     margin-top: 1rem;
+}
+
+
+
+// WIDTH 425PX
+
+@media screen and (min-width: 425px) {
+    
+    .banner-img {
+        height: 25rem;
+    }
+
+}
+
+
+
+// WIDTH 520px
+
+@media screen and (min-width: 520px) {
+
+    header,
+    .banner, 
+    .intro-bg,
+    .section-one,
+    .section-title,
+    .fundraiser,
+    .donate, 
+    .quote,
+    .instruction,
+    .donate-option-form,
+    .footer-top, 
+    .site-info {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .section-two, 
+    .section-three {
+        .ms-content {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+
+    
+    .banner-img {
+        height: 32rem;
+        margin-bottom: 2.12rem;
+    }
+
+    .banner,
+    .footer-top {
+        grid-column-gap: 2.5rem;
+    }
+
+    .contact {
+        grid-column: 1/4;
+    }
+
+    .social {
+        grid-column: 4/-1;
+        grid-row: 2/span 2;
+        text-align: right;
+    }
+
+    .hours {
+        grid-column: 1/4;
+    }
+
 }

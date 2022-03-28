@@ -33,7 +33,9 @@ get_header();
 							<?php 
 								$img_url = $banner_image['url'];
 							?>
-							<img src="<?php print_r(esc_url($img_url)); ?>">
+							<div class="banner-img">
+								<img src="<?php print_r(esc_url($img_url)); ?>">
+							</div>
 						<?php endif; ?>
 						
 						<!-- Banner Text -->

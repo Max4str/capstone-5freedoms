@@ -13,7 +13,6 @@ function AddSiteTitle(){
         siteTitle[i].appendChild(newSiteTitle)
     }
     
-    // console.log(siteTitle)
 }
 AddSiteTitle()
 
@@ -60,11 +59,22 @@ function AboutMissionVission(e, sectName) {
 
 
 function addDonateRevealSvg() {
-    const donateRevealBtn = document.getElementsByClassName('give-btn-reveal')[0]    
-    
+    const donateRevealBtn = document.querySelector('.give-btn-reveal')
     const icon = document.createElement('i')
     icon.setAttribute('class', 'fa-solid fa-chevron-right' )
-
-    donateRevealBtn.appendChild(icon)
+    if(donateRevealBtn){
+        donateRevealBtn.append(icon)
+    }
 }
 addDonateRevealSvg()
+
+
+function addImageDonateOption(){
+    const image = document.getElementsByClassName('donate-option-image')[0]
+    const donateForm = document.querySelector('.donate-option-form .give-form-wrap .give-form-content-wrap')
+    
+    if(donateForm){
+        donateForm.append(image)
+    }
+}
+addImageDonateOption()

@@ -40,6 +40,13 @@ h4 {
   letter-spacing: 1px;
 }
 
+input::placeholder,
+textarea::placeholder {
+  font: 300 1rem/1 "Poppins", sans-serif;
+  font-style: italic;
+  color: #b3b3b3;
+}
+
 .site-title {
   font: 300 1.25rem/1.4 "Poppins", sans-serif;
   letter-spacing: 0;
@@ -232,6 +239,15 @@ form.give-form input[type=submit] {
   color: #2d5180;
 }
 
+.note {
+  font: 500 1rem "Poppins", sans-serif;
+  letter-spacing: 0;
+  color: #4365ee;
+}
+.note i {
+  text-align: right;
+}
+
 footer .site-title {
   color: #454545;
   font-size: 0.875rem;
@@ -264,11 +280,6 @@ footer a {
   letter-spacing: 0;
   color: #454545;
   text-transform: capitalize;
-}
-.contact-form input::placeholder {
-  font: 400 1rem/1 "Lato", sans-serif;
-  font-style: italic;
-  color: #b3b3b3;
 }
 .contact-form input[type=submit] {
   font: 600 1rem "Poppins", sans-serif;
@@ -304,6 +315,11 @@ footer a {
   margin: 0 0.5rem;
 }
 
+@media screen and (min-width: 520px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
 h3 {
   margin-bottom: 2rem;
 }
@@ -383,32 +399,40 @@ header .site-title {
   width: fit-content;
 }
 
-.menu-main-menu-container {
-  border-bottom-right-radius: 2px;
-  background-color: #2d5180;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: calc(25% + 0.5rem);
-}
 .menu-main-menu-container ul {
-  padding: 2rem 0;
+  width: 75%;
+  padding: 2.125rem 0;
+  display: block;
+  border-bottom-right-radius: 5px;
+  background-color: #2d5180;
+  position: fixed;
+  top: 0;
+  left: -75vw;
+  transition: transform 0.675s ease-in-out;
+  z-index: 99;
 }
 .menu-main-menu-container li:first-of-type {
   background-color: #4365ee;
   border-radius: 0 2px 2px 0;
   max-width: calc(66.6666666667% + 0.5rem);
+  transition: all 0.25s ease-in-out;
 }
 .menu-main-menu-container li:first-of-type:hover {
   background-color: #fff;
+  border-radius: 0 3rem 3rem 0;
 }
 .menu-main-menu-container a {
-  padding: 1rem;
+  padding: 1.25rem 1rem;
+}
+
+.toggled {
+  transform: translateX(75vw);
 }
 
 .menu-sub-menu-container a {
   max-width: 100%;
   background-color: #4365ee;
+  border: 1px solid #4365ee;
   border-radius: 2px;
   padding: 0.75rem;
 }
@@ -422,12 +446,7 @@ header .site-title {
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 0.5rem;
   padding: 0 1rem;
-  margin-bottom: 5rem;
-}
-.banner img {
-  grid-column: 1/4;
-  grid-row: 1/2;
-  margin-bottom: 1.25rem;
+  margin-bottom: 3.75rem;
 }
 .banner h2 {
   grid-column: 4/-1;
@@ -435,6 +454,19 @@ header .site-title {
 }
 .banner p {
   grid-column: 1/4;
+}
+
+.banner-img {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  margin-bottom: 1.25rem;
+  height: 17.5rem;
+}
+.banner-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .intro-bg {
@@ -462,18 +494,20 @@ header .site-title {
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 2rem;
   position: relative;
+  margin: 0 auto;
   padding: 0 1rem;
   margin-bottom: 5rem;
+  max-width: 21.25rem;
 }
 
 .stat-circle {
   grid-column: 1/-1;
-  height: 6.5rem;
+  height: 6.75rem;
 }
 .stat-circle div {
   border-radius: 100%;
-  width: 6.5rem;
-  height: 6.5rem;
+  width: 6.75rem;
+  height: 6.75rem;
   display: flex;
   align-items: center;
   position: absolute;
@@ -615,13 +649,15 @@ form.give-form #give-final-total-wrap .give-final-total-amount {
 }
 form.give-form .give-submit-button-wrap {
   max-width: fit-content;
-  margin: 0 0 0 auto;
+  margin: 2rem 0 0 auto;
 }
 form.give-form .give-submit-button-wrap input[type=submit] {
   background-color: #4365ee;
   border: 1px solid #4365ee;
+  padding: 0.75rem 1.875rem;
   border-radius: 2px;
   cursor: pointer;
+  margin: 0;
 }
 
 #give-donation-level-button-wrap {
@@ -731,6 +767,44 @@ form.give-form .give-submit-button-wrap input[type=submit] {
   background-color: #fff;
 }
 
+.donate-option-form {
+  padding: 0 1rem;
+}
+
+.note {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+.note p {
+  margin-right: 2rem;
+}
+.note i {
+  margin-right: 0.5rem;
+}
+
+.slider {
+  display: flex;
+  overflow-x: scroll;
+  margin-bottom: 3rem;
+}
+.slider div {
+  width: 100%;
+  height: 20rem;
+  flex: none;
+  margin-right: 1rem;
+}
+.slider div:last-child {
+  margin-right: 0;
+}
+.slider div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-fit: center;
+  border-radius: 5px;
+}
+
 .footer-top {
   border-top: 1px solid #2d5180;
   border-bottom: 1px solid #2d5180;
@@ -743,6 +817,7 @@ form.give-form .give-submit-button-wrap input[type=submit] {
 
 .site-branding {
   grid-column: 1/-1;
+  grid-row: 1/2;
 }
 .site-branding img {
   max-width: 2.25rem;
@@ -750,6 +825,7 @@ form.give-form .give-submit-button-wrap input[type=submit] {
 
 .contact {
   grid-column: 1/-1;
+  grid-row: 2/3;
 }
 .contact p {
   margin-bottom: 1.125rem;
@@ -770,6 +846,7 @@ form.give-form .give-submit-button-wrap input[type=submit] {
 }
 .hours a {
   background-color: #f9ac55;
+  border: 1px solid #f9ac55;
   max-width: 66.6666666667%;
   margin-top: 1rem;
 }
@@ -829,4 +906,57 @@ form.give-form .give-submit-button-wrap input[type=submit] {
 
 .policy {
   margin-top: 1rem;
+}
+
+@media screen and (min-width: 425px) {
+  .banner-img {
+    height: 25rem;
+  }
+}
+@media screen and (min-width: 520px) {
+  header,
+.banner,
+.intro-bg,
+.section-one,
+.section-title,
+.fundraiser,
+.donate,
+.quote,
+.instruction,
+.donate-option-form,
+.footer-top,
+.site-info {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .section-two .ms-content,
+.section-three .ms-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .banner-img {
+    height: 32rem;
+    margin-bottom: 2.12rem;
+  }
+
+  .banner,
+.footer-top {
+    grid-column-gap: 2.5rem;
+  }
+
+  .contact {
+    grid-column: 1/4;
+  }
+
+  .social {
+    grid-column: 4/-1;
+    grid-row: 2/span 2;
+    text-align: right;
+  }
+
+  .hours {
+    grid-column: 1/4;
+  }
 }

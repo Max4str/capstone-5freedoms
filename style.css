@@ -703,11 +703,11 @@ textarea {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 600px) {
 
-	.menu-toggle {
+	/* .menu-toggle {
 		display: none;
-	}
+	} */
 
 	.main-navigation ul {
 		display: flex;
