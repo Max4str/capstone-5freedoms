@@ -1,11 +1,24 @@
 .post {
-
+	border: 1px solid black;
+	border-radius: 5px;
+	margin: 0 1.6rem 3.6rem;
 }
 
-.blog-img {
+.blog-img img {
+	width: 100%;
+}
 
+.blog-img,
+.blog-card-body p {
+	margin-bottom: 3.6rem;
 }
 
 .blog-card-body {
-    
+	margin: 0 2.4rem;
+	text-align: center;
 }
+
+
+
+// ANNOUNCEMENTS SINGLE
+
