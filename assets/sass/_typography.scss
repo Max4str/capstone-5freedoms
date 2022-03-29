@@ -447,6 +447,12 @@ footer {
 // WIDTH 720px
 
 @media screen and (min-width: 768px) {
+
+    .banner {
+        h2 {
+            writing-mode: horizontal-tb;
+        }
+    }
     
     .about-content-bg {
         color: #fff;
