@@ -39,8 +39,11 @@ function AboutMissionVission(e, sectName) {
     var i, x, tablinks;
     x = document.getElementsByClassName('ms-content');
     for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+        if(x[i].classList.contains('show-section')){
+            x[i].classList.remove('show-section')
+        }
     }
+
     tablinks = document.getElementsByClassName('ms-title');
     
         for (i = 0; i < x.length; i++) {
@@ -52,7 +55,8 @@ function AboutMissionVission(e, sectName) {
             }
         }
     
-    document.getElementById(sectName).style.display = "block";
+    document.getElementById(sectName).classList.add('show-section')
+    
     e.currentTarget.className += " dk-blue";
 }
 

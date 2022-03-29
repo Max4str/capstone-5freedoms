@@ -96,7 +96,7 @@ header {
 
 .menu-main-menu-container {
     ul {
-        width: 75%;
+        width: 75vw;
         padding: 2.125rem 0;
         display: block;
         border-bottom-right-radius: 5px;
@@ -262,14 +262,27 @@ header {
 
 .section-two,
 .section-three {
-    .ms-content {
-        padding: 0 1rem;
-        margin-bottom: 5rem;
+
+    padding: 0 1rem;
+    margin-bottom: 5rem;
+    display: none;
+
+    .ms-title {
+        border: 0;
+        display: none;
+    }
+
+    li {
+        margin-bottom: 0 1rem;
     }
 }
 
-.ms-content li {
-    margin-bottom: 0 1rem;
+.show-section {
+    display: block;
+}
+
+.section-img {
+    display: none;
 }
 
 
@@ -295,7 +308,7 @@ header {
     }
 
     .give-progress-bar {
-        background-color: #bbe3f8;
+        background-color: #454545;
         display: block;
         width: 100%;
         height: .75rem;
@@ -525,8 +538,17 @@ form.give-form {
 
 // DONATE OPTION SINGLE
 
+.donate-option-content {
+    .banner {
+        .banner-img {
+            margin-bottom: 0;
+        }
+    }
+}
+
 .donate-option-form {
     padding: 0 1rem;
+    margin-bottom: 5rem;
 }
     
 .note {
@@ -562,7 +584,7 @@ form.give-form {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-fit: center;
+            object-position: center;
             border-radius: 5px;
         }
     }
@@ -699,6 +721,12 @@ form.give-form {
         height: 25rem;
     }
 
+    .slider {
+        div {
+            max-width: 20rem;
+        }
+    }
+
 }
 
 
@@ -707,38 +735,119 @@ form.give-form {
 
 @media screen and (min-width: 520px) {
 
-    header,
+    header {
+        padding: 2rem;
+
+        .site-title {
+            display: block;
+        }
+    }
+
     .banner, 
     .intro-bg,
     .section-one,
-    .section-title,
     .fundraiser,
     .donate, 
     .quote,
     .instruction,
     .donate-option-form,
-    .footer-top, 
-    .site-info {
+    .footer-top {
         padding-left: 2rem;
         padding-right: 2rem;
     }
-    .section-two, 
-    .section-three {
-        .ms-content {
-            padding-left: 2rem;
-            padding-right: 2rem;
+
+    .header-top {
+        margin-bottom: 1.125rem;
+    }
+
+    .site-branding {
+        align-items: center;
+
+        img {
+            max-width: 3rem;
         }
     }
 
+    .section-title {
+        display: none;
+    }
+
+
+    .section-two, 
+    .section-three {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        display: block;
+
+        .ms-title {
+            display: block;
+        }
+    }
     
     .banner-img {
-        height: 32rem;
-        margin-bottom: 2.12rem;
+        height: 25rem;
+        margin-bottom: 2.125rem;
     }
 
     .banner,
     .footer-top {
         grid-column-gap: 2.5rem;
+    }
+
+    #give-donation-level-button-wrap {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .donate-options {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: stretch;
+        grid-gap: .75rem;
+
+        div {
+            margin-bottom: 0;
+            position: relative;
+        }
+
+        p {
+            margin-bottom: 5.125rem;
+        }
+
+        a {
+            position: absolute;
+            right: 1.25rem;
+            bottom: 2.125rem;
+        }
+    }
+
+    .give-form-wrap {
+        .give-form-content-wrap {
+            & > p{
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    .instruction {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        div:first-of-type {
+            grid-column: 1/4;
+        }
+
+        div:nth-child(3) {
+            grid-column: 2/5;
+        }
+
+        div:last-of-type {
+            grid-column: 3/-1;
+        }
+
+        h3 {
+            grid-column: 1/-1;
+            grid-row: 1/2;
+        }
     }
 
     .contact {
@@ -755,4 +864,178 @@ form.give-form {
         grid-column: 1/4;
     }
 
+    .form-text {
+        max-width: 33.75rem;
+    }
+
+    .site-info {
+        padding: 2rem;
+    }
+
 }
+
+
+
+// WIDTH 720PX
+
+@media screen and (min-width: 768px) {
+    .about-content-bg {
+        display: flex;
+        align-items: flex-start;
+        background-color: #4365ee;
+        padding: 3.75rem 2rem;
+        margin: 0 -1rem 5rem;
+    }
+
+    .intro-bg,
+    .stat {
+        background-color: transparent;
+        padding: 0;
+        margin: 0 1rem;
+        flex: 1;
+    }
+
+    .stat-adopt {
+        background-color: #f07b57;
+    }
+
+    .stat-donate {
+        background-color: #f9ac55;
+    } 
+
+    .section-img {
+        max-width: 100%;
+        height: 22.5rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .section-two,
+    .section-three {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: center;
+
+        .section-img {
+            display: block;
+        }
+    }
+
+    .section-two {
+        .section-img {
+            grid-column: 8/-1;
+            grid-row: 1/span 2;
+        }
+
+        h3, 
+        ul {
+            grid-column: 1/7;
+        }
+    }
+
+    .section-three {
+        .section-img {
+            grid-column: 1/6;
+            grid-row: 1/span 2;
+        }
+
+        h3,
+        p {
+            grid-column: 7/-1;
+        }
+    }
+
+    #give-donation-level-button-wrap {
+        grid-template-columns: repeat(6, 1fr);
+        grid-row-gap: 0;
+    }
+
+    .donate-options {
+        grid-gap: 1.5rem;
+    }
+
+    .quote {
+        padding: 0;
+        max-width: 70%;
+        margin: 0 auto 5rem;
+    }
+
+    .instruction {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: .75rem;
+
+        div:first-of-type {
+            grid-column: 1/2;
+        }
+
+        div:nth-child(3) {
+            grid-column: 2/3;
+        }
+
+        div:last-of-type {
+            grid-column: 3/-1;
+        }
+    }
+
+    .contact {
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+    .hours {
+        grid-column: 3/-1;
+        grid-row: 2/3;
+    }
+
+    .social {
+        grid-column: 1/4;
+        grid-row: 3/span 1;
+    }
+
+    .social-icons {
+        display: flex;
+
+        a {
+            max-width: fit-content;
+            margin-bottom: 0;
+            margin-right: 2.25rem;
+        }
+    }
+
+    .contact-form {
+        form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 3rem;
+
+            p {
+                &:nth-child(2),
+                &:nth-child(3) {
+                    grid-column: 1/2;
+                }
+
+                &:nth-child(4) {
+                    grid-column: 1/2;
+                    // margin-bottom: 0;
+                }
+
+                &:nth-child(5) {
+                    grid-column: 2/-1;
+                    grid-row: 1/4;
+                }
+
+                &:last-of-type {
+                    grid-column: 2/-1;
+                }
+            }
+            
+        }
+    }
+    
+}
+

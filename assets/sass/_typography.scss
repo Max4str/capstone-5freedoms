@@ -56,7 +56,7 @@ textarea {
 // HEADER 
 
 .site-title {
-    font: 300 1.25rem/1.4 'Poppins', sans-serif;
+    font: 300 1.125rem/1.4 'Poppins', sans-serif;
     letter-spacing: 0;
     text-transform: uppercase;
 
@@ -434,4 +434,28 @@ footer {
         font-size: 4rem;
     }
 
+    .section-three {
+        .ms-title {
+            color: #2d5180;
+        }
+    }
+
+}
+
+
+
+// WIDTH 720px
+
+@media screen and (min-width: 768px) {
+    
+    .about-content-bg {
+        color: #fff;
+    }
+
+    .site-info {
+        p,
+        a {
+            font-size: 1.125rem;
+        }
+    }
 }

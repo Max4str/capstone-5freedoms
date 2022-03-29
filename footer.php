@@ -66,7 +66,7 @@
 
 		<div class="site-info">	
 			
-			<p class="copyright">&copy;2022 5 Freedoms Ranch by Lunar Point.<br>All rights reserved.</p>		
+			<p class="copyright">&copy;2022 5 Freedoms Ranch by Lunar Point. All rights reserved.</p>		
 
 			<p class="policy">
 				<a href="#">Privacy Policy</a>
