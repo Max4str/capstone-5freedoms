@@ -33,7 +33,9 @@ get_header();
 							<?php 
 								$img_url = $banner_image['url'];
 							?>
-							<img src="<?php print_r(esc_url($img_url)); ?>">
+							<div class="banner-img">
+								<img src="<?php print_r(esc_url($img_url)); ?>">
+							</div>
 						<?php endif; ?>
 						
 						<!-- Banner Text -->
@@ -46,9 +48,10 @@ get_header();
 				</div>
 
 				<!-- Fundraiser -->
-				<section>
-					<?php the_content(); ?>
-				</section>
+				<?php $fundraiser = get_field('fundraiser'); ?>
+				<?php if($fundraiser): ?>
+					<section class="fundraiser"><?php echo do_shortcode($fundraiser); ?></section>
+				<?php endif; ?>	
 
 				<!-- Donate -->
 				<section class="donate">
@@ -86,11 +89,12 @@ get_header();
 								<!-- start the loop -->
 								<?php while($donate_options->have_posts()) : $donate_options->the_post(); ?>
 									<div class="donate-card">
-										<a class="donate-card-title" href="<?php the_permalink(); ?>"><?php the_title('<h4>', '</h4>'); ?></a>
+										<?php the_title('<h4>', '</h4>'); ?>
 										<?php $short_description = get_field('short_description'); ?>
 										<?php if($short_description): ?>
 											<p class="donate-card-text"><?php _e($short_description); ?></p>
 										<?php endif; ?>
+										<a class="donate-card-link" href="<?php the_permalink(); ?>">select</a>
 									</div>
 								<?php endwhile; ?>
 								<!-- end while loop -->
@@ -108,7 +112,7 @@ get_header();
 					<?php if($quote): ?>
 						<p><?php _e($quote); ?></p>
 					<?php endif; ?>
-
+					<p class="quote-mark">"</p>
 				</div>
 
 				
@@ -124,7 +128,7 @@ get_header();
 						<?php endif; ?>
 					
 						<!--Step One  -->
-						<div class="step-one">
+						<div class="step-card">
 							<?php $step_one = $instructions['step_one']; ?>
 							<?php if($step_one): ?>
 						
@@ -139,12 +143,14 @@ get_header();
 								<?php if($step_one_text): ?>
 									<p><?php _e($step_one_text); ?></p>
 								<?php endif; ?>
+
+								<p class="step-number">01</p>
 					
 							<?php endif; ?>
 						</div>
 
 						<!-- Step Two -->
-						<div class="step-two">
+						<div class="step-card">
 							<?php $step_two = $instructions['step_two']; ?>
 							<?php if($step_two): ?>
 						
@@ -160,11 +166,13 @@ get_header();
 									<p><?php _e($step_two_text); ?></p>
 								<?php endif; ?>
 					
+								<p class="step-number">02</p>
+
 							<?php endif; ?>
 						</div>
 
 						<!-- Step Three -->
-						<div class="step-three">
+						<div class="step-card">
 							<?php $step_three = $instructions['step_three']; ?>
 							<?php if($step_three): ?>
 						
@@ -180,10 +188,10 @@ get_header();
 									<p><?php _e($step_three_text); ?></p>
 								<?php endif; ?>
 					
+								<p class="step-number">03</p>
+
 							<?php endif; ?>
 						</div>
-
-						
 					
 					<?php endif; ?>
 				</section>

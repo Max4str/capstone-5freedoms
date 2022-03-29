@@ -33,7 +33,9 @@ get_header();
 							<?php 
 								$img_url = $banner_image['url'];
 							?>
-							<img src="<?php print_r(esc_url($img_url)); ?>">
+							<div class="banner-img">
+								<img src="<?php print_r(esc_url($img_url)); ?>">
+							</div>
 						<?php endif; ?>
 						
 						<!-- Banner Text -->
@@ -189,6 +191,17 @@ get_header();
 					<section class="section-one">
 						<?php $section_one = get_field('section_one'); ?>
 						<?php if($section_one): ?>
+
+							<!-- Image-->
+							<?php $section_one_img = $section_one['section_one_img']; ?>
+							<?php if($section_one_img): ?>
+								<?php 
+									$img_url = $section_one_img['url'];
+								?>
+								<div class="section-img">
+									<img src="<?php print_r(esc_url($img_url)); ?>">
+								</div>
+							<?php endif; ?>
 						
 							<!-- Title-->
 							<?php $section_one_title = $section_one['section_one_title']; ?>
@@ -231,14 +244,31 @@ get_header();
 					</section>
 
 
-					<div class="section-two">
+					<div id="mission" class="section-two ms-content show-section">
 						<?php $section_two = get_field('section_two'); ?>
 						<?php if($section_two): ?>
+
+							<!-- Image-->
+							<?php $section_two_img = $section_two['section_two_img']; ?>
+							<?php if($section_two_img): ?>
+								<?php 
+									$img_url = $section_two_img['url'];
+								?>
+								<div class="section-img">
+									<img src="<?php print_r(esc_url($img_url)); ?>">
+								</div>
+							<?php endif; ?>
+
+							<!-- Title-->
+							<?php $section_two_title = $section_two['section_two_title']; ?>
+							<?php if($section_two_title): ?>
+								<h3 class="ms-title dk-blue"><?php _e($section_two_title); ?></h3>
+							<?php endif; ?>
 
 							<!-- List -->
 							<?php $section_two_list = $section_two['section_two_list']; ?>
 							<?php if($section_two_list): ?>
-								<ul id="mission" class="ms-content list">
+								<ul class="list">
 
 									<?php $list_item_1 = $section_two_list['list_item_1']; ?>
 									<?php if($list_item_1): ?>
@@ -273,14 +303,31 @@ get_header();
 
 
 					<!-- Vision -->
-					<div class="section-three">
+					<div id="vision" class="section-three ms-content ">
 						<?php $section_three = get_field('section_three'); ?>
 						<?php if($section_three): ?>
+
+							<!-- Image-->
+							<?php $section_three_img = $section_three['section_three_img']; ?>
+							<?php if($section_three_img): ?>
+								<?php 
+									$img_url = $section_three_img['url'];
+								?>
+								<div class="section-img">
+									<img src="<?php print_r(esc_url($img_url)); ?>">
+								</div>
+							<?php endif; ?>
+
+							<!-- Title-->
+							<?php $section_three_title = $section_three['section_three_title']; ?>
+							<?php if($section_three_title): ?>
+								<h3 class="ms-title"><?php _e($section_three_title); ?></h3>
+							<?php endif; ?>
 						
 							<!-- Text -->
 							<?php $section_three_text = $section_three['section_three_text']; ?>
 							<?php if($section_three_text): ?>
-								<p id="vision" class="ms-content " style="display:none"><?php _e($section_three_text); ?></p>
+								<p><?php _e($section_three_text); ?></p>
 							<?php endif; ?>
 
 						<?php endif; ?>
