@@ -444,13 +444,19 @@ footer {
 
 
 
-// WIDTH 720px
+// WIDTH 768px
 
 @media screen and (min-width: 768px) {
 
     .banner {
         h2 {
             writing-mode: horizontal-tb;
+        }
+    }
+
+    .give-form-wrap {
+        h2 {
+            font-size: 3rem;
         }
     }
     
@@ -462,6 +468,105 @@ footer {
         p,
         a {
             font-size: 1.125rem;
+        }
+    }
+}
+
+
+
+
+// WIDTH 1024PX
+
+@media screen and (min-width: 1024px) {
+    h3,
+    form.give-form legend {
+        font-size: 2.5rem;
+    }
+
+    h4 {
+        font-size: 1.75rem;
+    }
+
+    .menu-main-menu-container {
+        li:first-of-type {
+            a {
+                color: #fff;
+            }
+
+            &:hover {
+                a {
+                    color: #4365ee;
+                }
+            }
+        }
+    
+        a {
+            color: #2d5180;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+    }
+
+    footer {
+        .site-title {
+            font-size: 1.125rem;
+        }
+    }
+
+    .form-title,
+    .hours span {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    body {
+        font-size: 1.25rem;
+    }
+
+    h2 {
+        font-size: 3.75rem;
+    }
+
+    h3,
+    form.give-form legend {
+        font-size: 3rem;
+    }
+
+    .banner {
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    .contact {
+        i {
+            font-size: 1.25rem;
+        }
+    }
+
+    .social {
+        i {
+            font-size: 2rem;
+        }
+    }
+
+    .menu-main-menu-container {
+        a {
+            font-size: 1.125rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1720px) {
+    .site-title {
+        font-size: 1.25rem;
+    }
+    
+    .menu-main-menu-container {
+        a {
+            font-size: 1.25rem;
         }
     }
 }

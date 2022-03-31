@@ -329,6 +329,10 @@ footer a {
     writing-mode: horizontal-tb;
   }
 
+  .give-form-wrap h2 {
+    font-size: 3rem;
+  }
+
   .about-content-bg {
     color: #fff;
   }
@@ -336,6 +340,77 @@ footer a {
   .site-info p,
 .site-info a {
     font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  h3,
+form.give-form legend {
+    font-size: 2.5rem;
+  }
+
+  h4 {
+    font-size: 1.75rem;
+  }
+
+  .menu-main-menu-container li:first-of-type a {
+    color: #fff;
+  }
+  .menu-main-menu-container li:first-of-type:hover a {
+    color: #4365ee;
+  }
+  .menu-main-menu-container a {
+    color: #2d5180;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  footer .site-title {
+    font-size: 1.125rem;
+  }
+
+  .form-title,
+.hours span {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  body {
+    font-size: 1.25rem;
+  }
+
+  h2 {
+    font-size: 3.75rem;
+  }
+
+  h3,
+form.give-form legend {
+    font-size: 3rem;
+  }
+
+  .banner p {
+    font-size: 1.5rem;
+  }
+
+  .contact i {
+    font-size: 1.25rem;
+  }
+
+  .social i {
+    font-size: 2rem;
+  }
+
+  .menu-main-menu-container a {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 1720px) {
+  .site-title {
+    font-size: 1.25rem;
+  }
+
+  .menu-main-menu-container a {
+    font-size: 1.25rem;
   }
 }
 .home-banner .hero-image {
@@ -543,6 +618,9 @@ header .site-title {
   transition: transform 0.675s ease-in-out;
   z-index: 99;
 }
+.menu-main-menu-container li:hover a {
+  transition: all 0.25s ease-in-out;
+}
 .menu-main-menu-container li:first-of-type {
   background-color: #4365ee;
   border-radius: 0 2px 2px 0;
@@ -693,7 +771,7 @@ header .site-title {
 }
 .section-two li,
 .section-three li {
-  margin-bottom: 0 1rem;
+  margin-bottom: 1rem;
 }
 
 .show-section {
@@ -1271,6 +1349,16 @@ form.give-form .give-submit-button-wrap input[type=submit] {
 .section-three .section-img {
     display: block;
   }
+  .section-two h3,
+.section-three h3 {
+    align-self: end;
+  }
+  .section-two ul,
+.section-two p,
+.section-three ul,
+.section-three p {
+    align-self: flex-start;
+  }
 
   .section-two .section-img {
     grid-column: 8/-1;
@@ -1293,6 +1381,7 @@ form.give-form .give-submit-button-wrap input[type=submit] {
   #give-donation-level-button-wrap {
     grid-template-columns: repeat(6, 1fr);
     grid-row-gap: 0;
+    max-width: 60rem;
   }
 
   .donate-options {
@@ -1308,6 +1397,9 @@ form.give-form .give-submit-button-wrap input[type=submit] {
   .instruction {
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 0.75rem;
+  }
+  .instruction div {
+    margin: 1.5rem 0 0;
   }
   .instruction div:first-of-type {
     grid-column: 1/2;
@@ -1327,6 +1419,10 @@ form.give-form .give-submit-button-wrap input[type=submit] {
   }
   .fundraiser .give-form-wrap .give-goal-progress .raised {
     text-align: left;
+  }
+
+  .note {
+    display: none;
   }
 
   .contact {
@@ -1370,5 +1466,429 @@ form.give-form .give-submit-button-wrap input[type=submit] {
   }
   .contact-form form p:last-of-type {
     grid-column: 2/-1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    margin-bottom: 2rem;
+  }
+  header .site-title {
+    display: none;
+  }
+  header .menu-sub-menu-container a {
+    display: none;
+  }
+
+  .header-top {
+    margin-bottom: 0;
+  }
+
+  .menu-main-menu-container ul {
+    position: static;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu-main-menu-container li {
+    width: fit-content;
+  }
+  .menu-main-menu-container li:first-of-type {
+    width: fit-content;
+    order: 1;
+    border-radius: 3px;
+    border: 1px solid #4365ee;
+    margin-left: 0.4375rem;
+  }
+  .menu-main-menu-container li:first-of-type a {
+    padding: 0.5rem 0.875rem;
+  }
+  .menu-main-menu-container li:first-of-type:hover {
+    border-radius: 3px;
+  }
+  .menu-main-menu-container a {
+    padding: 0 0.5rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .banner {
+    margin-bottom: 6.25rem;
+    grid-column-gap: 4.5rem;
+  }
+
+  .about-content-bg {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 0 0 7.5rem;
+  }
+
+  .intro-bg {
+    margin: 0;
+    grid-column: 1/8;
+  }
+
+  .stat {
+    margin: 0 0 0 auto;
+    width: 100%;
+    grid-column: 9/-1;
+  }
+
+  form.give-form {
+    margin-bottom: 0;
+  }
+
+  .section-one,
+.section-two,
+.section-three,
+.fundraiser,
+.donate,
+.quote,
+.instruction {
+    margin-bottom: 8.75rem;
+  }
+
+  .section-img {
+    height: 28.75rem;
+  }
+
+  .section-one {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+  }
+  .section-one .section-img {
+    display: block;
+    grid-column: 1/6;
+    grid-row: 1/span 2;
+  }
+  .section-one h3,
+.section-one p {
+    grid-column: 7/-1;
+  }
+  .section-one h3 {
+    align-self: end;
+  }
+  .section-one p {
+    align-self: flex-start;
+  }
+
+  .fundraiser .give-form-wrap .give-goal-progress,
+.fundraiser .give-form-wrap .give-form-content-wrap {
+    max-width: 65%;
+  }
+  .fundraiser form.give-form .give-btn-reveal {
+    max-width: 65%;
+  }
+
+  .donate-info {
+    margin-bottom: 5rem;
+  }
+  .donate-info p {
+    max-width: 65%;
+  }
+
+  .donate-options {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 0.75rem;
+  }
+
+  .donate-option-form > div {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .donate-option-form h2 {
+    grid-column: 1/7;
+    grid-row: 1/2;
+  }
+  .donate-option-form div.give-form-content-wrap {
+    grid-column: 1/7;
+    grid-row: 2/3;
+    height: fit-content;
+    grid-column-gap: 3rem;
+    margin-bottom: 0;
+  }
+  .donate-option-form form.give-form {
+    grid-column: 8/-1;
+    grid-row: 2/span 1;
+  }
+  .donate-option-form form.give-form .give-submit-button-wrap {
+    margin: 2rem 0 0;
+  }
+  .donate-option-form #give-donation-level-button-wrap {
+    align-self: flex-start;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .donate-option-form #give-donation-level-button-wrap li {
+    height: fit-content;
+    margin-bottom: 0.75rem;
+  }
+
+  .slider {
+    display: block;
+    margin-bottom: 0;
+  }
+  .slider div {
+    max-width: 80%;
+    height: 22.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .quote {
+    max-width: 60%;
+  }
+
+  .footer-top {
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 0;
+  }
+  .footer-top .site-branding {
+    grid-column: 1/6;
+    margin-left: 0.25rem;
+  }
+
+  .contact,
+.social,
+.hours {
+    grid-column: 1/5;
+  }
+
+  .hours {
+    grid-row: 3/4;
+  }
+
+  .social {
+    grid-row: 4/5;
+  }
+
+  .contact-form {
+    grid-column: 6/-1;
+    grid-row: 1/span 4;
+  }
+  .contact-form form {
+    grid-column-gap: 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  header,
+.banner,
+.about-content-bg,
+.section-one,
+.section-two,
+.section-three,
+.fundraiser,
+.donate,
+.quote,
+.instruction,
+.donate-option-form,
+.footer-top,
+.site-info {
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+  }
+
+  .banner,
+.about-content-bg,
+.section-one,
+.section-two,
+.section-three,
+.donate-options,
+.instruction,
+.donate-option-form > div,
+.footer-top {
+    grid-column-gap: 1.75rem;
+  }
+
+  .banner {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .banner .banner-img {
+    grid-column: 1/6;
+  }
+  .banner h2,
+.banner p {
+    grid-column: 7/-1;
+  }
+
+  .fundraiser {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1.75rem;
+  }
+  .fundraiser > div {
+    grid-column: 1/10;
+  }
+  .fundraiser .give-form-wrap .give-goal-progress,
+.fundraiser .give-form-wrap .give-form-content-wrap {
+    max-width: 80%;
+  }
+  .fundraiser form.give-form .give-btn-reveal {
+    max-width: 80%;
+  }
+  .fundraiser #give-donation-level-button-wrap {
+    margin-bottom: 3.75rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  header,
+.banner,
+.about-content-bg,
+.section-one,
+.section-two,
+.section-three,
+.fundraiser,
+.donate,
+.quote,
+.instruction,
+.donate-option-form,
+.footer-top,
+.site-info {
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+  }
+
+  header {
+    padding-top: 3.75rem;
+    margin-bottom: 3.75rem;
+  }
+  header .site-title {
+    display: block;
+  }
+
+  .menu-main-menu-container ul {
+    padding-bottom: 0.5rem;
+  }
+
+  .banner-img,
+.section-img {
+    height: 30rem;
+  }
+
+  .banner h2,
+.banner p {
+    grid-column: 7/-2;
+  }
+
+  .donate-card,
+.step-card {
+    padding: 3.75rem 2rem;
+  }
+
+  .donate-option-form div.give-form-content-wrap {
+    grid-column: 1/6;
+  }
+  .donate-option-form form.give-form {
+    grid-column: 7/-1;
+  }
+
+  .footer-top {
+    grid-template-rows: auto auto auto 1fr;
+    grid-row-gap: 3.75rem;
+  }
+
+  .contact-form {
+    grid-column: 7/-1;
+  }
+  .contact-form form {
+    display: block;
+  }
+  .contact-form textarea {
+    max-height: 10rem;
+  }
+  .contact-form input[type=submit] {
+    max-width: 50%;
+  }
+
+  .contact {
+    grid-column: 1/7;
+  }
+  .contact p {
+    margin-bottom: 2.25rem;
+  }
+  .contact i {
+    margin-right: 0.5rem;
+  }
+
+  .social,
+.hours {
+    grid-column: 1/6;
+  }
+
+  .social-icons a {
+    margin-right: 3.75rem;
+  }
+
+  .hours p:first-child {
+    margin-bottom: 3.75rem;
+  }
+}
+@media screen and (min-width: 1720px) {
+  header,
+.banner,
+.about-content-bg,
+.section-one,
+.section-two,
+.section-three,
+.fundraiser,
+.donate,
+.quote,
+.instruction,
+.donate-option-form,
+.footer-top,
+.site-info {
+    max-width: 1640px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .site-branding img {
+    max-width: 3.75rem;
+    margin-right: 1rem;
+  }
+
+  .menu-main-menu-container li:first-of-type a {
+    padding: 0.75rem 2rem;
+  }
+  .menu-main-menu-container a {
+    padding: 0 1.125rem;
+  }
+
+  .banner-img {
+    height: 35rem;
+  }
+
+  .about-content-wrap {
+    background-color: #4365ee;
+  }
+
+  .about-content-bg {
+    background-color: transparent;
+    padding: 5rem 5.5rem;
+  }
+
+  .read-more-link {
+    margin-top: 4.5rem;
+  }
+
+  .section-img {
+    height: 37.5rem;
+  }
+
+  .quote {
+    max-width: 45%;
+  }
+
+  .slider > div {
+    height: 27.5rem;
+  }
+
+  .donate-option-form #give-donation-level-button-wrap {
+    grid-template-columns: repeat(6, 1fr);
+    margin-bottom: 5rem;
   }
 }
