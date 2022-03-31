@@ -50,138 +50,140 @@ get_header();
 
 				<!-- About Content -->
 
-					<div class="about-content-bg">
+					<div class="about-content-wrap">
 
-						<!-- Intro -->
-						<section class="intro-bg">
-							<?php $intro = get_field('intro'); ?>
-							<?php if($intro): ?>
-							
-								<!-- Title-->
-								<?php $intro_title = $intro['intro_title']; ?>
-								<?php if($intro_title): ?>
-									<h3><?php _e($intro_title); ?></h3>
-								<?php endif; ?>
+						<div class="about-content-bg">
+							<!-- Intro -->
+							<section class="intro-bg">
+								<?php $intro = get_field('intro'); ?>
+								<?php if($intro): ?>
 								
-								<!-- Text -->
-								<?php $intro_text = $intro['intro_text']; ?>
-								<?php if($intro_text): ?>
-									<p><?php _e($intro_text); ?></p>
+									<!-- Title-->
+									<?php $intro_title = $intro['intro_title']; ?>
+									<?php if($intro_title): ?>
+										<h3><?php _e($intro_title); ?></h3>
+									<?php endif; ?>
+									
+									<!-- Text -->
+									<?php $intro_text = $intro['intro_text']; ?>
+									<?php if($intro_text): ?>
+										<p><?php _e($intro_text); ?></p>
+									<?php endif; ?>
+							
+									<!-- Read More -->
+									<?php $intro_read_more = $intro['intro_read_more']; ?>
+									<?php if($intro_read_more): ?>
+										<div class="read-more">
+											<p class="read-more-link">
+												read more 
+												<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
+												<g id="plus_icon" data-name="plus icon" transform="translate(-299.5 -1152)">
+													<line id="Line_4" data-name="Line 4" x2="8" transform="translate(300.5 1157)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+													<line id="Line_5" data-name="Line 5" y2="8" transform="translate(304.5 1153)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+												</g>
+												</svg>
+											</p>
+											<p class="read-more-text"><?php _e($intro_read_more); ?></p>
+										</div>
+									<?php endif; ?>
+							
 								<?php endif; ?>
-
-								<!-- Read More -->
-								<?php $intro_read_more = $intro['intro_read_more']; ?>
-								<?php if($intro_read_more): ?>
-									<div class="read-more">
-										<p class="read-more-link">
-											read more 
-											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
-											<g id="plus_icon" data-name="plus icon" transform="translate(-299.5 -1152)">
-												<line id="Line_4" data-name="Line 4" x2="8" transform="translate(300.5 1157)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
-												<line id="Line_5" data-name="Line 5" y2="8" transform="translate(304.5 1153)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
-											</g>
-											</svg>
-										</p>
-										<p class="read-more-text"><?php _e($intro_read_more); ?></p>
+							</section>
+							
+							<!-- Stats -->
+							<div class="stat">
+								<div class="stat-circle">
+									<div class="stat-meet"><p>Meet</p></div>
+									<div class="stat-adopt"><p>Adopt</p></div>
+									<div class="stat-donate"><p>Donate</p></div>
+								</div>
+							
+								<?php $stats = get_field('stats'); ?>
+								<?php if($stats): ?>
+							
+									<!-- Stat Field 1 -->
+									<div class="stat-info">
+										<?php $stat_field_one = $stats['stat_field_one']; ?>
+										<?php if($stat_field_one): ?>
+									
+											<!-- Number -->
+											<?php $stat_field_one_number = $stat_field_one['stat_field_one_number']; ?>
+											<?php if($stat_field_one_number): ?>
+												<p class="stat-number"><?php _e($stat_field_one_number); ?></p>
+											<?php endif; ?>
+											
+											<!-- Title -->
+											<?php $stat_field_one_title = $stat_field_one['stat_field_one_title']; ?>
+											<?php if($stat_field_one_title): ?>
+												<p><?php _e($stat_field_one_title); ?></p>
+											<?php endif; ?>
+							
+										<?php endif; ?>
 									</div>
-								<?php endif; ?>
-
-							<?php endif; ?>
-						</section>
-						
-						<!-- Stats -->
-						<div class="stat">
-							<div class="stat-circle">
-								<div class="stat-meet"><p>Meet</p></div>
-								<div class="stat-adopt"><p>Adopt</p></div>
-								<div class="stat-donate"><p>Donate</p></div>
-							</div>
-
-							<?php $stats = get_field('stats'); ?>
-							<?php if($stats): ?>
-						
-								<!-- Stat Field 1 -->
-								<div class="stat-info">
-									<?php $stat_field_one = $stats['stat_field_one']; ?>
-									<?php if($stat_field_one): ?>
-								
-										<!-- Number -->
-										<?php $stat_field_one_number = $stat_field_one['stat_field_one_number']; ?>
-										<?php if($stat_field_one_number): ?>
-											<p class="stat-number"><?php _e($stat_field_one_number); ?></p>
-										<?php endif; ?>
-										
-										<!-- Title -->
-										<?php $stat_field_one_title = $stat_field_one['stat_field_one_title']; ?>
-										<?php if($stat_field_one_title): ?>
-											<p><?php _e($stat_field_one_title); ?></p>
-										<?php endif; ?>
-
-									<?php endif; ?>
-								</div>
-
-								<!-- Stat Field 2 -->
-								<div class="stat-info">
-									<?php $stat_field_two = $stats['stat_field_two']; ?>
-									<?php if($stat_field_two): ?>
-								
-										<!-- Number -->
-										<?php $stat_field_two_number = $stat_field_two['stat_field_two_number']; ?>
-										<?php if($stat_field_two_number): ?>
-											<p class="stat-number"><?php _e($stat_field_two_number); ?></p>
-										<?php endif; ?>
-										
-										<!-- Title -->
-										<?php $stat_field_two_title = $stat_field_two['stat_field_two_title']; ?>
-										<?php if($stat_field_two_title): ?>
-											<p><?php _e($stat_field_two_title); ?></p>
-										<?php endif; ?>
-
-									<?php endif; ?>
-								</div>
-
-								<!-- Stat Field 3 -->
-								<div class="stat-info">
-									<?php $stat_field_three = $stats['stat_field_three']; ?>
-									<?php if($stat_field_three): ?>
-								
-										<!-- Number -->
-										<?php $stat_field_three_number = $stat_field_three['stat_field_three_number']; ?>
-										<?php if($stat_field_three_number): ?>
-											<p class="stat-number"><?php _e($stat_field_three_number); ?></p>
-										<?php endif; ?>
-										
-										<!-- Title -->
-										<?php $stat_field_three_title = $stat_field_three['stat_field_three_title']; ?>
-										<?php if($stat_field_three_title): ?>
-											<p><?php _e($stat_field_three_title); ?></p>
-										<?php endif; ?>
-
-									<?php endif; ?>
-								</div>
-
-								<!-- Stat Field 4 -->
-								<div class="stat-info">
-									<?php $stat_field_four = $stats['stat_field_four']; ?>
-									<?php if($stat_field_four): ?>
-								
-										<!-- Number -->
-										<?php $stat_field_four_number = $stat_field_four['stat_field_four_number']; ?>
-										<?php if($stat_field_four_number): ?>
-											<p class="stat-number"><?php _e($stat_field_four_number); ?></p>
-										<?php endif; ?>
-										
-										<!-- Title -->
-										<?php $stat_field_four_title = $stat_field_four['stat_field_four_title']; ?>
-										<?php if($stat_field_four_title): ?>
-											<p><?php _e($stat_field_four_title); ?></p>
-										<?php endif; ?>
-
-									<?php endif; ?>
-								</div>
-
-							<?php endif; ?>
 							
+									<!-- Stat Field 2 -->
+									<div class="stat-info">
+										<?php $stat_field_two = $stats['stat_field_two']; ?>
+										<?php if($stat_field_two): ?>
+									
+											<!-- Number -->
+											<?php $stat_field_two_number = $stat_field_two['stat_field_two_number']; ?>
+											<?php if($stat_field_two_number): ?>
+												<p class="stat-number"><?php _e($stat_field_two_number); ?></p>
+											<?php endif; ?>
+											
+											<!-- Title -->
+											<?php $stat_field_two_title = $stat_field_two['stat_field_two_title']; ?>
+											<?php if($stat_field_two_title): ?>
+												<p><?php _e($stat_field_two_title); ?></p>
+											<?php endif; ?>
+							
+										<?php endif; ?>
+									</div>
+							
+									<!-- Stat Field 3 -->
+									<div class="stat-info">
+										<?php $stat_field_three = $stats['stat_field_three']; ?>
+										<?php if($stat_field_three): ?>
+									
+											<!-- Number -->
+											<?php $stat_field_three_number = $stat_field_three['stat_field_three_number']; ?>
+											<?php if($stat_field_three_number): ?>
+												<p class="stat-number"><?php _e($stat_field_three_number); ?></p>
+											<?php endif; ?>
+											
+											<!-- Title -->
+											<?php $stat_field_three_title = $stat_field_three['stat_field_three_title']; ?>
+											<?php if($stat_field_three_title): ?>
+												<p><?php _e($stat_field_three_title); ?></p>
+											<?php endif; ?>
+							
+										<?php endif; ?>
+									</div>
+							
+									<!-- Stat Field 4 -->
+									<div class="stat-info">
+										<?php $stat_field_four = $stats['stat_field_four']; ?>
+										<?php if($stat_field_four): ?>
+									
+											<!-- Number -->
+											<?php $stat_field_four_number = $stat_field_four['stat_field_four_number']; ?>
+											<?php if($stat_field_four_number): ?>
+												<p class="stat-number"><?php _e($stat_field_four_number); ?></p>
+											<?php endif; ?>
+											
+											<!-- Title -->
+											<?php $stat_field_four_title = $stat_field_four['stat_field_four_title']; ?>
+											<?php if($stat_field_four_title): ?>
+												<p><?php _e($stat_field_four_title); ?></p>
+											<?php endif; ?>
+							
+										<?php endif; ?>
+									</div>
+							
+								<?php endif; ?>
+								
+							</div>
 						</div>
 					</div>
 

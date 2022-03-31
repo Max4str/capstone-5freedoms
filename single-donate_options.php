@@ -29,6 +29,12 @@ get_header();
 							<img src="<?php print_r(esc_url($img_url)); ?>">
 						</div>
 					<?php endif; ?>
+
+					<!-- Banner Text -->
+					<?php $banner_text = $banner['banner_text']; ?>
+					<?php if($banner_text): ?>
+						<p><?php _e($banner_text); ?></p>
+					<?php endif; ?>
 					
 				<?php endif; ?>
 			</div>
