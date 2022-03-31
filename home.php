@@ -23,7 +23,7 @@
 				<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
 			</header>.entry-header -->
 
-			<?php five_freedoms_ranch_post_thumbnail(); ?>
+			<!-- <?php five_freedoms_ranch_post_thumbnail(); ?> -->
 
 			<div class="entry-content">
 

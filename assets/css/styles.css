@@ -439,6 +439,12 @@ form.give-form legend {
   text-align: center;
 }
 
+.home-announcements .widget {
+  padding: 0 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .home-mission {
   margin-bottom: 8rem;
 }

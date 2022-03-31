@@ -63,9 +63,9 @@
 				<h3>What's New</h3>
 				<div>
 
-					<!-- NEWEST BLOG POSTS HERE (2-3 of them) -->
-					<!-- setup a query to display the first 3 blog posts. show 3 posts and output the image, title, excerpt, and read more -->
-					
+					<?php if(is_active_sidebar('home-latest-blog-posts')):?>
+						<?php dynamic_sidebar('home-latest-blog-posts'); ?>
+					<?php endif; ?>
 
 				</div>
 				<a href="#" class="btn">More announcements</a>
