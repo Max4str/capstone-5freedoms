@@ -1055,6 +1055,15 @@ form.give-form {
         }
     }
 
+    .fundraiser
+    .donate-option-form {
+        .give_error, 
+        .give_success, 
+        .give_warning {
+            max-width: fit-content;
+        }
+    }
+
     .fundraiser {
         .give-form-wrap {
             .give-form-content-wrap{
@@ -1254,6 +1263,18 @@ form.give-form {
         
     }
 
+    .fundraiser
+    .donate-option-form {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+
+        .give_error, 
+        .give_success, 
+        .give_warning {
+            max-width: fit-content;
+        }
+    }
+
     .fundraiser {
         .give-form-wrap {
             .give-goal-progress,
@@ -1280,48 +1301,6 @@ form.give-form {
     .donate-options {
         grid-template-columns: repeat(4, 1fr);
         grid-column-gap: .75rem;
-    }
-
-    .donate-option-form {
-        & > div {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-        }
-
-        h2 {
-            grid-column: 1/7;
-            grid-row: 1/2;
-        }
-
-        div.give-form-content-wrap {
-            grid-column: 1/7;
-            grid-row: 2/3;
-            height: fit-content;
-            grid-column-gap: 3rem;
-            margin-bottom: 0;
-        }
-
-
-        form.give-form {
-            grid-column: 8/-1;
-            grid-row: 2/span 1;
-
-            .give-submit-button-wrap {
-                margin: 2rem 0 0;
-            }
-        }
-
-        #give-donation-level-button-wrap {
-            align-self: flex-start;
-            grid-template-columns: repeat(3, 1fr);
-            // margin-bottom: 0;
-    
-            li {
-                height: fit-content;
-                margin-bottom: .75rem;
-            }
-        }
-
     }
 
     .slider {
@@ -1400,6 +1379,8 @@ form.give-form {
     .donate-options,
     .instruction,
     .donate-option-form > div,
+    .fundraiser > div,
+    .donate-option-form > div,
     .footer-top {
         grid-column-gap: 1.75rem;
     }
@@ -1417,31 +1398,95 @@ form.give-form {
         }
     }
 
-    .fundraiser {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-column-gap: 1.75rem;
-
-        & > div {
-            grid-column: 1/10;
-        }
+    .fundraiser
+    .donate-option-form {
 
         .give-form-wrap {
             .give-goal-progress,
             .give-form-content-wrap {
-                max-width: 80%;
+                grid-column: 1/7;
+                max-width: 100%;
+            }
+        }
+
+        h2 {
+            grid-column: 1/9;
+            grid-row: 2/3;
+        }
+
+        .give_error, 
+        .give_success, 
+        .give_warning {
+            grid-column: 1/-1;
+            grid-row: 1/2;
+            max-width: fit-content;
+
+            & > p {
+                max-width: fit-content;
             }
         }
 
         form.give-form {
+            grid-column: 1/-1;
+            grid-row: 4/span 1;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-column-gap: 1.75rem;
+
             .give-btn-reveal {
-                max-width: 80%;
+                grid-column: 1/6;
+            }
+
+            .give-submit-button-wrap {
+                max-width: 100%;
+                
+                .give_notices {
+                    display: flex;
+                    margin: 0 -.5rem;
+
+                    & > div {
+                        margin: 0 0.5rem;
+                    }
+                }
             }
         }
 
         #give-donation-level-button-wrap {
             margin-bottom: 3.75rem;
+            grid-column: 1/10;
         }
+
+        #give_purchase_form_wrap {
+            grid-column: 1/-1;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto auto .5fr;;
+            grid-column-gap: 1.75rem;
+            grid-row-gap: 3rem;
+
+            fieldset:first-child,
+            fieldset:nth-child(2) {
+                grid-column: 1/6;
+            }
+
+            #give-paypal-commerce-smart-buttons-wrap {
+                max-width: 70%;
+            }
+
+            fieldset:nth-child(3) {
+                grid-column: 7/-1;
+                grid-row: 2/4;
+            }
+
+            fieldset.give-donation-submit {
+                grid-column: 1/-1;
+                grid-row: 1/2;
+                max-width: 100%;
+            }
+
+        }
+
+
     }
 }
 

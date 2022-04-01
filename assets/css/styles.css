@@ -1424,6 +1424,12 @@ form.give-form .give-submit-button-wrap input[type=submit] {
     grid-column: 3/-1;
   }
 
+  .fundraiser .donate-option-form .give_error,
+.fundraiser .donate-option-form .give_success,
+.fundraiser .donate-option-form .give_warning {
+    max-width: fit-content;
+  }
+
   .fundraiser .give-form-wrap .give-form-content-wrap {
     max-width: 75%;
   }
@@ -1589,6 +1595,16 @@ form.give-form .give-submit-button-wrap input[type=submit] {
     align-self: flex-start;
   }
 
+  .fundraiser .donate-option-form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .fundraiser .donate-option-form .give_error,
+.fundraiser .donate-option-form .give_success,
+.fundraiser .donate-option-form .give_warning {
+    max-width: fit-content;
+  }
+
   .fundraiser .give-form-wrap .give-goal-progress,
 .fundraiser .give-form-wrap .give-form-content-wrap {
     max-width: 65%;
@@ -1607,37 +1623,6 @@ form.give-form .give-submit-button-wrap input[type=submit] {
   .donate-options {
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 0.75rem;
-  }
-
-  .donate-option-form > div {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-  }
-  .donate-option-form h2 {
-    grid-column: 1/7;
-    grid-row: 1/2;
-  }
-  .donate-option-form div.give-form-content-wrap {
-    grid-column: 1/7;
-    grid-row: 2/3;
-    height: fit-content;
-    grid-column-gap: 3rem;
-    margin-bottom: 0;
-  }
-  .donate-option-form form.give-form {
-    grid-column: 8/-1;
-    grid-row: 2/span 1;
-  }
-  .donate-option-form form.give-form .give-submit-button-wrap {
-    margin: 2rem 0 0;
-  }
-  .donate-option-form #give-donation-level-button-wrap {
-    align-self: flex-start;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .donate-option-form #give-donation-level-button-wrap li {
-    height: fit-content;
-    margin-bottom: 0.75rem;
   }
 
   .slider {
@@ -1712,6 +1697,8 @@ form.give-form .give-submit-button-wrap input[type=submit] {
 .donate-options,
 .instruction,
 .donate-option-form > div,
+.fundraiser > div,
+.donate-option-form > div,
 .footer-top {
     grid-column-gap: 1.75rem;
   }
@@ -1727,23 +1714,74 @@ form.give-form .give-submit-button-wrap input[type=submit] {
     grid-column: 7/-1;
   }
 
-  .fundraiser {
+  .fundraiser .donate-option-form .give-form-wrap .give-goal-progress,
+.fundraiser .donate-option-form .give-form-wrap .give-form-content-wrap {
+    grid-column: 1/7;
+    max-width: 100%;
+  }
+  .fundraiser .donate-option-form h2 {
+    grid-column: 1/9;
+    grid-row: 2/3;
+  }
+  .fundraiser .donate-option-form .give_error,
+.fundraiser .donate-option-form .give_success,
+.fundraiser .donate-option-form .give_warning {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    max-width: fit-content;
+  }
+  .fundraiser .donate-option-form .give_error > p,
+.fundraiser .donate-option-form .give_success > p,
+.fundraiser .donate-option-form .give_warning > p {
+    max-width: fit-content;
+  }
+  .fundraiser .donate-option-form form.give-form {
+    grid-column: 1/-1;
+    grid-row: 4/span 1;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 1.75rem;
   }
-  .fundraiser > div {
+  .fundraiser .donate-option-form form.give-form .give-btn-reveal {
+    grid-column: 1/6;
+  }
+  .fundraiser .donate-option-form form.give-form .give-submit-button-wrap {
+    max-width: 100%;
+  }
+  .fundraiser .donate-option-form form.give-form .give-submit-button-wrap .give_notices {
+    display: flex;
+    margin: 0 -0.5rem;
+  }
+  .fundraiser .donate-option-form form.give-form .give-submit-button-wrap .give_notices > div {
+    margin: 0 0.5rem;
+  }
+  .fundraiser .donate-option-form #give-donation-level-button-wrap {
+    margin-bottom: 3.75rem;
     grid-column: 1/10;
   }
-  .fundraiser .give-form-wrap .give-goal-progress,
-.fundraiser .give-form-wrap .give-form-content-wrap {
-    max-width: 80%;
+  .fundraiser .donate-option-form #give_purchase_form_wrap {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto 0.5fr;
+    grid-column-gap: 1.75rem;
+    grid-row-gap: 3rem;
   }
-  .fundraiser form.give-form .give-btn-reveal {
-    max-width: 80%;
+  .fundraiser .donate-option-form #give_purchase_form_wrap fieldset:first-child,
+.fundraiser .donate-option-form #give_purchase_form_wrap fieldset:nth-child(2) {
+    grid-column: 1/6;
   }
-  .fundraiser #give-donation-level-button-wrap {
-    margin-bottom: 3.75rem;
+  .fundraiser .donate-option-form #give_purchase_form_wrap #give-paypal-commerce-smart-buttons-wrap {
+    max-width: 70%;
+  }
+  .fundraiser .donate-option-form #give_purchase_form_wrap fieldset:nth-child(3) {
+    grid-column: 7/-1;
+    grid-row: 2/4;
+  }
+  .fundraiser .donate-option-form #give_purchase_form_wrap fieldset.give-donation-submit {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    max-width: 100%;
   }
 }
 @media screen and (min-width: 1400px) {
