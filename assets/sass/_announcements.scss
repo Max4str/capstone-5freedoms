@@ -1,7 +1,7 @@
 .post {
 	border: 1px solid black;
-	border-radius: 5px;
-	margin: 0 1.6rem 3.6rem;
+	border-radius: 0.3125rem;
+	margin: 0 1rem 2.25rem;
 }
 
 .blog-img img {
@@ -16,6 +16,36 @@
 .blog-card-body {
 	margin: 0 2.4rem;
 	text-align: center;
+}
+
+
+.announcements {
+	.post {
+		border: 1px solid black;
+		border-radius: 0.3125rem;
+		margin: 0 1rem 2.25rem;
+	}
+	
+	.blog-img {
+		height: 10rem;
+		margin-bottom: 2.25rem;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	.blog-card-body {
+		margin: 0 2.4rem;
+		text-align: center;
+
+		p {
+			margin-bottom: 2.25rem;
+		}
+	}
 }
 
 

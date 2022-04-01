@@ -76,11 +76,6 @@
 
 			<!-- OUR MISSION -->
 			<section class="home-mission">
-				<!-- <div class="home-mission-img"></div>
-				<div class="home-mission-content">
-					<h3>Our Mission</h3>
-					<p>Our Mission is dedicated to rescuing and protecting horses. Freeing them from abuse, neglect & slaughter, thus providing an opportunity to bond horses with humans through the power of connection!!</p>
-				</div> -->
 				<?php $our_mission = get_field('our_mission'); ?>
 				<?php if($our_mission): ?>
 

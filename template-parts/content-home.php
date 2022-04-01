@@ -11,7 +11,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="blog-img">
 		<!-- image size options are: thumbnail, medium, large -->
-		<?php echo get_the_post_thumbnail($post->ID, 'thumbnail'); ?>
+		<?php echo get_the_post_thumbnail($post->ID, 'medium'); ?>
 	</div>
 	<div class="blog-card-body">
 		<?php the_title('<h4>', '</h4>'); ?>

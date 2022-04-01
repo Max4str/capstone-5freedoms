@@ -4,7 +4,7 @@
     .hero-image {
         position: relative;
         height: 420px;
-        margin-bottom: 8rem;
+        margin-bottom: 5rem;
 
         img {
             width: 100%;
@@ -30,7 +30,7 @@
 // WHAT'S NEW
 
 .home-announcements {
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
     text-align: center;
 }
 
@@ -45,11 +45,11 @@
 // OUR MISSION
 
 .home-mission {
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
 
     .hero-image {
         position: relative;
-        height: 650px;
+        height: 40rem;
         background-color: black;
 
         img {
@@ -81,35 +81,37 @@
 // CARDS
 
 .home-cards {
-    margin-bottom: 8rem;
+    padding: 0 1rem;
+    margin-bottom: 5rem;
 
     .home-card-container {
         border: 1px solid black;
-        border-radius: 5px;
-        margin: 0 1.6rem 3.6rem;
+        border-radius: 0.3125rem;
+        margin: 0 1rem 2.25rem;
         text-align: center;
+        max-width: 25rem;
     }
     
     .img-circle {
-        padding: 3.6rem;
-        
+        width: 13.5rem;
+        height: 13.5rem;
+        margin: 2.25rem auto;
     }
     
     .img-circle img {
         border-radius: 50%;
-        width: 216px;
-        height: 216px;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
         object-position: center;
-        margin: auto;
-        
     }
     
     p,
     .list {
-        margin: 0 2.4rem 3.6rem;
+        margin: 0 1.5rem 2.25rem;
     }
 }
+
 
 
 
@@ -117,7 +119,7 @@
 
 .home-stats {
     background-color: #4365EE;
-    padding: 8rem 0rem;
+    padding: 5rem 0rem;
     color: #fff;
 
     .stat {
