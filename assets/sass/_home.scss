@@ -3,7 +3,7 @@
 .home-banner {
     .hero-image {
         position: relative;
-        height: 420px;
+        height: 490px;
         margin-bottom: 5rem;
 
         img {
@@ -22,6 +22,11 @@
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 1rem;
+        width: 90%;
+
+        p {
+            margin-bottom: 1.5rem;
+        }
     }
 }
 
@@ -32,12 +37,20 @@
 .home-announcements {
     margin-bottom: 5rem;
     text-align: center;
+
+    .btn {
+        max-width: 66.6%;
+    }
 }
 
 .home-announcements .widget {
     padding: 0 1rem;
     max-width: 1000px;
     margin: 0 auto;
+}
+
+.wp-block-latest-posts.is-grid li {
+    margin:0 0em 1.25em 0;
 }
 
 
@@ -85,17 +98,20 @@
     margin-bottom: 5rem;
 
     .home-card-container {
-        border: 1px solid black;
+        background-color: #fff;
+        filter: drop-shadow(1px 2px 0.25rem rgb(124, 124, 124));
         border-radius: 0.3125rem;
-        margin: 0 1rem 2.25rem;
+        margin-bottom: 2.25rem;
         text-align: center;
         max-width: 25rem;
+        padding: 3rem 0rem;
     }
     
     .img-circle {
         width: 13.5rem;
         height: 13.5rem;
-        margin: 2.25rem auto;
+        margin: 0rem auto;
+        margin-bottom: 2.25rem;
     }
     
     .img-circle img {

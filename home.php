@@ -16,7 +16,10 @@
 
 <?php get_header(); ?>
 
+<h1>Test 1</h1>
+
 	<main id="primary" class="site-main">
+		<h1>Test 2</h1>
 
 		<?php if ( have_posts() ) :?>
 			<!-- <header class="entry-header">
@@ -24,6 +27,7 @@
 			</header>.entry-header -->
 
 			<!-- <?php five_freedoms_ranch_post_thumbnail(); ?> -->
+			<h1>Test 3</h1>
 
 			<!-- Banner -->
 			<div class="banner">
@@ -50,6 +54,7 @@
 				</div>
 
 			<div class="entry-content">
+				<h1>Test 4</h1>
 
 				<!-- Banner -->
 				<div class="banner">
