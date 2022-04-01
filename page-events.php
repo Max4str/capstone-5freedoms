@@ -11,4 +11,6 @@
 
 <!-- EVENTS WIDGET HERE -->
 
+
+
 <?php get_footer(); ?>

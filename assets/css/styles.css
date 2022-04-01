@@ -915,6 +915,12 @@ form.give-form .give-submit-button-wrap input[type=submit] {
   background-color: #f9ac55;
 }
 
+#give-receipt {
+  padding: 0 1rem;
+  max-width: 768px;
+  margin: 0 auto 5rem;
+}
+
 .donate {
   padding: 0 1rem;
   margin-bottom: 5rem;
@@ -1164,6 +1170,7 @@ form.give-form .give-submit-button-wrap input[type=submit] {
 .intro-bg,
 .section-one,
 .fundraiser,
+#give-receipt,
 .donate,
 .quote,
 .instruction,
@@ -1686,6 +1693,7 @@ form.give-form .give-submit-button-wrap input[type=submit] {
 .section-two,
 .section-three,
 .fundraiser,
+#give-receipt,
 .donate,
 .quote,
 .instruction,
