@@ -11,6 +11,7 @@
 
 <!-- EVENTS WIDGET HERE -->
 
+<<<<<<< HEAD
 <div class="banner">
     <?php $banner = get_field('banner'); ?>
     <?php if($banner): ?>
@@ -33,5 +34,8 @@
         
     <?php endif; ?>
 </div>
+=======
+
+>>>>>>> e3ff9d636a40518d883dad5fa849d8827b283cf5
 
 <?php get_footer(); ?>

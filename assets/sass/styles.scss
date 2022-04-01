@@ -454,6 +454,12 @@ form.give-form {
     }
 }
 
+#give-receipt {
+    padding: 0 1rem;
+    max-width: 768px;
+    margin: 0 auto 5rem;
+}
+
 
 .donate {
     padding: 0 1rem;
@@ -775,6 +781,7 @@ form.give-form {
     .intro-bg,
     .section-one,
     .fundraiser,
+    #give-receipt,
     .donate, 
     .quote,
     .instruction,
@@ -1476,6 +1483,7 @@ form.give-form {
     .section-two,
     .section-three,
     .fundraiser, 
+    #give-receipt,
     .donate, 
     .quote, 
     .instruction, 
