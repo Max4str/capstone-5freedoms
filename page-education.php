@@ -54,6 +54,14 @@ get_header();
 					<h3><?php _e($horse_slaughter_title); ?></h3>
 				<?php endif; ?>
 
+				<!--title -->
+				<?php $horse_slaughter_subheading = get_field('horse_slaughter_subheading'); ?>
+				<?php if ($horse_slaughter_subheading) : ?>
+					<h4><?php _e($horse_slaughter_subheading); ?></h4>
+				<?php endif; ?>
+
+
+
 				<!-- text -->
 				<?php $horse_slaughter_title = get_field('horse_slaughter_text'); ?>
 				<?php if ($horse_slaughter_title) : ?>
