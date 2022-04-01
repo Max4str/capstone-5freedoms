@@ -49,6 +49,8 @@
 							<?php if($hero_banner_text): ?>
 								<p><?php _e($hero_banner_text); ?></p>
 							<?php endif; ?>
+
+							<a href="https://5freedoms.web.dmitcapstone.ca/five-freedoms-ranch/get-involved/" class="btn">I WANT TO HELP!</a>
 						</div>
 					</div>
 
@@ -68,7 +70,7 @@
 					<?php endif; ?>
 
 				</div>
-				<a href="#" class="btn">More announcements</a>
+				<a href="https://5freedoms.web.dmitcapstone.ca/five-freedoms-ranch/announcements/" class="btn">MORE ANNOUNCEMENTS</a>
 			</section>
 			<!-- END: WHAT'S NEW -->
 
@@ -76,11 +78,6 @@
 
 			<!-- OUR MISSION -->
 			<section class="home-mission">
-				<!-- <div class="home-mission-img"></div>
-				<div class="home-mission-content">
-					<h3>Our Mission</h3>
-					<p>Our Mission is dedicated to rescuing and protecting horses. Freeing them from abuse, neglect & slaughter, thus providing an opportunity to bond horses with humans through the power of connection!!</p>
-				</div> -->
 				<?php $our_mission = get_field('our_mission'); ?>
 				<?php if($our_mission): ?>
 
@@ -149,6 +146,8 @@
 							<p><?php _e($home_card_1_text); ?></p>
 						<?php endif; ?>
 
+						<a href="https://5freedoms.web.dmitcapstone.ca/five-freedoms-ranch/our-horses/" class="btn">MEET OUR HORSES</a>
+
 					<?php endif; ?>
 				</div>
 
@@ -207,6 +206,8 @@
 							</ul>
 						<?php endif; ?>
 
+						<a href="https://5freedoms.web.dmitcapstone.ca/five-freedoms-ranch/get-involved/" class="btn">DONATE ITEMS</a>
+
 					<?php endif; ?>
 				</div>
 
@@ -264,6 +265,8 @@
 
 							</ul>
 						<?php endif; ?>
+
+						<a href="https://5freedoms.web.dmitcapstone.ca/five-freedoms-ranch/education" class="btn">LEARN MORE</a>
 
 					<?php endif; ?>
 				</div>

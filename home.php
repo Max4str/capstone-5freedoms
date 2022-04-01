@@ -16,7 +16,10 @@
 
 <?php get_header(); ?>
 
+<h1>Test 1</h1>
+
 	<main id="primary" class="site-main">
+		<h1>Test 2</h1>
 
 		<?php if ( have_posts() ) :?>
 			<!-- <header class="entry-header">
@@ -24,8 +27,34 @@
 			</header>.entry-header -->
 
 			<!-- <?php five_freedoms_ranch_post_thumbnail(); ?> -->
+			<h1>Test 3</h1>
+
+			<!-- Banner -->
+			<div class="banner">
+					<?php $banner = get_field('banner'); ?>
+					<?php if($banner): ?>
+						
+						<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+						<!-- Banner Image -->
+						<?php $banner_image = $banner['banner_image']; ?>
+						<?php if($banner_image): ?>
+							<?php 
+								$img_url = $banner_image['url'];
+							?>
+							<img src="<?php print_r(esc_url($img_url)); ?>">
+						<?php endif; ?>
+						
+						<!-- Banner Text -->
+						<?php $banner_text = $banner['banner_text']; ?>
+						<?php if($banner_text): ?>
+							<p><?php _e($banner_text); ?></p>
+						<?php endif; ?>
+						
+					<?php endif; ?>
+				</div>
 
 			<div class="entry-content">
+				<h1>Test 4</h1>
 
 				<!-- Banner -->
 				<div class="banner">
@@ -51,14 +80,16 @@
 					<?php endif; ?>
 				</div>
 
-				<?php
-				while ( have_posts() ) :
-					the_post();
-
-					get_template_part( 'template-parts/content', 'home' );
-
-				endwhile; // End of the loop.
-				?>
+				<div class="announcements">
+					<?php
+					while ( have_posts() ) :
+						the_post();
+	
+						get_template_part( 'template-parts/content', 'home' );
+	
+					endwhile; // End of the loop.
+					?>
+				</div>
 
 			</div><!-- .entry-content -->
 
