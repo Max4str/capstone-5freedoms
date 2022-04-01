@@ -752,7 +752,7 @@ header .site-title {
 
 .show-text {
   display: block;
-  margin-top: 2rem;
+  margin-top: 3rem;
   padding: 0 1rem;
 }
 
@@ -1614,6 +1614,10 @@ form.give-form fieldset:last-child {
     grid-column: 9/-1;
   }
 
+  .show-text {
+    margin-top: 4.5rem;
+  }
+
   form.give-form {
     margin-bottom: 0;
   }
@@ -1717,7 +1721,6 @@ form.give-form fieldset:last-child {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto auto 0.5fr;
     grid-column-gap: 1.75rem;
-    grid-row-gap: 3rem;
   }
   .fundraiser form.give-form #give_purchase_form_wrap fieldset:first-child,
 .donate-option-form form.give-form #give_purchase_form_wrap fieldset:first-child {
