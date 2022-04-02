@@ -1,0 +1,166 @@
+<?php
+
+/**
+ * The template for displaying Donate Page
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package five-freedoms-ranch
+ */
+
+get_header();
+?>
+
+<main id="primary" class="site-main">
+
+	<div class="entry-content">
+
+
+		<!-- Banner -->
+		<div class="banner">
+			<?php $banner = get_field('banner'); ?>
+			<?php if ($banner) : ?>
+
+				<?php the_title('<h2 class="entry-title">', '</h2>'); ?>
+				<!-- Banner Image -->
+				<?php $banner_image = $banner['banner_image']; ?>
+				<?php if ($banner_image) : ?>
+					<?php
+					$img_url = $banner_image['url'];
+					?>
+					<div class="banner-img">
+						<img src="<?php print_r(esc_url($img_url)); ?>">
+					</div>
+				<?php endif; ?>
+
+				<!-- Banner Text -->
+				<?php $banner_text = $banner['banner_text']; ?>
+				<?php if ($banner_text) : ?>
+					<p><?php _e($banner_text); ?></p>
+				<?php endif; ?>
+
+			<?php endif; ?>
+		</div>
+
+
+
+		<section class="our Horses">
+
+			<div class="meetourhorses">
+				<!--title -->
+				<?php $meethorsestitle = get_field('our_horses_title'); ?>
+				<?php if ($meethorsestitle) : ?>
+					<h3><?php _e($meethorsestitle); ?></h3>
+				<?php endif; ?>
+
+				<!-- text -->
+				<?php $meethorsestext = get_field('our_horses_text'); ?>
+				<?php if ($meethorsestext) : ?>
+					<p><?php _e($meethorsestext); ?></p>
+				<?php endif; ?>
+			</div>
+
+	</div>
+
+
+	<div class="adoptable horses">
+		<!--title -->
+		<?php $adoptablehorsestitle = get_field('adoptable_horses_title'); ?>
+		<?php if ($adoptablehorsestitle) : ?>
+			<h3><?php _e($adoptablehorsestitle); ?></h3>
+		<?php endif; ?>
+
+		<!-- text -->
+		<?php $adoptablehorsestext = get_field('adoptable_horses_text'); ?>
+		<?php if ($adoptablehorsestext) : ?>
+			<p><?php _e($adoptablehorsestext); ?></p>
+		<?php endif; ?>
+	</div>
+
+	<?php
+	$args = array(
+		'post_type' => 'adoptable_horses',
+		'posts_per_page' => 8,
+		'order' => 'ASC'
+	);
+	$adoptable = new WP_Query($args);
+	?>
+
+
+	<div class="adoptable">
+		<?php if ($adoptable->have_posts()) :
+		?>
+			<div class="adoptable-horse-profiles">
+				<!-- start the loop -->
+				<?php while ($adoptable->have_posts()) : $adoptable->the_post(); ?>
+					<div class="adoptable-horse card">
+						<h4 class="horse-name" href="<?php get_field('horse_name'); ?>"><?php the_title('<h4>', '</h4>'); ?></h4>
+
+						<p class="horse-age"><?php get_field('horse_age'); ?></p>
+						<p class="horse-gender"><?php get_field('horse_gender'); ?></p>
+
+
+					</div>
+				<?php endwhile; ?>
+				<!-- end while loop -->
+			</div>
+			<?php wp_reset_postdata(); ?>
+		<?php endif;
+		?>
+
+	</div>
+
+	<div class="sanctuary-horses">
+		<!--title -->
+		<?php $sanctuaryhorsetitle = get_field('sanctuary_horses_title'); ?>
+		<?php if ($sanctuaryhorsetitle) : ?>
+			<h3><?php _e($sanctuaryhorsetitle); ?></h3>
+		<?php endif; ?>
+
+		<!-- text -->
+		<?php $sanctuaryhorsestext = get_field('sanctuary_horses_text'); ?>
+		<?php if ($sanctuaryhorsestext) : ?>
+			<p><?php _e($sanctuaryhorsestext); ?></p>
+		<?php endif; ?>
+	</div>
+
+	<?php
+	$args = array(
+		'post_type' => 'sanctuary_horse',
+		'posts_per_page' => 8,
+		'order' => 'ASC'
+	);
+	$sanctuaryhorse = new WP_Query($args);
+	?>
+
+
+	<div class="sanctuary-horses">
+		<?php if ($sanctuaryhorse->have_posts()) :
+		?>
+			<div class="sanctuary horses">
+				<!-- start the loop -->
+				<?php while ($sanctuaryhorse->have_posts()) : $sanctuaryhorse->the_post(); ?>
+					<div class="sanctuary-horse card">
+						<h4 class="horse-name" href="<?php the_permalink(); ?>"><?php the_title('<h4>', '</h4>'); ?></h4>
+
+
+
+					</div>
+				<?php endwhile; ?>
+				<!-- end while loop -->
+			</div>
+			<?php wp_reset_postdata(); ?>
+		<?php endif;
+		?>
+
+	</div>
+
+
+
+	</div>
+
+
+</main><!-- #main -->
+
+<?php
+get_footer();

@@ -13,180 +13,166 @@ get_header();
 
 <main id="primary" class="site-main">
 
-	<?php if (have_posts()) : ?>
-		<!-- <header class="entry-header">
+	<div class="entry-content">
+
+
+		<!-- Banner -->
+		<div class="banner">
+			<?php $banner = get_field('banner'); ?>
+			<?php if ($banner) : ?>
+
 				<?php the_title('<h2 class="entry-title">', '</h2>'); ?>
-			</header>.entry-header -->
-
-		<?php five_freedoms_ranch_post_thumbnail(); ?>
-
-		<div class="entry-content">
-
-			<!-- Banner -->
-			<div class="banner">
-				<?php $banner = get_field('banner'); ?>
-				<?php if ($banner) : ?>
-
-					<?php the_title('<h2 class="entry-title">', '</h2>'); ?>
-					<!-- Banner Image -->
-					<?php $banner_image = $banner['banner_image']; ?>
-					<?php if ($banner_image) : ?>
-						<?php
-						$img_url = $banner_image['url'];
-						?>
+				<!-- Banner Image -->
+				<?php $banner_image = $banner['banner_image']; ?>
+				<?php if ($banner_image) : ?>
+					<?php
+					$img_url = $banner_image['url'];
+					?>
+					<div class="banner-img">
 						<img src="<?php print_r(esc_url($img_url)); ?>">
-					<?php endif; ?>
+					</div>
+				<?php endif; ?>
 
-					<!-- Banner Text -->
-					<?php $banner_text = $banner['banner_text']; ?>
-					<?php if ($banner_text) : ?>
-						<p><?php _e($banner_text); ?></p>
-					<?php endif; ?>
+				<!-- Banner Text -->
+				<?php $banner_text = $banner['banner_text']; ?>
+				<?php if ($banner_text) : ?>
+					<p><?php _e($banner_text); ?></p>
+				<?php endif; ?>
 
+			<?php endif; ?>
+		</div>
+
+
+
+		<section class="educationcontent">
+
+
+			<div class="slaughter">
+				<!--title -->
+				<?php $horse_slaughter_title = get_field('horse_slaughter_title'); ?>
+				<?php if ($horse_slaughter_title) : ?>
+					<h3><?php _e($horse_slaughter_title); ?></h3>
+				<?php endif; ?>
+
+				<!--title -->
+				<?php $horse_slaughter_subheading = get_field('horse_slaughter_subheading'); ?>
+				<?php if ($horse_slaughter_subheading) : ?>
+					<h4><?php _e($horse_slaughter_subheading); ?></h4>
+				<?php endif; ?>
+
+
+
+				<!-- text -->
+				<?php $horse_slaughter_title = get_field('horse_slaughter_text'); ?>
+				<?php if ($horse_slaughter_title) : ?>
+					<p><?php _e($horse_slaughter_title); ?></p>
 				<?php endif; ?>
 			</div>
 
-			<!-- volunteering -->
-			<section class="donate">
-				<?php $donate_options = get_field('get_involved_content'); ?>
-				<?php if ($get_involved) : ?>
 
-					<div class="volunteering">
+			<div class="slaughter links">
 
-						<!-- Title -->
-						<?php $volunteer_options_title = $get_involved['volunteer_options_title']; ?>
-						<?php if ($get_involved_title) : ?>
-							<h3><?php _e($get_involved_title); ?></h3>
-						<?php endif; ?>
+				<div class="links">
+					<!-- start the loop -->
 
-						<!-- Text -->
-						<?php $get_involved_text = $get_involved['volunteer_options_text']; ?>
-						<?php if ($volunteer_options_text) : ?>
-							<p><?php _e($volunteer_options_text); ?></p>
-						<?php endif; ?>
+					<div class="button links">
+						<a class="slaughter info link" href="https://canadianhorsedefencecoalition.org/">Canadaian Horse Defence Coalition</a>
+						<a class="mpletter link" href="https://banhorseslaughter.com/contact-your-mp-2/">write your MP</a>
+						<a class="mpletter link" href="https://www.change.org/p/lawrence-macaulay-canada-stop-exporting-live-horses-for-slaughter">Sign the Petition</a>
+
 
 					</div>
 
-					<!-- volunteering posts -->
-					<?php
-					$args = array(
-						'post_type' => 'volunteer options',
-						'posts_per_page' => 2,
-						'order' => 'ASC'
-					);
-					$get_involved = new WP_Query($args);
-					?>
+					<!-- end while loop -->
+				</div>
 
-					<?php if ($donate_options->have_posts()) : ?>
-						<div class="donate-options">
-							<!-- start the loop -->
-							<?php while ($donate_options->have_posts()) : $donate_options->the_post(); ?>
-								<div class="donate-card">
-									<a class="donate-card-title" href="<?php the_permalink(); ?>"><?php the_title('<h4>', '</h4>'); ?></a>
-									<?php $short_description = get_field('short_description'); ?>
-									<?php if ($short_description) : ?>
-										<p class="donate-card-text"><?php _e($short_description); ?></p>
-									<?php endif; ?>
-								</div>
-							<?php endwhile; ?>
-							<!-- end while loop -->
-						</div>
-						<?php wp_reset_postdata(); ?>
+
+			</div>
+
+			<div class="media">
+				<!--title -->
+				<?php $media_title = get_field('media_title'); ?>
+				<?php if ($media_title) : ?>
+					<h3><?php _e($media_title); ?></h3>
+				<?php endif; ?>
+
+				<!-- text -->
+				<?php $media_text = get_field('meida_text'); ?>
+				<?php if ($media_text) : ?>
+					<p><?php _e($media_text); ?></p>
+				<?php endif; ?>
+
+				<!-- text -->
+				<?php $media_links = get_field('meida_links'); ?>
+				<?php if ($media_links) : ?>
+					<p><?php _e($media_links); ?></p>
+				<?php endif; ?>
+
+
+			</div>
+
+
+
+
+			<div class="sanctuary animals">
+
+				<div class="sanctuaryhorses">
+					<!--title -->
+					<?php $education_sanctuaryhorses_title = get_field('sanctuary_animals_title'); ?>
+					<?php if ($education_sanctuaryhorses_title) : ?>
+						<h3><?php _e($education_sanctuaryhorses_title); ?></h3>
 					<?php endif; ?>
 
-				<?php endif; ?>
-			</section>
+					<!-- text -->
+					<?php $education_sanctuaryhorses_text = get_field('sanctuary_animals_text'); ?>
+					<?php if ($education_sanctuaryhorses_text) : ?>
+						<p><?php _e($education_sanctuaryhorses_text); ?></p>
+					<?php endif; ?>
+				</div>
 
 
-			Intructions
-			<section class="instruction">
-				<?php $instructions = get_field('instructions'); ?>
-				<?php if ($instructions) : ?>
 
-					<!-- Title -->
-					<?php $intructions_title = $instructions['intructions_title']; ?>
-					<?php if ($intructions_title) : ?>
-						<h3><?php _e($intructions_title); ?></h3>
+			</div>
+			<div class="compasionfund">
+
+				<div class="compassionfund content">
+					<!--title -->
+					<?php $compassionfund_title = get_field('compassion_fund_title'); ?>
+					<?php if ($compassionfund_title) : ?>
+						<h3><?php _e($compassionfund_title); ?></h3>
 					<?php endif; ?>
 
-					<!--Step One  -->
-					<div class="step-one">
-						<?php $step_one = $instructions['step_one']; ?>
-						<?php if ($step_one) : ?>
-
-							<!-- Step One Title -->
-							<?php $step_one_title = $step_one['step_one_title']; ?>
-							<?php if ($step_one_title) : ?>
-								<h4><?php _e($step_one_title); ?></h4>
-							<?php endif; ?>
-
-							<!-- Step One Text -->
-							<?php $step_one_text = $step_one['step_one_text']; ?>
-							<?php if ($step_one_text) : ?>
-								<p><?php _e($step_one_text); ?></p>
-							<?php endif; ?>
-
-						<?php endif; ?>
-					</div>
-
-					<!-- Step Two -->
-					<div class="step-two">
-						<?php $step_two = $instructions['step_two']; ?>
-						<?php if ($step_two) : ?>
-
-							<!-- Step Two Title -->
-							<?php $step_two_title = $step_two['step_two_title']; ?>
-							<?php if ($step_two_title) : ?>
-								<h4><?php _e($step_two_title); ?></h4>
-							<?php endif; ?>
-
-							<!-- Step Two Text -->
-							<?php $step_two_text = $step_two['step_two_text']; ?>
-							<?php if ($step_two_text) : ?>
-								<p><?php _e($step_two_text); ?></p>
-							<?php endif; ?>
-
-						<?php endif; ?>
-					</div>
-
-					<!-- Step Three -->
-					<div class="step-three">
-						<?php $step_three = $instructions['step_three']; ?>
-						<?php if ($step_three) : ?>
-
-							<!-- Step Three Title -->
-							<?php $step_three_title = $step_three['step_three_title']; ?>
-							<?php if ($step_three_title) : ?>
-								<h4><?php _e($step_three_title); ?></h4>
-							<?php endif; ?>
-
-							<!-- Step Three Text -->
-							<?php $step_three_text = $step_three['step_three_text']; ?>
-							<?php if ($step_three_text) : ?>
-								<p><?php _e($step_three_text); ?></p>
-							<?php endif; ?>
-
-						<?php endif; ?>
-					</div>
+					<!-- text -->
+					<?php $compassionfund_text = get_field('compassion_fund_text'); ?>
+					<?php if ($compassionfund_text) : ?>
+						<p><?php _e($compassionfund_text); ?></p>
+					<?php endif; ?>
+				</div>
 
 
 
-				<?php endif; ?>
-			</section>
+			</div>
 
-			<?php
-			wp_link_pages(
-				array(
-					'before' => '<div class="page-links">' . esc_html__('Pages:', 'five-freedoms-ranch'),
-					'after'  => '</div>',
-				)
-			);
-			?>
-		</div><!-- .entry-content -->
 
-	<?php else : ?>
-		<?php get_template_part('template-parts/content', 'none'); ?>
-	<?php endif; ?>
+			<div class="therapy">
+
+				<div class="therapy content">
+					<!--title -->
+					<?php $therapy_title = get_field('equine_therapy_title'); ?>
+					<?php if ($therapy_title) : ?>
+						<h3><?php _e($therapy_title); ?></h3>
+					<?php endif; ?>
+
+					<!-- text -->
+					<?php $therapy_text = get_field('equine_therapy_text'); ?>
+					<?php if ($therapy_text) : ?>
+						<p><?php _e($therapy_text); ?></p>
+					<?php endif; ?>
+				</div>
+
+
+
+			</div>
 
 </main><!-- #main -->
 
