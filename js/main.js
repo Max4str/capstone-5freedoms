@@ -76,9 +76,14 @@ addDonateRevealSvg()
 function addImageDonateOption(){
     const image = document.getElementsByClassName('donate-option-image')[0]
     const donateForm = document.querySelector('.donate-option-form .give-form-wrap .give-form-content-wrap')
+    const wishlistForm = document.querySelector('.donate-option-form .wpcf7')
     
     if(donateForm){
         donateForm.append(image)
+    }
+    
+    if(wishlistForm){
+        wishlistForm.append(image)
     }
 }
 addImageDonateOption()
