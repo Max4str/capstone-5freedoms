@@ -27,9 +27,18 @@
 	.blog-card-body {
 		margin: 0 2.4rem;
 		text-align: center;
+		padding-bottom: 2.25rem;
 
 		p {
 			margin-bottom: 2.25rem;
+		}
+
+		.read-more-link {
+			border-bottom: 1px solid #2d5180;
+		}
+
+		svg line {
+			stroke: #2d5180;
 		}
 	}
 }

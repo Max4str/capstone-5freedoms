@@ -414,6 +414,24 @@ form.give-form legend {
     font-size: 1.25rem;
   }
 }
+.btn {
+  border: 1px solid #f9ac55;
+  border-radius: 5px;
+  background-color: #f9ac55;
+  color: #fff;
+  font-weight: 600;
+  max-width: 66.6%;
+  margin: 0 auto;
+  padding: 0.75rem 1.625rem;
+  transition: ease-in-out 0.2s;
+}
+
+.btn:hover {
+  border: 1px solid #f9ac55;
+  background-color: #fff;
+  color: #f9ac55;
+}
+
 .home-banner .hero-image {
   position: relative;
   height: 490px;
@@ -515,6 +533,9 @@ form.give-form legend {
 .home-cards .list {
   margin: 0 1.5rem 2.25rem;
 }
+.home-cards .list {
+  text-align: left;
+}
 
 .home-stats {
   background-color: #4365EE;
@@ -531,6 +552,92 @@ form.give-form legend {
   background-color: #f9ac55;
 }
 
+@media screen and (min-width: 425px) {
+  .home-mission .hero-image {
+    height: 35rem;
+  }
+}
+@media screen and (min-width: 465px) {
+  .home-cards .home-card-container {
+    max-width: 25rem;
+    margin: 0 auto 2.25rem;
+  }
+}
+@media screen and (min-width: 520px) {
+  .home-mission .hero-image {
+    height: 25rem;
+  }
+}
+@media (min-width: 600px) {
+  .wp-block-latest-posts.is-grid li {
+    margin: 0 1.25em 1.25em 0;
+  }
+}
+@media screen and (min-width: 650px) {
+  .announcements {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-announcements .btn {
+    max-width: 45%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .home-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .home-card-container:first-of-type {
+    grid-column: 1/3;
+  }
+
+  .home-card-container:nth-child(2) {
+    grid-column: 3/5;
+    width: 100%;
+  }
+
+  .home-card-container:last-of-type {
+    grid-column: 2/4;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .home-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 1400px;
+    margin: 0 auto 5rem;
+  }
+
+  .home-card-container:first-of-type {
+    grid-column: span 1;
+    margin-bottom: 0;
+  }
+
+  .home-card-container:nth-child(2) {
+    grid-column: span 1;
+    margin-bottom: 0;
+  }
+
+  .home-card-container:last-of-type {
+    grid-column: span 1;
+    margin-bottom: 0;
+  }
+
+  .announcements {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1300px) {
+  .announcements {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
 .announcements .blog-container {
   background-color: #fff;
   border-radius: 5px;
@@ -553,9 +660,16 @@ form.give-form legend {
 .announcements .blog-card-body {
   margin: 0 2.4rem;
   text-align: center;
+  padding-bottom: 2.25rem;
 }
 .announcements .blog-card-body p {
   margin-bottom: 2.25rem;
+}
+.announcements .blog-card-body .read-more-link {
+  border-bottom: 1px solid #2d5180;
+}
+.announcements .blog-card-body svg line {
+  stroke: #2d5180;
 }
 
 .entry-header {
