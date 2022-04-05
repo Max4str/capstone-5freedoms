@@ -687,6 +687,10 @@ header .site-title {
   display: none;
 }
 
+.menu-toggle {
+  cursor: pointer;
+}
+
 .main-navigation {
   width: fit-content;
 }
