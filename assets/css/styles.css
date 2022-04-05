@@ -241,6 +241,29 @@ form.give-form input[type=submit] {
   color: #2d5180;
 }
 
+.option-title {
+  font: 300 2rem/1.3 "Poppins", sans-serif;
+  text-transform: capitalize;
+  color: #4365ee;
+  letter-spacing: 0;
+}
+
+.donate-option-form .wpcf7 label {
+  color: #f07b57;
+  font: 600 1.5rem/1 "Poppins", sans-serif;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.donate-option-form .wpcf7 input[type=submit] {
+  font: 600 1rem "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.donate-option-form .wpcf7 input[type=submit]:hover {
+  color: #4365ee;
+}
+
 .note {
   font: 500 1rem "Poppins", sans-serif;
   letter-spacing: 0;
@@ -331,7 +354,8 @@ footer a {
     writing-mode: horizontal-tb;
   }
 
-  .give-form-wrap h2 {
+  .option-title h2,
+.give-form-wrap h2 {
     font-size: 3rem;
   }
 
@@ -365,6 +389,10 @@ form.give-form legend {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1rem;
+  }
+
+  .donate-option-form .wpcf7 label {
+    font-size: 1.75rem;
   }
 
   footer .site-title {
@@ -771,6 +799,10 @@ header .site-title {
 
 .site-title h1 {
   display: none;
+}
+
+.menu-toggle {
+  cursor: pointer;
 }
 
 .main-navigation {
@@ -1188,6 +1220,55 @@ form.give-form fieldset:last-child {
 .donate-option-form {
   padding: 0 1rem;
   margin-bottom: 5rem;
+}
+.donate-option-form .wpcf7 {
+  display: flex;
+  flex-direction: column;
+}
+.donate-option-form .wpcf7 form {
+  order: 1;
+}
+.donate-option-form .wpcf7 form p {
+  margin-bottom: 2rem;
+}
+.donate-option-form .wpcf7 input,
+.donate-option-form .wpcf7 textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid #454545;
+  border-radius: 0;
+  padding: 0.75rem 1.125rem;
+  margin-top: 0.5rem;
+  outline: none;
+}
+.donate-option-form .wpcf7 input:focus-visible,
+.donate-option-form .wpcf7 textarea:focus-visible {
+  border: 1px solid #454545;
+  outline: none;
+}
+.donate-option-form .wpcf7 textarea {
+  border: 1px solid #454545;
+  border-radius: 2px;
+  margin-top: 1.5rem;
+}
+.donate-option-form .wpcf7 input[type=submit] {
+  border: 1px solid #f07b57;
+  background-color: #f07b57;
+  border-radius: 2px;
+  width: 75%;
+  cursor: pointer;
+}
+.donate-option-form .wpcf7 input[type=submit]:hover {
+  background-color: #fff;
+}
+
+.option-title {
+  margin-bottom: 2rem;
+}
+
+.option-description {
+  margin-bottom: 2.125rem;
 }
 
 .note {
@@ -1885,6 +1966,49 @@ form.give-form fieldset:last-child {
     grid-column-gap: 0.75rem;
   }
 
+  .donate-option-form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .donate-option-form .option-title {
+    grid-row: 1/2;
+    grid-column: 1/6;
+  }
+  .donate-option-form .option-description {
+    grid-column: 1/9;
+  }
+  .donate-option-form .wpcf7 {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .donate-option-form .wpcf7 .donate-option-image {
+    grid-column: 1/11;
+  }
+  .donate-option-form .wpcf7 form {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1.75rem;
+    margin-top: 3rem;
+  }
+  .donate-option-form .wpcf7 p {
+    margin-bottom: 0;
+  }
+  .donate-option-form .wpcf7 p:nth-child(n+1) {
+    grid-column: 2/-1;
+  }
+  .donate-option-form .wpcf7 p:nth-child(4) {
+    grid-column: 1/2;
+    grid-row: 1/span 3;
+  }
+  .donate-option-form .wpcf7 p:last-of-type {
+    text-align: right;
+  }
+  .donate-option-form .wpcf7 input[type=submit] {
+    max-width: 50%;
+    height: fit-content;
+  }
   .donate-option-form .give-form-wrap .give-form-content-wrap {
     grid-column: 1/-1;
     display: grid;
@@ -1991,7 +2115,7 @@ form.give-form fieldset:last-child {
   }
 
   .donate-option-form .give-form-wrap .give-form-content-wrap {
-    padding: 1.75rem;
+    grid-column-gap: 1.75rem;
   }
   .donate-option-form .give-form-wrap .give-form-content-wrap > div {
     grid-column: 1/10;
@@ -2030,11 +2154,6 @@ form.give-form fieldset:last-child {
   .banner-img,
 .section-img {
     height: 30rem;
-  }
-
-  .banner h2,
-.banner p {
-    grid-column: 7/-2;
   }
 
   .donate-card,

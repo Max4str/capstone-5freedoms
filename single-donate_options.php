@@ -38,11 +38,30 @@ get_header();
 					
 				<?php endif; ?>
 			</div>
+
+			
 			
 			<!-- Donate Option Form Info -->
 			<?php $option_donate_form = get_field('option_donate_form'); ?>
 			<?php if($option_donate_form): ?>
 				<div class="donate-option-form">
+					
+					<?php $option_title = get_field('option_title'); ?>
+					<?php if($option_title): ?>
+						<!-- Donate Option Title -->
+						<h2 class="option-title">
+							<?php _e($option_title); ?>
+						</h2>
+					<?php endif; ?>
+
+					<?php $option_description = get_field('option_description'); ?>
+					<?php if($option_description): ?>
+						<!-- Donate Description -->
+						<p class="option-description">
+							<?php _e($option_description); ?>
+						</p>
+					<?php endif; ?>
+
 					<?php echo do_shortcode($option_donate_form); ?>
 				</div>
 			<?php endif; ?>
