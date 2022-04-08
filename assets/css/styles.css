@@ -442,27 +442,22 @@ form.give-form legend {
     font-size: 1.25rem;
   }
 }
-.btn {
+main .btn {
   border: 1px solid #f9ac55;
   border-radius: 5px;
   background-color: #f9ac55;
   color: #fff;
   font-weight: 600;
-  max-width: 66.6%;
   margin: 0 auto;
   padding: 0.75rem 1.625rem;
   transition: ease-in-out 0.2s;
   z-index: 9;
 }
-.btn :hover {
+main .btn:hover, main .btn:focus {
   border: 1px solid #f9ac55;
   background-color: #fff;
   color: #f9ac55;
 }
-.btn :visited {
-  color: #fff;
-}
-
 .home-banner .hero-image {
   position: relative;
   height: 490px;
@@ -481,11 +476,14 @@ form.give-form legend {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 1rem;
+  padding: 3rem 1rem;
   width: 90%;
 }
 .home-banner .hero-text p {
   margin-bottom: 1.5rem;
+}
+.home-banner .hero-text a {
+  max-width: 15rem;
 }
 
 .home-announcements {
@@ -493,7 +491,7 @@ form.give-form legend {
   text-align: center;
 }
 .home-announcements .btn {
-  max-width: 66.6%;
+  max-width: 20rem;
 }
 
 .home-announcements .widget {
@@ -506,6 +504,40 @@ form.give-form legend {
   margin: 0 0em 1.25em 0;
 }
 
+.wp-block-latest-posts__featured-image img {
+  width: 12rem;
+}
+
+@media screen and (min-width: 500px) {
+  .wp-block-latest-posts.is-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .wp-block-latest-posts.is-grid li {
+    grid-column: span 2;
+  }
+
+  .wp-block-latest-posts.columns-4 li {
+    width: auto;
+  }
+}
+@media screen and (min-width: 900px) {
+  .wp-block-latest-posts.is-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .wp-block-latest-posts.is-grid li {
+    grid-column: span 1;
+  }
+
+  .wp-block-latest-posts.columns-4 li {
+    width: auto;
+  }
+}
 .home-mission {
   margin-bottom: 5rem;
 }
@@ -567,6 +599,9 @@ form.give-form legend {
 .home-cards .list {
   text-align: left;
 }
+.home-cards .btn {
+  max-width: 15rem;
+}
 
 .home-stats {
   background-color: #4365EE;
@@ -608,10 +643,6 @@ form.give-form legend {
   .announcements {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .home-announcements .btn {
-    max-width: 45%;
   }
 }
 @media screen and (min-width: 700px) {
