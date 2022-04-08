@@ -8,12 +8,17 @@
     margin: 0 auto;
     padding: 0.75rem 1.625rem;
     transition: ease-in-out 0.2s;
-}
+    z-index: 9;
 
-.btn:hover {
-    border: 1px solid #f9ac55;
-    background-color: #fff;
-    color: #f9ac55;
+    :hover {
+        border: 1px solid #f9ac55;
+        background-color: #fff;
+        color: #f9ac55;
+    }
+
+    :visited {
+        color: #fff;
+    }
 }
 
 // HERO BANNER

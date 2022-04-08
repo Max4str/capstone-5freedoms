@@ -452,12 +452,15 @@ form.give-form legend {
   margin: 0 auto;
   padding: 0.75rem 1.625rem;
   transition: ease-in-out 0.2s;
+  z-index: 9;
 }
-
-.btn:hover {
+.btn :hover {
   border: 1px solid #f9ac55;
   background-color: #fff;
   color: #f9ac55;
+}
+.btn :visited {
+  color: #fff;
 }
 
 .home-banner .hero-image {
@@ -670,6 +673,7 @@ form.give-form legend {
   background-color: #fff;
   border-radius: 5px;
   filter: drop-shadow(1px 2px 0.25rem #7c7c7c);
+  height: 100%;
 }
 .announcements .post {
   margin: 0 1rem 2.25rem;
@@ -724,6 +728,34 @@ form.give-form legend {
 
 .entry-footer {
   display: none;
+}
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+  padding-top: 0rem;
+}
+
+.tribe-common h2 {
+  font-weight: 700;
+}
+
+.tribe-common .events-banner {
+  margin-bottom: 8rem;
+}
+
+.tribe-common .tribe-common-l-container,
+#tribe-events-pg-template {
+  max-width: 1640px;
+}
+
+.tribe-common a .tribe-events-calendar-list__event-featured-image {
+  height: 13rem;
+}
+
+.tribe-common img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 h3 {
