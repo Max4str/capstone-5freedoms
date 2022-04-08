@@ -700,6 +700,10 @@ main .btn:hover, main .btn:focus {
     margin: 0 auto;
   }
 }
+.announcements-title {
+  margin: 8rem 0;
+}
+
 .announcements .blog-container {
   background-color: #fff;
   border-radius: 5px;

@@ -26,12 +26,12 @@
 			<!-- <?php five_freedoms_ranch_post_thumbnail(); ?> -->
 
 			<!-- Banner -->
-			<div class="banner">
+			<!-- <div class="banner">
 				<?php $banner = get_field('banner'); ?>
 				<?php if($banner): ?>
 					
 					<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
-					<!-- Banner Image -->
+					Banner Image
 					<?php $banner_image = $banner['banner_image']; ?>
 					<?php if($banner_image): ?>
 						<?php 
@@ -42,16 +42,18 @@
 						</div>
 					<?php endif; ?>
 					
-					<!-- Banner Text -->
+					Banner Text
 					<?php $banner_text = $banner['banner_text']; ?>
 					<?php if($banner_text): ?>
 						<p><?php _e($banner_text); ?></p>
 					<?php endif; ?>
 					
 				<?php endif; ?>
-			</div>
+			</div> -->
 
 			<div class="entry-content">
+
+				<h2 class="entry-title announcements-title">ANNOUNCEMENTS</h2>
 
 				<div class="announcements">
 					<?php
