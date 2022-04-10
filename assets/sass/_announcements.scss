@@ -1,8 +1,13 @@
+.announcements-title {
+	margin: 8rem 0;
+}
+
 .announcements {
 	.blog-container {
 		background-color: #fff;
 		border-radius: 5px;
 		filter: drop-shadow(1px 2px 0.25rem rgb(124, 124, 124));
+		height: 100%;
 	}
 
 	.post {
@@ -27,9 +32,18 @@
 	.blog-card-body {
 		margin: 0 2.4rem;
 		text-align: center;
+		padding-bottom: 2.25rem;
 
 		p {
 			margin-bottom: 2.25rem;
+		}
+
+		.read-more-link {
+			border-bottom: 1px solid #2d5180;
+		}
+
+		svg line {
+			stroke: #2d5180;
 		}
 	}
 }

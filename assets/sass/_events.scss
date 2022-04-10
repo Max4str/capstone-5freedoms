@@ -1,0 +1,27 @@
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+    padding-top: 0rem;
+}
+
+.tribe-common h2 {
+    font-weight: 700;
+}
+
+.tribe-common .events-banner {
+    margin-bottom: 8rem;
+}
+
+.tribe-common .tribe-common-l-container,
+#tribe-events-pg-template {
+    max-width: 1640px;
+}
+
+.tribe-common a .tribe-events-calendar-list__event-featured-image {
+    height: 13rem;
+}
+
+.tribe-common img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}

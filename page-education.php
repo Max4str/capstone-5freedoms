@@ -48,45 +48,58 @@ get_header();
 
 
 			<div class="slaughter">
-				<!--title -->
-				<?php $horse_slaughter_title = get_field('horse_slaughter_title'); ?>
-				<?php if ($horse_slaughter_title) : ?>
-					<h3><?php _e($horse_slaughter_title); ?></h3>
-				<?php endif; ?>
+				<div class="slaughtercontent">
+					<!--title -->
+					<?php $horse_slaughter_title = get_field('horse_slaughter_title'); ?>
+					<?php if ($horse_slaughter_title) : ?>
+						<h3><?php _e($horse_slaughter_title); ?></h3>
+					<?php endif; ?>
 
-				<!--title -->
-				<?php $horse_slaughter_subheading = get_field('horse_slaughter_subheading'); ?>
-				<?php if ($horse_slaughter_subheading) : ?>
-					<h4><?php _e($horse_slaughter_subheading); ?></h4>
-				<?php endif; ?>
-
-
-
-				<!-- text -->
-				<?php $horse_slaughter_title = get_field('horse_slaughter_text'); ?>
-				<?php if ($horse_slaughter_title) : ?>
-					<p><?php _e($horse_slaughter_title); ?></p>
-				<?php endif; ?>
-			</div>
+					<!--title -->
+					<?php $horse_slaughter_subheading = get_field('horse_slaughter_subheading'); ?>
+					<?php if ($horse_slaughter_subheading) : ?>
+						<h4><?php _e($horse_slaughter_subheading); ?></h4>
+					<?php endif; ?>
 
 
-			<div class="slaughter links">
 
-				<div class="links">
-					<!-- start the loop -->
-
-					<div class="button links">
-						<a class="slaughter info link" href="https://canadianhorsedefencecoalition.org/">Canadaian Horse Defence Coalition</a>
-						<a class="mpletter link" href="https://banhorseslaughter.com/contact-your-mp-2/">write your MP</a>
-						<a class="mpletter link" href="https://www.change.org/p/lawrence-macaulay-canada-stop-exporting-live-horses-for-slaughter">Sign the Petition</a>
-
-
-					</div>
-
-					<!-- end while loop -->
+					<!-- text -->
+					<?php $horse_slaughter_title = get_field('horse_slaughter_text'); ?>
+					<?php if ($horse_slaughter_title) : ?>
+						<p><?php _e($horse_slaughter_title); ?></p>
+					<?php endif; ?>
 				</div>
 
 
+				<div class="slaughter links">
+
+					<div class="links">
+						<!-- start the loop -->
+
+						<div class="button links">
+							<a class="slaughter info link" href="https://canadianhorsedefencecoalition.org/">Canadaian Horse Defence Coalition</a>
+							<a class="mpletter link" href="https://banhorseslaughter.com/contact-your-mp-2/">write your MP</a>
+							<a class="mpletter link" href="https://www.change.org/p/lawrence-macaulay-canada-stop-exporting-live-horses-for-slaughter">Sign the Petition</a>
+
+
+						</div>
+
+
+						<!-- end while loop -->
+					</div>
+
+
+				</div>
+				<!-- Image-->
+				<?php $slaughter_img = $slaughter['horse_slaughter_img']; ?>
+				<?php if ($slaughter_img) : ?>
+					<?php
+					$img_url = $slaughter_img['url'];
+					?>
+					<div class="section-img">
+						<img src="<?php print_r(esc_url($img_url)); ?>">
+					</div>
+				<?php endif; ?>
 			</div>
 
 			<div class="media">
