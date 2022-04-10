@@ -11,16 +11,25 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
+		
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h2 class="page-title"><?php esc_html_e( 'Oops.. Wrong Way', 'five-freedoms-ranch' ); ?></h2>
-			</header><!-- .page-header -->
+		<section class="banner error-404 not-found">
+			<!-- Title -->
+			<h2 class="entry-title">Oops.. Wrong Way</h2>
 
-			<div class="page-content">
-				<p>It seems like you are lost. Let&rsquor;s  ride back to the ranch.</p>
-				<a class="learn-more link-404" href="index.php">ride to home</a>
-			</div><!-- .page-content -->
+			<!-- Image -->
+			<?php if(is_active_sidebar('404-banner-img')):?>	
+				<?php dynamic_sidebar('404-banner-img'); ?>
+			<?php endif; ?>
+
+			<!-- Text -->
+			<div class="banner-content">
+				<!-- Text -->
+				<?php if(is_active_sidebar('404-banner-content')):?>
+					<?php dynamic_sidebar('404-banner-content'); ?>
+				<?php endif; ?>
+			</div>
+
 		</section><!-- .error-404 -->
 
 	</main><!-- #main -->

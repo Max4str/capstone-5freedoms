@@ -198,7 +198,36 @@ function five_freedoms_ranch_widgets_init() {
 			'after_title'   => '</h5>',
 		)
 	);
+
+	// 404 Page Content
+	register_sidebar(
+		array(
+			'name'          => esc_html__( '404 Page Content', 'five-freedoms-ranch' ),
+			'id'            => '404-banner-content',
+			'description'   => esc_html__( 'Add widgets here.', 'five-freedoms-ranch' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5 class="entry-title">',
+			'after_title'   => '</h5>',
+		)
+	);
+
+
+	// 404 Page Image
+	register_sidebar(
+		array(
+			'name'          => esc_html__( '404 Page Image', 'five-freedoms-ranch' ),
+			'id'            => '404-banner-img',
+			'description'   => esc_html__( 'Add widgets here.', 'five-freedoms-ranch' ),
+			'before_widget' => '<div id="%1$s" class="banner-img widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h5 class="widget-title">',
+			'after_title'   => '</h5>',
+		)
+	);
 }
+
+
 add_action( 'widgets_init', 'five_freedoms_ranch_widgets_init' );
 
 /**

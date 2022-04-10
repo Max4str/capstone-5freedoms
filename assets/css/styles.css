@@ -340,6 +340,16 @@ footer a {
   margin: 0 0.5rem;
 }
 
+.banner.error-404 a {
+  color: #2d5180;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.banner.error-404 i {
+  font-weight: 800;
+  font-size: 0.75rem;
+}
+
 @media screen and (min-width: 520px) {
   h2 {
     font-size: 4rem;
@@ -402,6 +412,14 @@ form.give-form legend {
   .form-title,
 .hours span {
     font-size: 1.25rem;
+  }
+
+  .banner.error-404 a {
+    font-size: 1.125rem;
+  }
+  .banner.error-404 i {
+    font-weight: 900;
+    font-size: 1.125rem;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -751,7 +769,8 @@ header .site-title {
   grid-column: 4/-1;
   margin: 0 0 0 auto;
 }
-.banner p {
+.banner p,
+.banner .banner-content {
   grid-column: 1/4;
 }
 
@@ -1294,6 +1313,21 @@ form.give-form fieldset:last-child {
   margin-top: 1rem;
 }
 
+.banner.error-404 h2 {
+  grid-row: 1/span 3;
+}
+.banner.error-404 .banner-img img {
+  height: 100%;
+}
+.banner.error-404 li a {
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2d5180;
+  margin-top: 2.25rem;
+}
+
 @media screen and (min-width: 425px) {
   .banner-img {
     height: 25rem;
@@ -1451,7 +1485,8 @@ form.give-form fieldset:last-child {
     grid-column: 3/-1;
     margin: 0;
   }
-  .banner p {
+  .banner p,
+.banner .banner-content {
     margin-top: 2rem;
     grid-column: 3/-1;
   }
@@ -1624,6 +1659,10 @@ form.give-form fieldset:last-child {
   }
   .contact-form form p:last-of-type {
     grid-column: 2/-1;
+  }
+
+  .banner.error-404 .banner-img {
+    grid-row: 1/span 4;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1996,7 +2035,8 @@ form.give-form fieldset:last-child {
     grid-column: 1/6;
   }
   .banner h2,
-.banner p {
+.banner p,
+.banner .banner-content {
     grid-column: 7/-1;
   }
 

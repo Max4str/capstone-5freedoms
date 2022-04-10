@@ -61,18 +61,6 @@ function AboutMissionVission(e, sectName) {
 }
 
 
-
-function addDonateRevealSvg() {
-    const donateRevealBtn = document.querySelector('.give-btn-reveal')
-    const icon = document.createElement('i')
-    icon.setAttribute('class', 'fa-solid fa-chevron-right' )
-    if(donateRevealBtn){
-        donateRevealBtn.append(icon)
-    }
-}
-addDonateRevealSvg()
-
-
 function addImageDonateOption(){
     const image = document.getElementsByClassName('donate-option-image')[0]
     const donateForm = document.querySelector('.donate-option-form .give-form-wrap .give-form-content-wrap')
@@ -87,3 +75,23 @@ function addImageDonateOption(){
     }
 }
 addImageDonateOption()
+
+
+function removeImageAttr(){
+    const img404 = document.querySelector('.error-404 .widget_media_image img')
+    if(img404){
+        img404.removeAttribute("style")
+    }
+}
+removeImageAttr()
+
+
+function addLinkSvg() {
+    const link = document.querySelector('.menu-404-menu-container a')
+    const icon = document.createElement('i')
+    icon.setAttribute('class', 'fa-solid fa-chevron-right' )
+    if(link){
+        link.append(icon)
+    }
+}
+addLinkSvg()

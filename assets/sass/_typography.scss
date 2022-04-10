@@ -457,6 +457,22 @@ footer {
 
 
 
+// 404
+.banner.error-404 {
+    a {
+        color: #2d5180;
+        font-weight: 600;
+        letter-spacing: 1px;    
+    }
+
+    i {
+        font-weight: 800;
+        font-size: .75rem;
+    }
+} 
+
+
+
 // WIDTH 520px
 
 @media screen and (min-width: 520px) {
@@ -558,6 +574,18 @@ footer {
     .hours span {
         font-size: 1.25rem;
     }
+
+    .banner.error-404 {
+
+        a {
+            font-size: 1.125rem;
+        }
+    
+        i {
+            font-weight: 900;
+            font-size: 1.125rem;
+        }
+    } 
 }
 
 @media screen and (min-width: 1400px) {
