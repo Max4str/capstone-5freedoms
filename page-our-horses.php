@@ -44,7 +44,7 @@ get_header();
 
 
 
-		<section class="our Horses">
+		<section class="ourhorses">
 
 			<div class="meetourhorses">
 				<!--title -->
@@ -60,104 +60,159 @@ get_header();
 				<?php endif; ?>
 			</div>
 
-	</div>
+			<div class="adoptable horses">
+				<!--title -->
+				<?php $adoptablehorsestitle = get_field('adoptable_horses_title'); ?>
+				<?php if ($adoptablehorsestitle) : ?>
+					<h3><?php _e($adoptablehorsestitle); ?></h3>
+				<?php endif; ?>
 
-
-	<div class="adoptable horses">
-		<!--title -->
-		<?php $adoptablehorsestitle = get_field('adoptable_horses_title'); ?>
-		<?php if ($adoptablehorsestitle) : ?>
-			<h3><?php _e($adoptablehorsestitle); ?></h3>
-		<?php endif; ?>
-
-		<!-- text -->
-		<?php $adoptablehorsestext = get_field('adoptable_horses_text'); ?>
-		<?php if ($adoptablehorsestext) : ?>
-			<p><?php _e($adoptablehorsestext); ?></p>
-		<?php endif; ?>
-	</div>
-
-	<?php
-	$args = array(
-		'post_type' => 'adoptable_horses',
-		'posts_per_page' => 8,
-		'order' => 'ASC'
-	);
-	$adoptable = new WP_Query($args);
-	?>
-
-
-	<div class="adoptable">
-		<?php if ($adoptable->have_posts()) :
-		?>
-			<div class="adoptable-horse-profiles">
-				<!-- start the loop -->
-				<?php while ($adoptable->have_posts()) : $adoptable->the_post(); ?>
-					<div class="adoptable-horse card">
-						<h4 class="horse-name" href="<?php get_field('horse_name'); ?>"><?php the_title('<h4>', '</h4>'); ?></h4>
-
-						<p class="horse-age"><?php get_field('horse_age'); ?></p>
-						<p class="horse-gender"><?php get_field('horse_gender'); ?></p>
-
-
-					</div>
-				<?php endwhile; ?>
-				<!-- end while loop -->
+				<!-- text -->
+				<?php $adoptablehorsestext = get_field('adoptable_horses_text'); ?>
+				<?php if ($adoptablehorsestext) : ?>
+					<p><?php _e($adoptablehorsestext); ?></p>
+				<?php endif; ?>
 			</div>
-			<?php wp_reset_postdata(); ?>
-		<?php endif;
-		?>
+			<?php
+			$args = array(
+				'post_type' => 'adoptable_horses',
+				'posts_per_page' => 8,
+				'order' => 'ASC'
+			);
+			$adoptable = new WP_Query($args);
+			?>
+			<div class="adoptable" <?php post_class(); ?> id="post-<?php the_ID(); ?> ">
+				<?php if (have_posts()) : ?>
 
-	</div>
+					<!-- start the loop -->
+					<?php while (have_posts()) : the_post(); ?>
+						<section class="home-card">
 
-	<div class="sanctuary-horses">
-		<!--title -->
-		<?php $sanctuaryhorsetitle = get_field('sanctuary_horses_title'); ?>
-		<?php if ($sanctuaryhorsetitle) : ?>
-			<h3><?php _e($sanctuaryhorsetitle); ?></h3>
-		<?php endif; ?>
+							<?php $horseimage = get_field('horse_img'); ?>
+							<?php if ($horseimage) : ?>
+								<?php
+								$img_url = $horseimage['url'];
+								?>
+								<div class="img-circle">
+									<img src="<?php print_r(esc_url($img_url)); ?>">
+								</div>
+							<?php endif; ?>
 
-		<!-- text -->
-		<?php $sanctuaryhorsestext = get_field('sanctuary_horses_text'); ?>
-		<?php if ($sanctuaryhorsestext) : ?>
-			<p><?php _e($sanctuaryhorsestext); ?></p>
-		<?php endif; ?>
-	</div>
+							<!-- Card Info -->
+							<div class="home-card">
+								<!-- Title -->
+								<?php get_field('horse_name'); ?>
+								<!-- text -->
+								<?php $horsename = get_field('horse_name'); ?>
+								<?php if ($horsename) : ?>
+									<p><?php _e($horsename); ?></p>
+								<?php endif; ?>
 
-	<?php
-	$args = array(
-		'post_type' => 'sanctuary_horse',
-		'posts_per_page' => 8,
-		'order' => 'ASC'
-	);
-	$sanctuaryhorse = new WP_Query($args);
-	?>
+								<!-- text -->
+								<?php $horseage = get_field('horse_age'); ?>
+								<?php if ($horseage) : ?>
+									<p><?php _e($horseage); ?></p>
+								<?php endif; ?>
 
+								<!-- text -->
+								<?php $horsesex = get_field('horse_gender'); ?>
+								<?php if ($horsesex) : ?>
+									<p><?php _e($horsesex); ?></p>
+								<?php endif; ?>
 
-	<div class="sanctuary-horses">
-		<?php if ($sanctuaryhorse->have_posts()) :
-		?>
-			<div class="sanctuary horses">
-				<!-- start the loop -->
-				<?php while ($sanctuaryhorse->have_posts()) : $sanctuaryhorse->the_post(); ?>
-					<div class="sanctuary-horse card">
-						<h4 class="horse-name" href="<?php the_permalink(); ?>"><?php the_title('<h4>', '</h4>'); ?></h4>
+								<!-- Learn More -->
+								<a class="btn-link" href="<?php the_permalink(); ?>">learn more</a>
 
+								<?php //get_template_part( 'template-parts/content', 'page' ); 
+								?>
+							</div>
 
+						</section>
+					<?php endwhile; ?>
+					<!-- end while loop -->
 
-					</div>
-				<?php endwhile; ?>
-				<!-- end while loop -->
+				<?php else : ?>
+					<?php get_template_part('template-parts/content', 'none'); ?>
+				<?php endif; ?>
+
 			</div>
-			<?php wp_reset_postdata(); ?>
-		<?php endif;
-		?>
 
-	</div>
+			<div class="sanctuaryhorses">
+				<!--title -->
+				<?php $sanctuaryhorsestitle = get_field('sanctuary_horses_title'); ?>
+				<?php if ($sanctuaryhorsestitle) : ?>
+					<h3><?php _e($sanctuaryhorsestitle); ?></h3>
+				<?php endif; ?>
+
+				<!-- text -->
+				<?php $sanctuaryhorsestext = get_field('sanctuary_horses_text'); ?>
+				<?php if ($sanctuaryhorsestext) : ?>
+					<p><?php _e($sanctuaryhorsestext); ?></p>
+				<?php endif; ?>
+			</div>
+			<?php
+			$args = array(
+				'post_type' => 'sanctuary_horses',
+				'posts_per_page' => 8,
+				'order' => 'ASC'
+			);
+			$sanctuary = new WP_Query($args);
+			?>
+			<div class="sanctuary" <?php post_class(); ?> id="post-<?php the_ID(); ?> ">
+				<?php if (have_posts()) : ?>
+
+					<!-- start the loop -->
+					<?php while (have_posts()) : the_post(); ?>
+						<section class="home-card">
+
+							<?php $horseimage = get_field('horse_img'); ?>
+							<?php if ($horseimage) : ?>
+								<?php
+								$img_url = $horseimage['url'];
+								?>
+								<div class="img-circle">
+									<img src="<?php print_r(esc_url($img_url)); ?>">
+								</div>
+							<?php endif; ?>
+
+							<!-- Card Info -->
+							<div class="home-card">
+								<!-- Title -->
+								<?php get_field('horse_name'); ?>
+								<!-- text -->
+								<?php $horsename = get_field('horse_name'); ?>
+								<?php if ($horsename) : ?>
+									<p><?php _e($horsename); ?></p>
+								<?php endif; ?>
+
+								<!-- text -->
+								<?php $horseage = get_field('horse_age'); ?>
+								<?php if ($horseage) : ?>
+									<p><?php _e($horseage); ?></p>
+								<?php endif; ?>
 
 
+								<!-- Learn More -->
+								<a class="btn-link" href="<?php the_permalink(); ?>">learn more</a>
+								<a class="btn-link" href="<?php the_permalink(); ?>">Sponsor Me</a>
 
-	</div>
+								<?php //get_template_part( 'template-parts/content', 'page' ); 
+								?>
+							</div>
+
+						</section>
+					<?php endwhile; ?>
+					<!-- end while loop -->
+
+				<?php else : ?>
+					<?php get_template_part('template-parts/content', 'none'); ?>
+				<?php endif; ?>
+
+			</div>
+
+		</section>
+
+
 
 
 </main><!-- #main -->

@@ -349,6 +349,27 @@ footer a {
   font-weight: 800;
   font-size: 0.75rem;
 }
+.educationcontent,
+.adoptable,
+.sanctuaryhorses,
+.meetourhorses{
+  text-align: center;
+  padding: 2%;
+}
+.media,
+.compasionfund{
+  background-color: #2d5180;
+  display: flex;
+  padding-bottom: 2%;
+}
+.compasionfund h3,
+.compasionfund p,
+.media h3,
+.media a,
+.media p{
+  color: #fff;
+}
+
 
 @media screen and (min-width: 520px) {
   h2 {
@@ -450,6 +471,104 @@ form.give-form legend {
   .menu-main-menu-container a {
     font-size: 1.125rem;
   }
+
+.ourhorses{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ .adoptable,
+.sanctuaryhorses,
+.meetourhorses{
+display: grid;
+justify-content: center;
+padding: 2%;
+}
+
+.adoptable h3,
+.sanctuaryhorses h3,
+.meetourhorses h3,
+.adoptable p,
+.sanctuaryhorses p,
+.meetourhorses p{
+  width: 60%;
+  align-content: center;
+}
+
+.slaughter{
+  display: flex;
+ flex-wrap: wrap;
+ padding-bottom: 2%;
+}
+
+.slaughtercontent{
+  width: 48%;
+}
+
+.slaughterimg{width:50%;}
+
+.slaughterlinks ul{
+  width:100%;
+}
+.slaughterlinks li{
+  background-color: #f07b57;
+  color:#fff;
+  padding:2%;
+  flex-direction: column;
+}
+.media{
+  text-align: center;
+  background-color: #2d5180;
+  padding-bottom:2% ;
+}
+.media h3,
+.media a,
+.media p{
+  color: #fff;
+  padding: 3%;
+}
+
+.sanctuaryanimals{
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 2%;
+}
+.educationsanctuaryhorses{
+  flex-direction: row-reverse;
+   text-align: right;
+   width:50%;
+   justify-content: right;
+}
+.compasionfund{
+  background-color: #2d5180;
+  display: flex;
+  padding-bottom: 2%;
+}
+.compasionfund h3,
+.compasionfund p{
+  color: #fff;
+}
+.compassionfundimg{
+  width: 50%;
+}
+.compassionfundcontent{
+  width: 48%;
+text-align: right;
+
+}
+.therapy{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.therapycontent{
+  width: 48%;
+  text-align: left;
+}
+.therapyimg{
+  width: 48%;
+}
+
 }
 @media screen and (min-width: 1720px) {
   .site-title {
