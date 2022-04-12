@@ -283,7 +283,7 @@ footer a {
 
 .contact i {
   font-size: 1rem;
-  color: #f9ac55;
+  color: #4365ee;
 }
 
 .social i {
@@ -294,10 +294,10 @@ footer a {
 .hours span {
   font: 600 1.125rem "Poppins", sans-serif;
   text-transform: uppercase;
-  color: #f9ac55;
+  color: #4365ee;
 }
 .hours a:hover {
-  color: #f9ac55;
+  color: #4365ee;
 }
 
 .contact-form label {
@@ -349,27 +349,6 @@ footer a {
   font-weight: 800;
   font-size: 0.75rem;
 }
-.educationcontent,
-.adoptable,
-.sanctuaryhorses,
-.meetourhorses{
-  text-align: center;
-  padding: 2%;
-}
-.media,
-.compasionfund{
-  background-color: #2d5180;
-  display: flex;
-  padding-bottom: 2%;
-}
-.compasionfund h3,
-.compasionfund p,
-.media h3,
-.media a,
-.media p{
-  color: #fff;
-}
-
 
 @media screen and (min-width: 520px) {
   h2 {
@@ -471,105 +450,6 @@ form.give-form legend {
   .menu-main-menu-container a {
     font-size: 1.125rem;
   }
-
-.ourhorses{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
- .adoptable,
-.sanctuaryhorses,
-.meetourhorses{
-display: grid;
-justify-content: center;
-padding: 2%;
-}
-
-.adoptable h3,
-.sanctuaryhorses h3,
-.meetourhorses h3,
-.adoptable p,
-.sanctuaryhorses p,
-.meetourhorses p{
-  width: 60%;
-  align-content: center;
-}
-.educationcontent{
-  display: flex;
-  flex-direction: column;
-}
-.slaughter{
-  display: flex;
- flex-wrap: wrap;
- padding-bottom: 2%;
-}
-
-.slaughtercontent{
-  width: 48%;
-}
-
-.slaughterimg{width:50%;}
-
-
-.slaughterlinks li{
-  background-color: #f07b57;
-  color:#fff;
-  padding:2%;
-  flex-direction: column;
-}
-.media{
-  text-align: center;
-  background-color: #2d5180;
-  padding-bottom:2% ;
-}
-.media h3,
-.media a,
-.media p{
-  color: #fff;
-  padding: 3%;
-}
-
-.sanctuaryanimals{
-  display: flex;
-  justify-content: flex-start;
-  padding-bottom: 2%;
-}
-.educationsanctuaryhorses{
-  flex-direction: row-reverse;
-   text-align: right;
-   width:50%;
-   justify-content: right;
-}
-.compasionfund{
-  background-color: #2d5180;
-  display: flex;
-  padding-bottom: 2%;
-}
-.compasionfund h3,
-.compasionfund p{
-  color: #fff;
-}
-.compassionfundimg{
-  width: 50%;
-}
-.compassionfundcontent{
-  width: 48%;
-text-align: right;
-
-}
-.therapy{
-  display: flex;
-  flex-direction: row-reverse;
-}
-.therapycontent{
-  width: 48%;
-  text-align: left;
-}
-.therapyimg{
-  width: 48%;
-}
-
 }
 @media screen and (min-width: 1720px) {
   .site-title {
@@ -708,8 +588,7 @@ main .btn:hover, main .btn:focus {
   padding: 0 1rem;
   margin-bottom: 5rem;
 }
-.home-cards .home-card-container,
-.gicard-container .gicards {
+.home-cards .home-card-container {
   background-color: #fff;
   filter: drop-shadow(1px 2px 0.25rem #7c7c7c);
   border-radius: 0.3125rem;
@@ -718,15 +597,13 @@ main .btn:hover, main .btn:focus {
   max-width: 25rem;
   padding: 3rem 0rem;
 }
-.home-cards .img-circle,
-.gicards .img-circle {
+.home-cards .img-circle {
   width: 13.5rem;
   height: 13.5rem;
   margin: 0rem auto;
   margin-bottom: 2.25rem;
 }
-.home-cards .img-circle img,
-.gicards .img-circle img {
+.home-cards .img-circle img {
   border-radius: 50%;
   width: 100%;
   height: 100%;
@@ -734,13 +611,10 @@ main .btn:hover, main .btn:focus {
   object-position: center;
 }
 .home-cards p,
-.home-cards .list,
-.gicards p,
-.gicards ul {
+.home-cards .list {
   margin: 0 1.5rem 2.25rem;
 }
-.home-cards .list,
-.gicards ul {
+.home-cards .list {
   text-align: left;
 }
 .home-cards .btn {
@@ -1569,14 +1443,14 @@ form.give-form fieldset:last-child {
   grid-column: 2/-1;
 }
 .hours a {
-  background-color: #f9ac55;
-  border: 1px solid #f9ac55;
+  background-color: #4365ee;
+  border: 1px solid #4365ee;
   max-width: 66.6666666667%;
   margin-top: 1rem;
 }
 .hours a:hover {
   background-color: #fff;
-  border: 1px solid #f9ac55;
+  border: 1px solid #4365ee;
 }
 .hours p:first-of-type {
   margin-bottom: 1rem;
