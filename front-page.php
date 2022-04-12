@@ -262,7 +262,7 @@
 							</ul>
 						<?php endif; ?>
 
-						<a href="https://5freedoms.web.dmitcapstone.ca/five-freedoms-ranch/education" class="btn">LEARN MORE</a>
+						<a href="https://5freedoms.web.dmitcapstone.ca/five-freedoms-ranch/education" class="btn">MORE EDUCATION</a>
 
 					<?php endif; ?>
 				</div>
