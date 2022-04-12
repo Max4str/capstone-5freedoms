@@ -286,3 +286,7 @@ function my_excerpt_length($length){
 	return 20;
 }
 add_filter('excerpt_length', 'my_excerpt_length');
+
+
+// custom image sizes
+// add_image_size( 'custom', 9999, 9999 );

@@ -16,7 +16,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<script src="https://kit.fontawesome.com/46e6209e11.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/46e6209e11.js" crossorigin="anonymous" defer></script>
 
 	<?php wp_head(); ?>
 </head>

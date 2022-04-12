@@ -27,15 +27,13 @@
 
 					<div class="hero-image">
 						<!-- Image-->
-						<?php $hero_banner_img = $hero_banner['hero_banner_img']; ?>
-						<?php if($hero_banner_img): ?>
-							<?php 
-								$img_url = $hero_banner_img['url'];
-							?>
-							<!-- <div class=""> -->
-								<img src="<?php print_r(esc_url($img_url)); ?>">
-							<!-- </div> -->
-						<?php endif; ?>
+						<?php 
+							$image = get_field('hero_image');
+							$size = 'full'; // (thumbnail, medium, large, full or custom size)
+							if( $image ) {
+								echo wp_get_attachment_image( $image, $size );
+							}
+						?>
 	
 						<div class="hero-text">
 							<!-- Title-->
@@ -83,15 +81,13 @@
 
 					<div class="hero-image">
 						<!-- Image-->
-						<?php $our_mission_img = $our_mission['our_mission_img']; ?>
-						<?php if($our_mission_img): ?>
-							<?php 
-								$img_url = $our_mission_img['url'];
-							?>
-							<!-- <div class=""> -->
-								<img src="<?php print_r(esc_url($img_url)); ?>">
-							<!-- </div> -->
-						<?php endif; ?>
+						<?php 
+							$image = get_field('our_mission_image');
+							$size = 'full'; // (thumbnail, medium, large, full or custom size)
+							if( $image ) {
+								echo wp_get_attachment_image( $image, $size );
+							}
+						?>
 	
 						<div class="hero-text">
 							<!-- Title-->
@@ -130,7 +126,7 @@
 								$img_url = $home_card_1_img['url'];
 							?>
 							<div class="img-circle">
-								<img src="<?php print_r(esc_url($img_url)); ?>">
+								<img src="<?php print_r(esc_url($img_url)); ?>" loading="lazy" alt="card 1 image">
 							</div>
 						<?php endif; ?>
 					
@@ -163,7 +159,7 @@
 								$img_url = $home_card_2_img['url'];
 							?>
 							<div class="img-circle">
-								<img src="<?php print_r(esc_url($img_url)); ?>">
+								<img src="<?php print_r(esc_url($img_url)); ?>" loading="lazy" alt="card image 2">
 							</div>
 						<?php endif; ?>
 
@@ -223,7 +219,7 @@
 								$img_url = $home_card_3_img['url'];
 							?>
 							<div class="img-circle">
-								<img src="<?php print_r(esc_url($img_url)); ?>">
+								<img src="<?php print_r(esc_url($img_url)); ?>" loading="lazy" alt="card image 3">
 							</div>
 						<?php endif; ?>
 

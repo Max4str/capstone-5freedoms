@@ -461,9 +461,9 @@ form.give-form legend {
   }
 }
 main .btn {
-  border: 1px solid #f9ac55;
+  border: 1px solid #4365ee;
   border-radius: 5px;
-  background-color: #f9ac55;
+  background-color: #4365ee;
   color: #fff;
   font-weight: 600;
   margin: 0 auto;
@@ -472,9 +472,9 @@ main .btn {
   z-index: 9;
 }
 main .btn:hover, main .btn:focus {
-  border: 1px solid #f9ac55;
+  border: 1px solid #4365ee;
   background-color: #fff;
-  color: #f9ac55;
+  color: #4365ee;
 }
 .home-banner .hero-image {
   position: relative;
@@ -629,11 +629,23 @@ main .btn:hover, main .btn:focus {
 .home-stats .stat {
   margin: 0 auto;
 }
+.home-stats .stat-meet {
+  background-color: #fff;
+}
+.home-stats .stat-meet p {
+  color: #000;
+}
 .home-stats .stat-adopt {
   background-color: #f07b57;
 }
+.home-stats .stat-adopt p {
+  color: #000;
+}
 .home-stats .stat-donate {
   background-color: #f9ac55;
+}
+.home-stats .stat-donate p {
+  color: #000;
 }
 
 @media screen and (min-width: 425px) {

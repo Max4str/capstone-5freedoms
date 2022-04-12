@@ -1,7 +1,7 @@
 main .btn {
-    border: 1px solid #f9ac55;
+    border: 1px solid #4365ee;
     border-radius: 5px;
-    background-color: #f9ac55;
+    background-color: #4365ee;
     color: #fff;
     font-weight: 600;
     // max-width: 66.6%;
@@ -12,13 +12,13 @@ main .btn {
 
     &:hover,
     &:focus {
-        border: 1px solid #f9ac55;
+        border: 1px solid #4365ee;
         background-color: #fff;
-        color: #f9ac55;
+        color: #4365ee;
     }
 
     &:visited {
-        // color: #f9ac55;
+        // color: #4365ee;
     }
 }
 
@@ -210,12 +210,28 @@ main .btn {
         margin: 0 auto;
     }
 
+    .stat-meet {
+        background-color: #fff;
+
+        p {
+            color: #000;
+        }
+    }
+
     .stat-adopt {
         background-color: #f07b57;
+
+        p {
+            color: #000;
+        }
     }
 
     .stat-donate {
         background-color: #f9ac55;
+
+        p {
+            color:#000
+        }
     }
 }
 
