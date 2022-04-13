@@ -52,11 +52,17 @@ get_header();
 
                 <div class="get-involved-content">
 
+                    <?php $volunteer_title = get_field('volunteer_title'); ?>
+                    <?php if ($volunteer_title) : ?>
+                        <h3><?php _e($volunteer_title); ?></h3>
+                    <?php endif; ?>
                     <!-- text -->
                     <?php $getinvolved_text = get_field('get_involved_intro'); ?>
                     <?php if ($getinvolved_text) : ?>
                         <p><?php _e($getinvolved_text); ?></p>
                     <?php endif; ?>
+
+
                     <div class="gicard-container">
                         <div class="gicards">
                             <!-- Image-->
@@ -115,11 +121,11 @@ get_header();
             </section>
 
 
-            <section class="donate">
+            <section class="gi-donate">
 
                 <?php $donate_title = get_field('donate_title'); ?>
                 <?php if ($donate_title) : ?>
-                    <h4><?php _e($donate_title); ?></h4>
+                    <h3><?php _e($donate_title); ?></h3>
                 <?php endif; ?>
 
                 <?php $donate_text = get_field('donate_text'); ?>
@@ -154,7 +160,7 @@ get_header();
 
                     </div>
 
-                    <div class="gicards">
+                    <div class="gicards wishlist">
                         <?php $card4 = get_field('card_4'); ?>
                         <?php if ($card4) : ?>
 
@@ -167,7 +173,7 @@ get_header();
 
 
                             <!-- list -->
-                            <ul>
+                            <ul class="list">
                                 <?php $list_item_1 = $card4['list_item_1']; ?>
                                 <?php if ($list_item_1) : ?>
                                     <li><?php _e($list_item_1); ?></li>

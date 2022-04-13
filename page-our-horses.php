@@ -60,7 +60,7 @@ get_header();
 				<?php endif; ?>
 			</div>
 
-			<div class="adoptable horses">
+			<div class="adoptable-horses">
 				<!--title -->
 				<?php $adoptablehorsestitle = get_field('adoptable_horses_title'); ?>
 				<?php if ($adoptablehorsestitle) : ?>
@@ -81,31 +81,30 @@ get_header();
 			);
 			$adoptable = new WP_Query($args);
 			?>
-			<div class="adoptable" <?php post_class(); ?> id="post-<?php the_ID(); ?> ">
-				<?php if (have_posts()) : ?>
+			<div class="adoptable">
+				<?php if ($adoptable->have_posts()) : ?>
 
 					<!-- start the loop -->
-					<?php while (have_posts()) : the_post(); ?>
-						<section class="home-card">
-
-							<?php $horseimage = get_field('horse_img'); ?>
-							<?php if ($horseimage) : ?>
-								<?php
-								$img_url = $horseimage['url'];
-								?>
-								<div class="img-circle">
-									<img src="<?php print_r(esc_url($img_url)); ?>">
-								</div>
-							<?php endif; ?>
-
+					<?php while ($adoptable->have_posts()) : $adoptable->the_post(); ?>
+						<section class="adoptable">
 							<!-- Card Info -->
-							<div class="home-card">
+							<div class="adoptable-card">
+								<?php $horseimage = get_field('horse_img'); ?>
+								<?php if ($horseimage) : ?>
+									<?php
+									$img_url = $horseimage['url'];
+									?>
+									<div class="img-circle">
+										<img src="<?php print_r(esc_url($img_url)); ?>">
+									</div>
+								<?php endif; ?>
+
 								<!-- Title -->
 								<?php get_field('horse_name'); ?>
 								<!-- text -->
 								<?php $horsename = get_field('horse_name'); ?>
 								<?php if ($horsename) : ?>
-									<p><?php _e($horsename); ?></p>
+									<h4><?php _e($horsename); ?></h4>
 								<?php endif; ?>
 
 								<!-- text -->
@@ -126,14 +125,14 @@ get_header();
 								<?php //get_template_part( 'template-parts/content', 'page' ); 
 								?>
 							</div>
-
+						<?php endwhile; ?>
+						<!-- end while loop -->
 						</section>
-					<?php endwhile; ?>
-					<!-- end while loop -->
 
-				<?php else : ?>
-					<?php get_template_part('template-parts/content', 'none'); ?>
-				<?php endif; ?>
+
+					<?php else : ?>
+						<?php get_template_part('template-parts/content', 'none'); ?>
+					<?php endif; ?>
 
 			</div>
 
@@ -158,12 +157,12 @@ get_header();
 			);
 			$sanctuary = new WP_Query($args);
 			?>
-			<div class="sanctuary" <?php post_class(); ?> id="post-<?php the_ID(); ?> ">
-				<?php if (have_posts()) : ?>
+			<div class="sanctuary">
+				<?php if ($sanctuary->have_posts()) : ?>
 
 					<!-- start the loop -->
-					<?php while (have_posts()) : the_post(); ?>
-						<section class="home-card">
+					<?php while ($sanctuary->have_posts()) : $sanctuary->the_post(); ?>
+						<section class="sanctuary-card">
 
 							<?php $horseimage = get_field('horse_img'); ?>
 							<?php if ($horseimage) : ?>
@@ -199,14 +198,14 @@ get_header();
 								<?php //get_template_part( 'template-parts/content', 'page' ); 
 								?>
 							</div>
-
+						<?php endwhile; ?>
+						<!-- end while loop -->
 						</section>
-					<?php endwhile; ?>
-					<!-- end while loop -->
 
-				<?php else : ?>
-					<?php get_template_part('template-parts/content', 'none'); ?>
-				<?php endif; ?>
+
+					<?php else : ?>
+						<?php get_template_part('template-parts/content', 'none'); ?>
+					<?php endif; ?>
 
 			</div>
 
