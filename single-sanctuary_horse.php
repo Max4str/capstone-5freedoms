@@ -96,37 +96,37 @@ get_header();
                         </div>
 
                     </div>
+
+                    <!-- end while loop -->
+
+
+                    <div class="horse-info">
+                        <!-- Title -->
+                        <?php get_field('horse_name'); ?>
+                        <!-- text -->
+                        <?php $horsename = get_field('horse_name'); ?>
+                        <?php if ($horsename) : ?>
+                            <h3><?php _e($horsename); ?></h3>
+                        <?php endif; ?>
+
+                        <!-- text -->
+                        <?php $horseage = get_field('horse_age'); ?>
+                        <?php if ($horseage) : ?>
+                            <p><?php _e($horseage); ?></p>
+                        <?php endif; ?>
+
+                        <!-- text -->
+                        <?php $horsedescription = get_field('horse_description'); ?>
+                        <?php if ($horsedescription) : ?>
+                            <p><?php _e($horsedescription); ?></p>
+                        <?php endif; ?>
+                    </div>
+
+                    <div class="buttons">
+                        <a href="https://5freedoms.web.dmitcapstone.ca/five-freedoms-ranch/donate/">Sponsor me</a>
+                        <a href="https://5freedoms.web.dmitcapstone.ca/five-freedoms-ranch/education/">Learn more</a>
+                    </div>
                 <?php endwhile; ?>
-                <!-- end while loop -->
-
-
-                <div class="horse-info">
-                    <!-- Title -->
-                    <?php get_field('horse_name'); ?>
-                    <!-- text -->
-                    <?php $horsename = get_field('horse_name'); ?>
-                    <?php if ($horsename) : ?>
-                        <h3><?php _e($horsename); ?></h3>
-                    <?php endif; ?>
-
-                    <!-- text -->
-                    <?php $horseage = get_field('horse_age'); ?>
-                    <?php if ($horseage) : ?>
-                        <p><?php _e($horseage); ?></p>
-                    <?php endif; ?>
-
-                    <!-- text -->
-                    <?php $horsedescription = get_field('horse_description'); ?>
-                    <?php if ($horsedescription) : ?>
-                        <p><?php _e($horsedescription); ?></p>
-                    <?php endif; ?>
-                </div>
-
-                <div class="buttons">
-                    <a href="https://5freedoms.web.dmitcapstone.ca/five-freedoms-ranch/donate/">Sponsor me</a>
-                    <a href="https://5freedoms.web.dmitcapstone.ca/five-freedoms-ranch/education/">Learn more</a>
-                </div>
-
             <?php else : ?>
                 <?php get_template_part('template-parts/content', 'none'); ?>
             <?php endif; ?>

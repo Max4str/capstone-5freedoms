@@ -86,53 +86,51 @@ get_header();
 
 					<!-- start the loop -->
 					<?php while ($adoptable->have_posts()) : $adoptable->the_post(); ?>
-						<section class="adoptable">
-							<!-- Card Info -->
-							<div class="adoptable-card">
-								<?php $horseimage = get_field('horse_img'); ?>
-								<?php if ($horseimage) : ?>
-									<?php
-									$img_url = $horseimage['url'];
-									?>
-									<div class="img-circle">
-										<img src="<?php print_r(esc_url($img_url)); ?>">
-									</div>
-								<?php endif; ?>
-
-								<!-- Title -->
-								<?php get_field('horse_name'); ?>
-								<!-- text -->
-								<?php $horsename = get_field('horse_name'); ?>
-								<?php if ($horsename) : ?>
-									<h4><?php _e($horsename); ?></h4>
-								<?php endif; ?>
-
-								<!-- text -->
-								<?php $horseage = get_field('horse_age'); ?>
-								<?php if ($horseage) : ?>
-									<p><?php _e($horseage); ?></p>
-								<?php endif; ?>
-
-								<!-- text -->
-								<?php $horsesex = get_field('horse_gender'); ?>
-								<?php if ($horsesex) : ?>
-									<p><?php _e($horsesex); ?></p>
-								<?php endif; ?>
-
-								<!-- Learn More -->
-								<a class="btn-link" href="<?php the_permalink(); ?>">learn more</a>
-
-								<?php //get_template_part( 'template-parts/content', 'page' ); 
+						<!-- Card Info -->
+						<div class="adoptable-card">
+							<?php $horseimage = get_field('horse_img'); ?>
+							<?php if ($horseimage) : ?>
+								<?php
+								$img_url = $horseimage['url'];
 								?>
-							</div>
-						<?php endwhile; ?>
-						<!-- end while loop -->
-						</section>
+								<div class="img-circle">
+									<img src="<?php print_r(esc_url($img_url)); ?>">
+								</div>
+							<?php endif; ?>
+
+							<!-- Title -->
+							<?php get_field('horse_name'); ?>
+							<!-- text -->
+							<?php $horsename = get_field('horse_name'); ?>
+							<?php if ($horsename) : ?>
+								<h4><?php _e($horsename); ?></h4>
+							<?php endif; ?>
+
+							<!-- text -->
+							<?php $horseage = get_field('horse_age'); ?>
+							<?php if ($horseage) : ?>
+								<p><?php _e($horseage); ?></p>
+							<?php endif; ?>
+
+							<!-- text -->
+							<?php $horsesex = get_field('horse_gender'); ?>
+							<?php if ($horsesex) : ?>
+								<p><?php _e($horsesex); ?></p>
+							<?php endif; ?>
+
+							<!-- Learn More -->
+							<a class="btn-link" href="<?php the_permalink(); ?>">learn more</a>
+
+							<?php //get_template_part( 'template-parts/content', 'page' ); 
+							?>
+						</div>
+					<?php endwhile; ?>
+					<!-- end while loop -->
 
 
-					<?php else : ?>
-						<?php get_template_part('template-parts/content', 'none'); ?>
-					<?php endif; ?>
+				<?php else : ?>
+					<?php get_template_part('template-parts/content', 'none'); ?>
+				<?php endif; ?>
 
 			</div>
 

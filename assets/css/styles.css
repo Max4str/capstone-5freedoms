@@ -377,6 +377,25 @@ footer a {
 .site-info a {
     font-size: 1.125rem;
   }
+
+.gicard-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.wishlist{
+  min-width:25rem;
+} 
+
+
+ .adoptable,
+ .sanctuary{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+ }
+
+
 }
 @media screen and (min-width: 1024px) {
   h3 {
@@ -450,6 +469,12 @@ form.give-form legend {
   .menu-main-menu-container a {
     font-size: 1.125rem;
   }
+
+  .sanctuary-card, 
+.adoptable-card{
+   padding: 5%;
+   margin: 0;
+ }
 }
 @media screen and (min-width: 1720px) {
   .site-title {
@@ -584,11 +609,17 @@ main .btn:hover, main .btn:focus {
   color: #fff;
 }
 
-.home-cards {
+.home-cards,
+.sanctuary,
+.adoptable,
+.gicard-container  {
   padding: 0 1rem;
   margin-bottom: 5rem;
 }
-.home-cards .home-card-container {
+.home-cards .home-card-container,
+.sanctuary .sanctuary-card,
+.adoptable .adoptable-card,
+.gicard-container .gicards {
   background-color: #fff;
   filter: drop-shadow(1px 2px 0.25rem #7c7c7c);
   border-radius: 0.3125rem;
@@ -597,13 +628,24 @@ main .btn:hover, main .btn:focus {
   max-width: 25rem;
   padding: 3rem 0rem;
 }
-.home-cards .img-circle {
+.adoptable .adoptable-card,
+.sanctuary .sanctuary-card{
+  padding: 3%;
+}
+.home-cards .img-circle,
+.sanctuary .img-circle,
+.adoptable .img-circle,
+.gicard-container .img-circle
+ {
   width: 13.5rem;
   height: 13.5rem;
   margin: 0rem auto;
   margin-bottom: 2.25rem;
 }
-.home-cards .img-circle img {
+.home-cards .img-circle img,
+.sanctuary .img-circle img,
+.adoptable .img-circle img,
+.gicard-container .img-circle img {
   border-radius: 50%;
   width: 100%;
   height: 100%;
@@ -611,13 +653,18 @@ main .btn:hover, main .btn:focus {
   object-position: center;
 }
 .home-cards p,
-.home-cards .list {
+.home-cards .list,
+.sanctuary p,
+.gicard-container p,
+.gicard-container .list {
   margin: 0 1.5rem 2.25rem;
 }
 .home-cards .list {
   text-align: left;
 }
-.home-cards .btn {
+.home-cards .btn,
+.sanctuary .btn,
+.adoptable .btn  {
   max-width: 15rem;
 }
 
@@ -648,7 +695,6 @@ main .btn:hover, main .btn:focus {
   color: #000;
 }
 
-<<<<<<< HEAD
 .ourhorses h3{
   text-align: center;
   padding: 1%;
@@ -728,15 +774,14 @@ main .btn:hover, main .btn:focus {
 .compassionfund p{
   color: #fff;
 }
-=======
->>>>>>> e3c59f7bbcf15e1ed1e402670abcc14060633db9
 @media screen and (min-width: 425px) {
   .home-mission .hero-image {
     height: 35rem;
   }
 }
 @media screen and (min-width: 465px) {
-  .home-cards .home-card-container {
+  .home-cards .home-card-container,
+.gicard-container .gicards  {
     max-width: 25rem;
     margin: 0 auto 2.25rem;
   }
@@ -2410,7 +2455,6 @@ form.give-form fieldset:last-child {
   .hours p:first-child {
     margin-bottom: 3.75rem;
   }
-<<<<<<< HEAD
 .getinvolved{
   display: flex;
 justify-content: center;
@@ -2449,8 +2493,6 @@ justify-content: center;
    width:48%;
  }
 
-=======
->>>>>>> e3c59f7bbcf15e1ed1e402670abcc14060633db9
 }
 @media screen and (min-width: 1720px) {
   header,
