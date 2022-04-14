@@ -53,7 +53,7 @@
 
 			<div class="entry-content">
 
-				<h2 class="entry-title announcements-title">ANNOUNCEMENTS</h2>
+				<h2 class="entry-title announcements-title">WHAT'S NEW</h2>
 
 				<div class="announcements">
 					<?php
