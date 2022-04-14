@@ -48,6 +48,17 @@ get_header();
 
 
 			<div class="slaughter">
+				<div class="slaughterimg">
+					<!-- Image-->
+					<?php $slaughter_img = get_field('slaughter_img'); ?>
+					<?php if ($slaughter_img) : ?>
+						<?php
+						$img_url = $slaughter_img['url'];
+						?>
+						<img src="<?php print_r(esc_url($img_url)); ?>">
+
+					<?php endif; ?>
+				</div>
 				<div class="slaughtercontent">
 					<!--title -->
 					<?php $horse_slaughter_title = get_field('horse_slaughter_title'); ?>
@@ -81,148 +92,133 @@ get_header();
 				</div><!-- end slaughter content -->
 
 
-				<div class="slaughterimg">
+
+
+			</div>
+
+
+
+
+			<div class="media">
+				<!--title -->
+				<?php $media_title = get_field('media_title'); ?>
+				<?php if ($media_title) : ?>
+					<h3><?php _e($media_title); ?></h3>
+				<?php endif; ?>
+
+				<!-- text -->
+				<?php $media_text = get_field('meida_text'); ?>
+				<?php if ($media_text) : ?>
+					<p><?php _e($media_text); ?></p>
+				<?php endif; ?>
+
+				<!-- text -->
+				<?php $media_links = get_field('meida_links'); ?>
+				<?php if ($media_links) : ?>
+					<p><?php _e($media_links); ?></p>
+				<?php endif; ?>
+
+
+			</div>
+
+
+
+
+			<div class="sanctuaryanimals">
+				<div class="sanctuaryimg">
 					<!-- Image-->
-					<?php $slaughter_img = get_field('horse_slaughter_img'); ?>
-					<?php if ($slaughter_img) : ?>
+					<?php $sanctuary_img = get_field('sanctuary_horse_img'); ?>
+					<?php if ($sanctuary_img) : ?>
 						<?php
-						$img_url = $slaughter_img['url'];
+						$img_url = $sanctuary_img['url'];
 						?>
-						<div class="slaughter-img">
-							<img src="<?php print_r(esc_url($img_url)); ?>">
-						</div>
+
+						<img src="<?php print_r(esc_url($img_url)); ?>">
+					<?php endif; ?>
+				</div>
+				<div class="educationsanctuaryhorses">
+					<!--title -->
+					<?php $education_sanctuaryhorses_title = get_field('sanctuary_animals_title'); ?>
+					<?php if ($education_sanctuaryhorses_title) : ?>
+						<h3><?php _e($education_sanctuaryhorses_title); ?></h3>
+					<?php endif; ?>
+
+					<!-- text -->
+					<?php $education_sanctuaryhorses_text = get_field('sanctuary_animals_text'); ?>
+					<?php if ($education_sanctuaryhorses_text) : ?>
+						<p><?php _e($education_sanctuaryhorses_text); ?></p>
 					<?php endif; ?>
 				</div>
 
 
-				<!-- end while loop -->
+
+
+			</div>
+			<div class="compassionfund">
+				<div class="compassionfundimg">
+					<!-- Image-->
+					<?php $compassion_img = get_field('compassion_fund_img'); ?>
+					<?php if ($compassion_img) : ?>
+						<?php
+						$img_url = $compassion_img['url'];
+						?>
+
+						<img src="<?php print_r(esc_url($img_url)); ?>">
+
+					<?php endif; ?>
+				</div>
+				<div class="compassionfundcontent">
+
+
+					<!--title -->
+					<?php $compassionfund_title = get_field('compassion_fund_title'); ?>
+					<?php if ($compassionfund_title) : ?>
+						<h3><?php _e($compassionfund_title); ?></h3>
+					<?php endif; ?>
+
+					<!-- text -->
+					<?php $compassionfund_text = get_field('compassion_fund_text'); ?>
+					<?php if ($compassionfund_text) : ?>
+						<p><?php _e($compassionfund_text); ?></p>
+					<?php endif; ?>
+				</div>
+
+
+
 			</div>
 
-	</div><!-- end slaughter  -->
 
-	</div><!-- end slaughter -->
+			<div class="therapy">
+				<div class="therapyimg">
+					<!-- Image-->
+					<?php $therapy_img = get_field('equine_therapy_img'); ?>
+					<?php if ($therapy_img) : ?>
+						<?php
+						$img_url = $therapy_img['url'];
+						?>
 
-	<div class="media">
-		<!--title -->
-		<?php $media_title = get_field('media_title'); ?>
-		<?php if ($media_title) : ?>
-			<h3><?php _e($media_title); ?></h3>
-		<?php endif; ?>
+						<img src="<?php print_r(esc_url($img_url)); ?>">
 
-		<!-- text -->
-		<?php $media_text = get_field('meida_text'); ?>
-		<?php if ($media_text) : ?>
-			<p><?php _e($media_text); ?></p>
-		<?php endif; ?>
-
-		<!-- text -->
-		<?php $media_links = get_field('meida_links'); ?>
-		<?php if ($media_links) : ?>
-			<p><?php _e($media_links); ?></p>
-		<?php endif; ?>
-
-
-	</div>
-
-
-
-
-	<div class="sanctuaryanimals">
-
-		<div class="educationsanctuaryhorses">
-			<!--title -->
-			<?php $education_sanctuaryhorses_title = get_field('sanctuary_animals_title'); ?>
-			<?php if ($education_sanctuaryhorses_title) : ?>
-				<h3><?php _e($education_sanctuaryhorses_title); ?></h3>
-			<?php endif; ?>
-
-			<!-- text -->
-			<?php $education_sanctuaryhorses_text = get_field('sanctuary_animals_text'); ?>
-			<?php if ($education_sanctuaryhorses_text) : ?>
-				<p><?php _e($education_sanctuaryhorses_text); ?></p>
-			<?php endif; ?>
-		</div>
-		<div class="sanctuaryimg">
-			<!-- Image-->
-			<?php $sanctuary_img = get_field('sanctuary_horse_img'); ?>
-			<?php if ($sanctuary_img) : ?>
-				<?php
-				$img_url = $sanctuary_img['url'];
-				?>
-				<div class="sanctuaryimg">
-					<img src="<?php print_r(esc_url($img_url)); ?>">
+					<?php endif; ?>
 				</div>
-			<?php endif; ?>
-		</div>
+				<div class="therapycontent">
+					<!--title -->
+					<?php $therapy_title = get_field('equine_therapy_title'); ?>
+					<?php if ($therapy_title) : ?>
+						<h3><?php _e($therapy_title); ?></h3>
+					<?php endif; ?>
 
-
-
-	</div>
-	<div class="compassionfund">
-		<div class="compassionfundimg">
-			<!-- Image-->
-			<?php $compassion_img = get_field('compassion_fund_img'); ?>
-			<?php if ($compassion_img) : ?>
-				<?php
-				$img_url = $compassion_img['url'];
-				?>
-				<div class="compassion-img">
-					<img src="<?php print_r(esc_url($img_url)); ?>">
+					<!-- text -->
+					<?php $therapy_text = get_field('equine_therapy_text'); ?>
+					<?php if ($therapy_text) : ?>
+						<p><?php _e($therapy_text); ?></p>
+					<?php endif; ?>
 				</div>
-			<?php endif; ?>
-		</div>
-		<div class="compassionfundcontent">
 
 
-			<!--title -->
-			<?php $compassionfund_title = get_field('compassion_fund_title'); ?>
-			<?php if ($compassionfund_title) : ?>
-				<h3><?php _e($compassionfund_title); ?></h3>
-			<?php endif; ?>
-
-			<!-- text -->
-			<?php $compassionfund_text = get_field('compassion_fund_text'); ?>
-			<?php if ($compassionfund_text) : ?>
-				<p><?php _e($compassionfund_text); ?></p>
-			<?php endif; ?>
-		</div>
-
-
-
+		</section>
 	</div>
 
-
-	<div class="therapy">
-		<div class="therapyimg">
-			<!-- Image-->
-			<?php $therapy_img = get_field('equine_therapy_img'); ?>
-			<?php if ($therapy_img) : ?>
-				<?php
-				$img_url = $therapy_img['url'];
-				?>
-				<div class="therapy-img">
-					<img src="<?php print_r(esc_url($img_url)); ?>">
-				</div>
-			<?php endif; ?>
-		</div>
-		<div class="therapycontent">
-			<!--title -->
-			<?php $therapy_title = get_field('equine_therapy_title'); ?>
-			<?php if ($therapy_title) : ?>
-				<h3><?php _e($therapy_title); ?></h3>
-			<?php endif; ?>
-
-			<!-- text -->
-			<?php $therapy_text = get_field('equine_therapy_text'); ?>
-			<?php if ($therapy_text) : ?>
-				<p><?php _e($therapy_text); ?></p>
-			<?php endif; ?>
-		</div>
-
-
-
-	</div>
-	</section>
 </main><!-- #main -->
 
 <?php

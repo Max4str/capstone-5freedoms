@@ -700,13 +700,15 @@ main .btn:hover, main .btn:focus {
 .educationcontent h4{
   padding-left:3%
 }
-.educationcontent p,
 .educationcontent img{
-padding: 5%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .educationcontent ul{
   list-style: none;
-  margin-bottom:3rem ;
+  padding-top:3%;
 }
 .links li {
   background-color: #f07b57;
@@ -728,8 +730,9 @@ padding: 5%;
 .compassionfund p,
 .sanctuaryanimals p,
 .media p,
-.therapy p{
-  padding: 3%;
+.therapy p,
+.slaughter p{
+  padding:2%;
 }
 .media,
 .compassionfund{
@@ -2450,31 +2453,33 @@ justify-content: center;
   margin-right:auto ;
   padding: 0;
  }
- .slaughter,
+ .sanctuaryanimals,
  .therapy{
    display: flex;
-   flex-direction: row;
+   justify-content: space-between;
  }
 
 .compassionfund,
-.sanctuaryanimals{
+.slaughter{
    display: flex;
    flex-direction: row-reverse;
-     justify-content: center;
-  align-items: center;
+   justify-content: space-between;
  }
 
  .slaughtercontent,
  .compassionfundcontent,
  .therapycontent,
  .educationsanctuaryhorses{
-   width:47%;
-   padding-right: 3%;
+   width:48%;
  }
-.educationsanctuaryhorses{
-  min-width: 40rem;
 
-}
+  .slaughterimg,
+ .compassionfundimg,
+ .therapyimg,
+ .sanctuaryimg{
+   width:48%;
+ }
+
 }
 @media screen and (min-width: 1720px) {
   header,

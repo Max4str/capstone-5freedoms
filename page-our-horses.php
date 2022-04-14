@@ -151,7 +151,7 @@ get_header();
 			</div>
 			<?php
 			$args = array(
-				'post_type' => 'sanctuary_horses',
+				'post_type' => 'sanctuary_horse',
 				'posts_per_page' => 8,
 				'order' => 'ASC'
 			);
