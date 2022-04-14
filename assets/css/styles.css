@@ -507,6 +507,7 @@ main .btn:hover, main .btn:focus {
 .home-announcements {
   margin-bottom: 5rem;
   text-align: center;
+  padding: 0 1rem;
 }
 .home-announcements .btn {
   max-width: 20rem;
@@ -578,7 +579,6 @@ main .btn:hover, main .btn:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 1rem;
 }
 .home-mission .hero-text h3 {
   color: #fff;
@@ -648,6 +648,88 @@ main .btn:hover, main .btn:focus {
   color: #000;
 }
 
+<<<<<<< HEAD
+.ourhorses h3{
+  text-align: center;
+  padding: 1%;
+}
+.ourhorses p{
+  padding: 0 5% ;
+  padding-bottom: 3%;
+  margin-bottom: 3%;
+}
+.gi-donate{
+  padding: 4%;
+}
+.gi-donate .list{
+  list-style: none;
+} 
+.getinvolved h3,
+.gi-donate h3{
+  text-align: center;
+}
+.getinvolved p,
+.gi-donate p{
+  padding: 2%;
+}
+
+.gicard-container{
+  margin-top: 5%;
+}
+
+.educationcontent h3{
+  text-align: center;
+  padding: 3%;
+}
+.educationcontent h4{
+  padding-left:3%
+}
+.educationcontent img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.educationcontent ul{
+  list-style: none;
+  padding-top:3%;
+}
+.links li {
+  background-color: #f07b57;
+  margin-bottom: 1rem;
+  width:50%;
+  color: #fff;
+}
+.links {
+  text-align: center;
+  font-weight: 800;
+} 
+.media h3,
+.compassionfund h3,
+.sanctuaryanimals h3,
+.therapy h3{
+  text-align: center;
+  padding:5%
+}
+.compassionfund p,
+.sanctuaryanimals p,
+.media p,
+.therapy p,
+.slaughter p{
+  padding:2%;
+}
+.media,
+.compassionfund{
+  background-color: #2d5180;
+}
+.media h3,
+.media p,
+.compassionfund h3,
+.compassionfund p{
+  color: #fff;
+}
+=======
+>>>>>>> e3c59f7bbcf15e1ed1e402670abcc14060633db9
 @media screen and (min-width: 425px) {
   .home-mission .hero-image {
     height: 35rem;
@@ -793,6 +875,10 @@ main .btn:hover, main .btn:focus {
 
 .entry-footer {
   display: none;
+}
+
+.tribe-common div .tribe-events-before-html {
+  padding-bottom: 4rem;
 }
 
 .tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
@@ -2324,6 +2410,47 @@ form.give-form fieldset:last-child {
   .hours p:first-child {
     margin-bottom: 3.75rem;
   }
+<<<<<<< HEAD
+.getinvolved{
+  display: flex;
+justify-content: center;
+}
+ .getinvolved-content p,
+ .gi-donate p{
+   width:80%;
+  margin-left:auto ;
+  margin-right:auto ;
+  padding: 0;
+ }
+ .sanctuaryanimals,
+ .therapy{
+   display: flex;
+   justify-content: space-between;
+ }
+
+.compassionfund,
+.slaughter{
+   display: flex;
+   flex-direction: row-reverse;
+   justify-content: space-between;
+ }
+
+ .slaughtercontent,
+ .compassionfundcontent,
+ .therapycontent,
+ .educationsanctuaryhorses{
+   width:48%;
+ }
+
+  .slaughterimg,
+ .compassionfundimg,
+ .therapyimg,
+ .sanctuaryimg{
+   width:48%;
+ }
+
+=======
+>>>>>>> e3c59f7bbcf15e1ed1e402670abcc14060633db9
 }
 @media screen and (min-width: 1720px) {
   header,
