@@ -495,6 +495,19 @@ form.give-form {
     margin-bottom: 3.75rem;
 }
 
+.canada-helps {
+    max-width: fit-content;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid #4365ee;
+    background-color: #4365ee;
+
+    &:hover {
+        background-color: #fff;
+    }
+}
+
 .donate-card {
     padding: 2.125rem 1.5rem;
     margin-bottom: 3rem;
@@ -1491,6 +1504,11 @@ form.give-form {
         p {
             max-width: 65%;
         }
+    }
+
+    .canada-helps {
+        padding: 1rem 2rem;
+        margin-top: 2.25rem;
     }
 
     .donate-options {

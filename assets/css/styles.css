@@ -186,6 +186,14 @@ form.give-form input[type=submit] {
   color: #fff;
 }
 
+a.canada-helps {
+  color: #fff;
+  letter-spacing: 0;
+}
+a.canada-helps:hover {
+  color: #4365ee;
+}
+
 .donate-options {
   color: #fff;
 }
@@ -377,25 +385,6 @@ footer a {
 .site-info a {
     font-size: 1.125rem;
   }
-
-.gicard-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-.wishlist{
-  min-width:25rem;
-} 
-
-
- .adoptable,
- .sanctuary{
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-around;
- }
-
-
 }
 @media screen and (min-width: 1024px) {
   h3 {
@@ -469,12 +458,6 @@ form.give-form legend {
   .menu-main-menu-container a {
     font-size: 1.125rem;
   }
-
-  .sanctuary-card, 
-.adoptable-card{
-   padding: 5%;
-   margin: 0;
- }
 }
 @media screen and (min-width: 1720px) {
   .site-title {
@@ -609,17 +592,11 @@ main .btn:hover, main .btn:focus {
   color: #fff;
 }
 
-.home-cards,
-.sanctuary,
-.adoptable,
-.gicard-container  {
+.home-cards {
   padding: 0 1rem;
   margin-bottom: 5rem;
 }
-.home-cards .home-card-container,
-.sanctuary .sanctuary-card,
-.adoptable .adoptable-card,
-.gicard-container .gicards {
+.home-cards .home-card-container {
   background-color: #fff;
   filter: drop-shadow(1px 2px 0.25rem #7c7c7c);
   border-radius: 0.3125rem;
@@ -628,24 +605,13 @@ main .btn:hover, main .btn:focus {
   max-width: 25rem;
   padding: 3rem 0rem;
 }
-.adoptable .adoptable-card,
-.sanctuary .sanctuary-card{
-  padding: 3%;
-}
-.home-cards .img-circle,
-.sanctuary .img-circle,
-.adoptable .img-circle,
-.gicard-container .img-circle
- {
+.home-cards .img-circle {
   width: 13.5rem;
   height: 13.5rem;
   margin: 0rem auto;
   margin-bottom: 2.25rem;
 }
-.home-cards .img-circle img,
-.sanctuary .img-circle img,
-.adoptable .img-circle img,
-.gicard-container .img-circle img {
+.home-cards .img-circle img {
   border-radius: 50%;
   width: 100%;
   height: 100%;
@@ -653,18 +619,13 @@ main .btn:hover, main .btn:focus {
   object-position: center;
 }
 .home-cards p,
-.home-cards .list,
-.sanctuary p,
-.gicard-container p,
-.gicard-container .list {
+.home-cards .list {
   margin: 0 1.5rem 2.25rem;
 }
 .home-cards .list {
   text-align: left;
 }
-.home-cards .btn,
-.sanctuary .btn,
-.adoptable .btn  {
+.home-cards .btn {
   max-width: 15rem;
 }
 
@@ -695,93 +656,13 @@ main .btn:hover, main .btn:focus {
   color: #000;
 }
 
-.ourhorses h3{
-  text-align: center;
-  padding: 1%;
-}
-.ourhorses p{
-  padding: 0 5% ;
-  padding-bottom: 3%;
-  margin-bottom: 3%;
-}
-.gi-donate{
-  padding: 4%;
-}
-.gi-donate .list{
-  list-style: none;
-} 
-.getinvolved h3,
-.gi-donate h3{
-  text-align: center;
-}
-.getinvolved p,
-.gi-donate p{
-  padding: 2%;
-}
-
-.gicard-container{
-  margin-top: 5%;
-}
-
-.educationcontent h3{
-  text-align: center;
-  padding: 3%;
-}
-.educationcontent h4{
-  padding-left:3%
-}
-.educationcontent img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-.educationcontent ul{
-  list-style: none;
-  padding-top:3%;
-}
-.links li {
-  background-color: #f07b57;
-  margin-bottom: 1rem;
-  width:50%;
-  color: #fff;
-}
-.links {
-  text-align: center;
-  font-weight: 800;
-} 
-.media h3,
-.compassionfund h3,
-.sanctuaryanimals h3,
-.therapy h3{
-  text-align: center;
-  padding:5%
-}
-.compassionfund p,
-.sanctuaryanimals p,
-.media p,
-.therapy p,
-.slaughter p{
-  padding:2%;
-}
-.media,
-.compassionfund{
-  background-color: #2d5180;
-}
-.media h3,
-.media p,
-.compassionfund h3,
-.compassionfund p{
-  color: #fff;
-}
 @media screen and (min-width: 425px) {
   .home-mission .hero-image {
     height: 35rem;
   }
 }
 @media screen and (min-width: 465px) {
-  .home-cards .home-card-container,
-.gicard-container .gicards  {
+  .home-cards .home-card-container {
     max-width: 25rem;
     margin: 0 auto 2.25rem;
   }
@@ -1371,6 +1252,18 @@ form.give-form fieldset:last-child {
 
 .donate-info {
   margin-bottom: 3.75rem;
+}
+
+.canada-helps {
+  max-width: fit-content;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid #4365ee;
+  background-color: #4365ee;
+}
+.canada-helps:hover {
+  background-color: #fff;
 }
 
 .donate-card {
@@ -2210,6 +2103,11 @@ form.give-form fieldset:last-child {
     max-width: 65%;
   }
 
+  .canada-helps {
+    padding: 1rem 2rem;
+    margin-top: 2.25rem;
+  }
+
   .donate-options {
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 0.75rem;
@@ -2455,44 +2353,6 @@ form.give-form fieldset:last-child {
   .hours p:first-child {
     margin-bottom: 3.75rem;
   }
-.getinvolved{
-  display: flex;
-justify-content: center;
-}
- .getinvolved-content p,
- .gi-donate p{
-   width:80%;
-  margin-left:auto ;
-  margin-right:auto ;
-  padding: 0;
- }
- .sanctuaryanimals,
- .therapy{
-   display: flex;
-   justify-content: space-between;
- }
-
-.compassionfund,
-.slaughter{
-   display: flex;
-   flex-direction: row-reverse;
-   justify-content: space-between;
- }
-
- .slaughtercontent,
- .compassionfundcontent,
- .therapycontent,
- .educationsanctuaryhorses{
-   width:48%;
- }
-
-  .slaughterimg,
- .compassionfundimg,
- .therapyimg,
- .sanctuaryimg{
-   width:48%;
- }
-
 }
 @media screen and (min-width: 1720px) {
   header,
