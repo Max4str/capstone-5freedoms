@@ -72,6 +72,17 @@ get_header();
 								<p><?php _e($donate_options_text); ?></p>
 							<?php endif; ?>
 
+							<!-- Canada Helps Btn -->
+							<?php $link = $donate_options['canada_helps_link'];?>
+							<?php if( $link ): ?>
+								<?php
+									$link_url = $link['url'];
+									$link_title = $link['title'];
+									$link_target = $link['target'] ? $link['target'] : '_self';
+								?>
+								<a class="canada-helps" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+							<?php endif; ?>
+
 						</div>
 
 						<!-- Donate options -->
