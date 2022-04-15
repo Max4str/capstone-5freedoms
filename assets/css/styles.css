@@ -2113,10 +2113,6 @@ form.give-form fieldset:last-child {
     grid-column-gap: 0.75rem;
   }
 
-  .donate-option-form {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-  }
   .donate-option-form .option-title {
     grid-row: 1/2;
     grid-column: 1/6;
