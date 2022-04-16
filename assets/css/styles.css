@@ -2557,7 +2557,12 @@ form.give-form fieldset:last-child {
 .compassionfund p{
   color: #fff;
 }
-
+.horse-images img{
+  width: 100%;
+}
+.horse-info h3{
+  padding-top: 8%;
+}
 @media screen and (min-width: 465px) {
 .gicard-container .gicards  {
     max-width: 25rem;
@@ -2587,9 +2592,15 @@ form.give-form fieldset:last-child {
     display: flex;
     text-align: left;
   }
+  .post-content{
+    width: 50%;
+  }
   .horse-info{
     padding: 8%;
+  min-width: 50%;
+
   }
+
 }
 
 @media screen and (min-width: 1400px){
@@ -2608,6 +2619,15 @@ justify-content: center;
   margin-left:auto ;
   margin-right:auto ;
   padding: 0;
+ }.educationcontent h3{
+   margin: 0;
+   padding: 5%;
+   padding-bottom: 2%;
+ }
+
+ .educationcontent p{
+   padding-bottom: 8%;
+   padding-left: 5%;
  }
  .sanctuaryanimals,
  .therapy{
@@ -2633,6 +2653,6 @@ justify-content: center;
  .compassionfundimg,
  .therapyimg,
  .sanctuaryimg{
-   width:48%;
+   width:50%;
  }
 }

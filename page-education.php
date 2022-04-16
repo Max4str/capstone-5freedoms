@@ -113,12 +113,24 @@ get_header();
 				<?php endif; ?>
 
 				<!-- text -->
-				<?php $media_links = get_field('meida_links'); ?>
-				<?php if ($media_links) : ?>
-					<p><?php _e($media_links); ?></p>
+				<?php
+				$link = get_field('media_links');
+				if ($link) : ?>
+					<a class="button" href="<?php echo esc_url($link); ?>">view story</a>
 				<?php endif; ?>
 
-
+				<!-- text -->
+				<?php
+				$link = get_field('media_links_2');
+				if ($link) : ?>
+					<a class="button" href="<?php echo esc_url($link); ?>">view story</a>
+				<?php endif; ?>
+				<!-- text -->
+				<?php
+				$link = get_field('media_links_3');
+				if ($link) : ?>
+					<a class="button" href="<?php echo esc_url($link); ?>">view story</a>
+				<?php endif; ?>
 			</div>
 
 
