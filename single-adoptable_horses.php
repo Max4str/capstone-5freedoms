@@ -48,10 +48,9 @@ get_header();
             <?php if (have_posts()) : ?>
                 <!-- start the loop -->
                 <?php while (have_posts()) : the_post(); ?>
-                    < <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+                    <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
                         <!-- main img -->
                         <div class="horse-images">
-
 
                             <!-- Option Image 1 -->
                             <?php $horse_image = get_field('horse_img'); ?>
@@ -64,60 +63,62 @@ get_header();
                                 </div>
                             <?php endif; ?>
 
-                            <!-- Image 2 -->
-                            <?php $horse_image2 = get_field('horse_img_2'); ?>
-                            <?php if ($horse_image2) : ?>
-                                <?php
-                                $img_url = $horse_image2['url'];
-                                ?>
-                                <div>
-                                    <img src="<?php print_r(esc_url($img_url)); ?>">
-                                </div>
-                            <?php endif; ?>
 
-                            <!-- Option Image 4-->
-                            <?php $horse_image4 = get_field('horse_img_3'); ?>
-                            <?php if ($horse_image4) : ?>
-                                <?php
-                                $img_url = $horse_image4['url'];
-                                ?>
-                                <div>
-                                    <img src="<?php print_r(esc_url($img_url)); ?>">
-                                </div>
-                            <?php endif; ?>
+
                         </div>
 
 
+                    </div>
+
+                    <!-- end while loop -->
+
+
+                    <div class="horse-info">
+
+                        <!-- Title -->
+                        <?php get_field('horse_name'); ?>
+                        <!-- text -->
+                        <?php $horsename = get_field('horse_name'); ?>
+                        <?php if ($horsename) : ?>
+                            <h3><?php _e($horsename); ?></h3>
+                        <?php endif; ?>
+                        <div class="pagetext">
+                            <!-- text -->
+                            <?php $horseage = get_field('horse_age'); ?>
+                            <?php if ($horseage) : ?>
+                                <p><strong>Age:</strong> <?php _e($horseage); ?></p>
+                            <?php endif; ?>
+
+                            <!-- text -->
+                            <?php $horsegender = get_field('horse_gender'); ?>
+                            <?php if ($horsegender) : ?>
+                                <p><strong>gender:</strong> <?php _e($horsegender); ?></p>
+                            <?php endif; ?>
+
+                            <!-- text -->
+                            <?php $horsedescription = get_field('horse_description'); ?>
+                            <?php if ($horsedescription) : ?>
+                                <p><?php _e($horsedescription); ?></p>
+                            <?php endif; ?>
+                        </div>
+                        <!-- text -->
+                        <?php $processtitle = get_field('adoption_process_title'); ?>
+                        <?php if ($processtitle) : ?>
+                            <p><?php _e($processtitle); ?></p>
+                        <?php endif; ?>
+                    </div>
+                    <!-- text -->
+                    <?php $process = get_field('adoption_process'); ?>
+                    <?php if ($process) : ?>
+                        <p><?php _e($processS); ?></p>
+                    <?php endif; ?>
         </div>
-
-        <!-- end while loop -->
-
-
-        <div class="horse-info">
-            <!-- Title -->
-            <?php get_field('horse_name'); ?>
-            <!-- text -->
-            <?php $horsename = get_field('horse_name'); ?>
-            <?php if ($horsename) : ?>
-                <h3><?php _e($horsename); ?></h3>
-            <?php endif; ?>
-
-            <!-- text -->
-            <?php $horseage = get_field('horse_age'); ?>
-            <?php if ($horseage) : ?>
-                <p><?php _e($horseage); ?></p>
-            <?php endif; ?>
-
-            <!-- text -->
-            <?php $horsedescription = get_field('horse_description'); ?>
-            <?php if ($horsedescription) : ?>
-                <p><?php _e($horsedescription); ?></p>
-            <?php endif; ?>
-        </div>
-
-    <?php endwhile; ?>
-<?php endif; ?>
     </div>
+
+
+<?php endwhile; ?>
+<?php endif; ?>
+</div>
 </main><!-- #main -->
 
 <?php

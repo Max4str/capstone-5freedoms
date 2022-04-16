@@ -45,55 +45,28 @@ get_header();
 
         <div class="conatiner">
 
-            <?php if ($sanctuary->have_posts()) : ?>
+            <?php if (have_posts()) : ?>
                 <!-- start the loop -->
-                <?php while ($sanctuary->have_posts()) : $sanctuary->the_post(); ?>
-                    <div <?php $sanctuary->post_class(); ?> id="post-<?php the_ID(); ?>">
+                <?php while (have_posts()) : the_post(); ?>
+                    <div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
                         <!-- main img -->
                         <div class="horse-images">
-                            <div class="note">
-                                <i class="fa-solid fa-circle-info"></i>
-                                <p>Slide to view</p>
-                                <i class="fa-solid fa-caret-right"></i>
-                                <i class="fa-solid fa-caret-right"></i>
-                                <i class="fa-solid fa-caret-right"></i>
-                            </div>
-                            <div class="slider">
-                                <!-- Option Image 1 -->
-                                <?php $horse_image = get_field('horse_img'); ?>
-                                <?php if ($horse_image) : ?>
-                                    <?php
-                                    $img_url = $horse_image['url'];
-                                    ?>
-                                    <div>
-                                        <img src="<?php print_r(esc_url($img_url)); ?>">
-                                    </div>
-                                <?php endif; ?>
 
-                                <!-- Option Image 2 -->
-                                <?php $horse_image2 = get_field('horse_img_2'); ?>
-                                <?php if ($horse_image2) : ?>
-                                    <?php
-                                    $img_url = $horse_image2['url'];
-                                    ?>
-                                    <div>
-                                        <img src="<?php print_r(esc_url($img_url)); ?>">
-                                    </div>
-                                <?php endif; ?>
+                            <!-- Option Image 1 -->
+                            <?php $sanctuaryhorse_image = get_field('sanctuary_horse_img'); ?>
+                            <?php if ($sanctuaryhorse_image) : ?>
+                                <?php
+                                $img_url = $sanctuaryhorse_image['url'];
+                                ?>
+                                <div>
+                                    <img src="<?php print_r(esc_url($img_url)); ?>">
+                                </div>
+                            <?php endif; ?>
 
-                                <!-- Option Image 4-->
-                                <?php $horse_image4 = get_field('horse_img_4'); ?>
-                                <?php if ($horse_image4) : ?>
-                                    <?php
-                                    $img_url = $horse_image4['url'];
-                                    ?>
-                                    <div>
-                                        <img src="<?php print_r(esc_url($img_url)); ?>">
-                                    </div>
-                                <?php endif; ?>
-                            </div>
+
 
                         </div>
+
 
                     </div>
 
@@ -101,36 +74,47 @@ get_header();
 
 
                     <div class="horse-info">
+
                         <!-- Title -->
-                        <?php get_field('horse_name'); ?>
+                        <?php get_field('sanctuary_horse_name'); ?>
                         <!-- text -->
-                        <?php $horsename = get_field('horse_name'); ?>
-                        <?php if ($horsename) : ?>
-                            <h3><?php _e($horsename); ?></h3>
+                        <?php $sanctuaryhorsename = get_field('sanctuary_horse_name'); ?>
+                        <?php if ($sanctuaryhorsename) : ?>
+                            <h3><?php _e($sanctuaryhorsename); ?></h3>
                         <?php endif; ?>
+                        <div class="pagetext">
+                            <!-- text -->
+                            <?php $sanctuaryhorseage = get_field('sanctuary_horse_age'); ?>
+                            <?php if ($sanctuaryhorseage) : ?>
+                                <p><strong>Age:</strong> <?php _e($sanctuaryhorseage); ?></p>
+                            <?php endif; ?>
 
-                        <!-- text -->
-                        <?php $horseage = get_field('horse_age'); ?>
-                        <?php if ($horseage) : ?>
-                            <p><?php _e($horseage); ?></p>
-                        <?php endif; ?>
 
+
+                            <!-- text -->
+                            <?php $sanctuaryhorsedescription = get_field('sanctuary_horse_description'); ?>
+                            <?php if ($sanctuaryhorsedescription) : ?>
+                                <p><?php _e($sanctuaryhorsedescription); ?></p>
+                            <?php endif; ?>
+                        </div>
                         <!-- text -->
-                        <?php $horsedescription = get_field('horse_description'); ?>
-                        <?php if ($horsedescription) : ?>
-                            <p><?php _e($horsedescription); ?></p>
+                        <?php $processtitle = get_field('sponsor_title'); ?>
+                        <?php if ($processtitle) : ?>
+                            <p><?php _e($processtitle); ?></p>
                         <?php endif; ?>
                     </div>
-
-                    <div class="buttons">
-                        <a href="https://5freedoms.web.dmitcapstone.ca/five-freedoms-ranch/donate/">Sponsor me</a>
-                        <a href="https://5freedoms.web.dmitcapstone.ca/five-freedoms-ranch/education/">Learn more</a>
-                    </div>
-                <?php endwhile; ?>
-            <?php else : ?>
-                <?php get_template_part('template-parts/content', 'none'); ?>
-            <?php endif; ?>
+                    <!-- text -->
+                    <?php $process = get_field('sponsor_process'); ?>
+                    <?php if ($process) : ?>
+                        <p><?php _e($processS); ?></p>
+                    <?php endif; ?>
         </div>
+    </div>
+
+
+<?php endwhile; ?>
+<?php endif; ?>
+</div>
 </main><!-- #main -->
 
 <?php

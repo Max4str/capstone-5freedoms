@@ -160,50 +160,44 @@ get_header();
 
 					<!-- start the loop -->
 					<?php while ($sanctuary->have_posts()) : $sanctuary->the_post(); ?>
-						<section class="sanctuary-card">
-
-							<?php $horseimage = get_field('horse_img'); ?>
-							<?php if ($horseimage) : ?>
+						<div class="sanctuary-card">
+							<?php $sanctuaryhorseimage = get_field('sanctuary_horse_img'); ?>
+							<?php if ($sanctuaryhorseimage) : ?>
 								<?php
-								$img_url = $horseimage['url'];
+								$img_url = $sanctuaryhorseimage['url'];
 								?>
 								<div class="img-circle">
 									<img src="<?php print_r(esc_url($img_url)); ?>">
 								</div>
 							<?php endif; ?>
 
-							<!-- Card Info -->
-							<div class="home-card">
-								<!-- Title -->
-								<?php get_field('horse_name'); ?>
-								<!-- text -->
-								<?php $horsename = get_field('horse_name'); ?>
-								<?php if ($horsename) : ?>
-									<p><?php _e($horsename); ?></p>
-								<?php endif; ?>
+							<!-- Title -->
+							<?php get_field('horse_name'); ?>
+							<!-- text -->
+							<?php $sanctuaryhorsename = get_field('sanctuary_horse_name'); ?>
+							<?php if ($sanctuaryhorsename) : ?>
+								<h4><?php _e($sanctuaryhorsename); ?></h4>
+							<?php endif; ?>
 
-								<!-- text -->
-								<?php $horseage = get_field('horse_age'); ?>
-								<?php if ($horseage) : ?>
-									<p><?php _e($horseage); ?></p>
-								<?php endif; ?>
+							<!-- text -->
+							<?php $sanctuaryhorseage = get_field('sanctuary_horse_age'); ?>
+							<?php if ($sanctuaryhorseage) : ?>
+								<p><?php _e($sanctuaryhorseage); ?></p>
+							<?php endif; ?>
 
+							<!-- Learn More -->
+							<a class="btn-link" href="<?php the_permalink(); ?>">learn more</a>
 
-								<!-- Learn More -->
-								<a class="btn-link" href="<?php the_permalink(); ?>">learn more</a>
-								<a class="btn-link" href="<?php the_permalink(); ?>">Sponsor Me</a>
-
-								<?php //get_template_part( 'template-parts/content', 'page' ); 
-								?>
-							</div>
-						<?php endwhile; ?>
-						<!-- end while loop -->
-						</section>
+							<?php //get_template_part( 'template-parts/content', 'page' ); 
+							?>
+						</div>
+					<?php endwhile; ?>
+					<!-- end while loop -->
 
 
-					<?php else : ?>
-						<?php get_template_part('template-parts/content', 'none'); ?>
-					<?php endif; ?>
+				<?php else : ?>
+					<?php get_template_part('template-parts/content', 'none'); ?>
+				<?php endif; ?>
 
 			</div>
 
@@ -216,3 +210,4 @@ get_header();
 
 <?php
 get_footer();
+?>
