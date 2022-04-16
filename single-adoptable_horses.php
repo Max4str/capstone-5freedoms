@@ -43,105 +43,81 @@ get_header();
         </div>
 
 
-        <article>
+        <div class="conatiner">
 
-            <?php if ($adoptable->have_posts()) : ?>
+            <?php if (have_posts()) : ?>
                 <!-- start the loop -->
-                <?php while ($adoptable->have_posts()) : $adoptable->the_post(); ?>
-                    <div <?php $adoptable->post_class(); ?> id="post-<?php $adoptable->the_ID(); ?>">
+                <?php while (have_posts()) : the_post(); ?>
+                    < <?php post_class(); ?> id="post-<?php the_ID(); ?>">
                         <!-- main img -->
                         <div class="horse-images">
-                            <div class="note">
-                                <i class="fa-solid fa-circle-info"></i>
-                                <p>Slide to view</p>
-                                <i class="fa-solid fa-caret-right"></i>
-                                <i class="fa-solid fa-caret-right"></i>
-                                <i class="fa-solid fa-caret-right"></i>
-                            </div>
-                            <div class="slider">
-                                <!-- Option Image 1 -->
-                                <?php $horse_image = get_field('adoptable horse_img'); ?>
-                                <?php if ($horse_image) : ?>
-                                    <?php
-                                    $img_url = $horse_image['url'];
-                                    ?>
-                                    <div>
-                                        <img src="<?php print_r(esc_url($img_url)); ?>">
-                                    </div>
-                                <?php endif; ?>
 
-                                <!-- Option Image 2 -->
-                                <?php $horse_image2 = get_field('adoptable horse_img_2'); ?>
-                                <?php if ($horse_image2) : ?>
-                                    <?php
-                                    $img_url = $horse_image2['url'];
-                                    ?>
-                                    <div>
-                                        <img src="<?php print_r(esc_url($img_url)); ?>">
-                                    </div>
-                                <?php endif; ?>
 
-                                <!-- Option Image 3-->
-                                <?php $horse_image3 = get_field('adoptable horse_img_3'); ?>
-                                <?php if ($horse_image3) : ?>
-                                    <?php
-                                    $img_url = $horse_image3['url'];
-                                    ?>
-                                    <div>
-                                        <img src="<?php print_r(esc_url($img_url)); ?>">
-                                    </div>
-                                <?php endif; ?>
+                            <!-- Option Image 1 -->
+                            <?php $horse_image = get_field('horse_img'); ?>
+                            <?php if ($horse_image) : ?>
+                                <?php
+                                $img_url = $horse_image['url'];
+                                ?>
+                                <div>
+                                    <img src="<?php print_r(esc_url($img_url)); ?>">
+                                </div>
+                            <?php endif; ?>
 
-                                <!-- Option Image 4-->
-                                <?php $horse_image4 = get_field('adoptable horse_img_4'); ?>
-                                <?php if ($horse_image4) : ?>
-                                    <?php
-                                    $img_url = $horse_image4['url'];
-                                    ?>
-                                    <div>
-                                        <img src="<?php print_r(esc_url($img_url)); ?>">
-                                    </div>
-                                <?php endif; ?>
-                            </div>
+                            <!-- Image 2 -->
+                            <?php $horse_image2 = get_field('horse_img_2'); ?>
+                            <?php if ($horse_image2) : ?>
+                                <?php
+                                $img_url = $horse_image2['url'];
+                                ?>
+                                <div>
+                                    <img src="<?php print_r(esc_url($img_url)); ?>">
+                                </div>
+                            <?php endif; ?>
 
+                            <!-- Option Image 4-->
+                            <?php $horse_image4 = get_field('horse_img_3'); ?>
+                            <?php if ($horse_image4) : ?>
+                                <?php
+                                $img_url = $horse_image4['url'];
+                                ?>
+                                <div>
+                                    <img src="<?php print_r(esc_url($img_url)); ?>">
+                                </div>
+                            <?php endif; ?>
                         </div>
 
-                    </div>
+
+        </div>
+
+        <!-- end while loop -->
 
 
-                    <div class="horse-info">
-                        <!-- Title -->
-                        <?php get_field('horse_name'); ?>
-                        <!-- text -->
-                        <?php $horsename = get_field('horse_name'); ?>
-                        <?php if ($horsename) : ?>
-                            <h3><?php _e($horsename); ?></h3>
-                        <?php endif; ?>
-
-                        <!-- text -->
-                        <?php $horseage = get_field('horse_age'); ?>
-                        <?php if ($horseage) : ?>
-                            <p><?php _e($horseage); ?></p>
-                        <?php endif; ?>
-                        <!-- text -->
-                        <?php $horsegender = get_field('horse_gender'); ?>
-                        <?php if ($horsegender) : ?>
-                            <p><?php _e($horsegender); ?></p>
-                        <?php endif; ?>
-
-                        <!-- text -->
-                        <?php $horsedescription = get_field('horse_profile'); ?>
-                        <?php if ($horsedescription) : ?>
-                            <p><?php _e($horsedescription); ?></p>
-                        <?php endif; ?>
-                    </div>
-                <?php endwhile; ?>
-
-
-            <?php else : ?>
-                <?php get_template_part('template-parts/content', 'none'); ?>
+        <div class="horse-info">
+            <!-- Title -->
+            <?php get_field('horse_name'); ?>
+            <!-- text -->
+            <?php $horsename = get_field('horse_name'); ?>
+            <?php if ($horsename) : ?>
+                <h3><?php _e($horsename); ?></h3>
             <?php endif; ?>
-        </article>
+
+            <!-- text -->
+            <?php $horseage = get_field('horse_age'); ?>
+            <?php if ($horseage) : ?>
+                <p><?php _e($horseage); ?></p>
+            <?php endif; ?>
+
+            <!-- text -->
+            <?php $horsedescription = get_field('horse_description'); ?>
+            <?php if ($horsedescription) : ?>
+                <p><?php _e($horsedescription); ?></p>
+            <?php endif; ?>
+        </div>
+
+    <?php endwhile; ?>
+<?php endif; ?>
+    </div>
 </main><!-- #main -->
 
 <?php
