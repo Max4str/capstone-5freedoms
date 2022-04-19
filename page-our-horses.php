@@ -127,15 +127,17 @@ get_header();
 					<?php endwhile; ?>
 					<!-- end while loop -->
 
+				<?php else : ?>
+					<?php get_template_part('template-parts/content', 'none'); ?>
 				<?php endif; ?>
 
 			</div>
 
 			<div class="sanctuaryhorses">
 				<!--title -->
-				<?php $sanctuarytitle = get_field('sanctuary_title'); ?>
-				<?php if ($sanctuarytitle) : ?>
-					<h3><?php _e($sanctuarytitle); ?></h3>
+				<?php $permanant_rescues = get_field('permanant_rescues'); ?>
+				<?php if ($permanant_rescues) : ?>
+					<h3><?php _e($permanant_rescues); ?></h3>
 				<?php endif; ?>
 
 				<!-- text -->
@@ -152,51 +154,7 @@ get_header();
 			);
 			$sanctuary = new WP_Query($args);
 			?>
-			<div class="sanctuary">
-				<?php if ($sanctuary->have_posts()) : ?>
 
-					<!-- start the loop -->
-					<?php while ($sanctuary->have_posts()) : $sanctuary->the_post(); ?>
-						<div class="sanctuary-card">
-							<?php $sanctuaryhorseimage = get_field('sanctuary_horse_img'); ?>
-							<?php if ($sanctuaryhorseimage) : ?>
-								<?php
-								$img_url = $sanctuaryhorseimage['url'];
-								?>
-								<div class="img-circle">
-									<img src="<?php print_r(esc_url($img_url)); ?>">
-								</div>
-							<?php endif; ?>
-
-							<!-- Title -->
-							<?php get_field('horse_name'); ?>
-							<!-- text -->
-							<?php $sanctuaryhorsename = get_field('sanctuary_horse_name'); ?>
-							<?php if ($sanctuaryhorsename) : ?>
-								<h4><?php _e($sanctuaryhorsename); ?></h4>
-							<?php endif; ?>
-
-							<!-- text -->
-							<?php $sanctuaryhorseage = get_field('sanctuary_horse_age'); ?>
-							<?php if ($sanctuaryhorseage) : ?>
-								<p><?php _e($sanctuaryhorseage); ?></p>
-							<?php endif; ?>
-
-							<!-- Learn More -->
-							<a class="btn-link" href="<?php the_permalink(); ?>">learn more</a>
-
-							<?php //get_template_part( 'template-parts/content', 'page' ); 
-							?>
-						</div>
-					<?php endwhile; ?>
-					<!-- end while loop -->
-
-
-				<?php else : ?>
-					<?php get_template_part('template-parts/content', 'none'); ?>
-				<?php endif; ?>
-
-			</div>
 
 		</section>
 
