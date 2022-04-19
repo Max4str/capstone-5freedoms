@@ -73,6 +73,7 @@ get_header();
 					<p><?php _e($adoptablehorsestext); ?></p>
 				<?php endif; ?>
 			</div>
+
 			<?php
 			$args = array(
 				'post_type' => 'adoptable_horses',
@@ -81,9 +82,8 @@ get_header();
 			);
 			$adoptable = new WP_Query($args);
 			?>
-			<div class="adoptable">
-				<?php if ($adoptable->have_posts()) : ?>
-
+			<?php if ($adoptable->have_posts()) : ?>
+				<div class="adoptable">
 					<!-- start the loop -->
 					<?php while ($adoptable->have_posts()) : $adoptable->the_post(); ?>
 						<!-- Card Info -->
@@ -126,24 +126,23 @@ get_header();
 						</div>
 					<?php endwhile; ?>
 					<!-- end while loop -->
-
-				<?php else : ?>
-					<?php get_template_part('template-parts/content', 'none'); ?>
-				<?php endif; ?>
-
-			</div>
+				</div>
+				<?php wp_reset_postdata(); ?>
+			<?php endif; ?>
+			
 
 			<div class="sanctuaryhorses">
-				<!--title -->
-				<?php $permanant_rescues = get_field('permanant_rescues'); ?>
-				<?php if ($permanant_rescues) : ?>
-					<h3><?php _e($permanant_rescues); ?></h3>
+
+				<!-- Title -->
+				<?php $permanant_rescues_title = get_field('permanant_rescues_title'); ?>
+				<?php if ($permanant_rescues_title) : ?>
+					<h3><?php _e($permanant_rescues_title); ?></h3>
 				<?php endif; ?>
 
 				<!-- text -->
-				<?php $sanctuaryhorsestext = get_field('sanctuary_horses_text'); ?>
-				<?php if ($sanctuaryhorsestext) : ?>
-					<p><?php _e($sanctuaryhorsestext); ?></p>
+				<?php $permanant_rescues_text = get_field('permanant_rescues_text'); ?>
+				<?php if ($permanant_rescues_text) : ?>
+					<p><?php _e($permanant_rescues_text); ?></p>
 				<?php endif; ?>
 			</div>
 			<?php
