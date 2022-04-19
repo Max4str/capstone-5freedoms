@@ -88,7 +88,7 @@ get_header();
 					<?php while ($adoptable->have_posts()) : $adoptable->the_post(); ?>
 						<!-- Card Info -->
 						<div class="adoptable-card">
-							<?php $horseimage = get_field('horse_img'); ?>
+							<?php $horseimage = get_field('adoptable_horse_img'); ?>
 							<?php if ($horseimage) : ?>
 								<?php
 								$img_url = $horseimage['url'];
@@ -127,20 +127,15 @@ get_header();
 					<?php endwhile; ?>
 					<!-- end while loop -->
 
-
-				<?php else : ?>
-					<?php get_template_part('template-parts/content', 'none'); ?>
-				<?php endif; ?>
-
 			</div>
 
 			<div class="sanctuaryhorses">
 				<!--title -->
-				<?php $sanctuaryhorsestitle = get_field('sanctuary_horses_title'); ?>
-				<?php if ($sanctuaryhorsestitle) : ?>
-					<h3><?php _e($sanctuaryhorsestitle); ?></h3>
+				<?php $sanctuarytitle = get_field('sanctuary_title'); ?>
+				<?php if ($sanctuarytitle) : ?>
+					<h3><?php _e($sanctuarytitle); ?></h3>
 				<?php endif; ?>
-
+			
 				<!-- text -->
 				<?php $sanctuaryhorsestext = get_field('sanctuary_horses_text'); ?>
 				<?php if ($sanctuaryhorsestext) : ?>

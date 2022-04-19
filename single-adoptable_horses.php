@@ -53,7 +53,7 @@ get_header();
                         <div class="horse-images">
 
                             <!-- Option Image 1 -->
-                            <?php $horse_image = get_field('horse_img'); ?>
+                            <?php $horse_image = get_field('adoptable_horse_img'); ?>
                             <?php if ($horse_image) : ?>
                                 <?php
                                 $img_url = $horse_image['url'];
@@ -123,7 +123,3 @@ get_header();
 
 <?php
 get_footer(); ?>
-
-
-
-</div>
