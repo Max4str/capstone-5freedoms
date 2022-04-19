@@ -127,6 +127,8 @@ get_header();
 					<?php endwhile; ?>
 					<!-- end while loop -->
 
+				<?php endif; ?>
+
 			</div>
 
 			<div class="sanctuaryhorses">
@@ -135,7 +137,7 @@ get_header();
 				<?php if ($sanctuarytitle) : ?>
 					<h3><?php _e($sanctuarytitle); ?></h3>
 				<?php endif; ?>
-			
+
 				<!-- text -->
 				<?php $sanctuaryhorsestext = get_field('sanctuary_horses_text'); ?>
 				<?php if ($sanctuaryhorsestext) : ?>
