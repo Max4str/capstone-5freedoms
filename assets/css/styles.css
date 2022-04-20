@@ -2600,6 +2600,10 @@ form.give-form fieldset:last-child {
   min-width: 50%;
 
   }
+  .ourhorses  p{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 
 }
 
@@ -2655,4 +2659,7 @@ justify-content: center;
  .sanctuaryimg{
    width:50%;
  }
+
+
+
 }
